@@ -1,12 +1,15 @@
 <!doctype html>
-<html style="overflow-x:hidden;">
+<html class="overflow-x-hidden scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Saad Siddiqui</title>
-  <link href="/dist/output.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
 </head>
 
 <body class="bg-slate-900 mx-auto max-w-screen-2xl">
@@ -16,22 +19,24 @@
     <nav
       class="text-white container basis-full min-w-full h-fit flex flex-row  justify-between items-baseline px-7 lg:px-14 py-7 ">
       <h6 class="border-t border-red-500">elvey picklepants</h6>
-      <button class="border rounded-md px-3 py-2 text-sm hover:bg-white hover:text-black transition-colors">Let's
-        Connect</button>
+      <a href="#contact"><button
+          class="border rounded-md px-3 py-2 text-sm hover:bg-white hover:text-black transition-colors">Let's
+          Connect</button></a>
     </nav>
     <!-- End of Nav Section -->
 
     <!-- Main Section -->
     <main class="text-white md:mt-14 lg:mt-0 h-fit px-7 lg:px-14 flex flex-wrap items-center grow">
-      <span style="flex:1 0 auto " class="max-w-full sm:max-w-min order-last sm:order-first">
+      <span class="sm:max-w-3/5 flex-2 max-w-full order-last sm:order-first">
         <h1 class=" text-3xl lg:text-6xl font-black whitespace-nowrap">Saad Siddiqui </h1>
-        <p style="min-width: 39vw;" class="mt-3 text-base lg:text-xl w-full md:w-11/12 ">A <span
-            class="text-red-500">Product Researcher</span> and <span class="text-red-500">Web 3 Enthusiast</span> working with tech like VR & AR to build intuitive products. </p>
+        <p class="xl:max-w-37 mt-3 text-base lg:text-xl w-full md:w-11/12 ">A <span class="text-red-500">Product
+            Researcher</span> and <span class="text-red-500">Web 3 Enthusiast</span> working with tech like VR & AR to
+          build intuitive products. </p>
         <ul class="mt-5">
-          <li class="inline mr-2">twitter</li>
-          <li class="inline mr-2">instagram</li>
-          <li class="inline mr-2"> dribbble</li>
-          <li class="inline mr-2"> linkedin</li>
+          <li class="inline mr-2"><a href="https://twitter.com/elveynft">twitter</a></li>
+          <li class="inline mr-2"><a href="https://www.instagram.com/dr.elvey_pickles/">instagram</a></li>
+          <li class="inline mr-2"><a href="https://dribbble.com/elveyui">dribbble</a></li>
+          <li class="inline mr-2"><a href="https://www.linkedin.com/in/saad-siddiqui-5528191aa/">linkedin</a></li>
         </ul>
       </span>
       <img src="./src/resources/images/p1.png"
@@ -41,16 +46,16 @@
     <!-- End of Main Section-->
   </header>
 
-  <section
-    class="mt-32 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
-    <div style="width:inherit;" class="text-white max-w-full">
+  <section class="mt-32 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
+    <div class="w-inherit text-white max-w-full">
       <h4 class="text-2xl lg:text-4xl ">Experience</h4>
     </div>
-    <div style="width:inherit" class="text-white mt-14 md:mt-0">
+    <div class="w-inherit text-white mt-14 md:mt-0">
       <span class="block">
         <span>
           <h6 class="text-xl inline font-semibold">Pakistan Single Window</h6>
           <span class="bg-red-500 text-red-500 w-3 h-3 inline-block rounded-3xl mx-4"></span>
+          <br class="sm:hidden">
           <h6 class="text-xl inline font-semibold text-red-500">UX Engineer</h6>
         </span>
         <p class="mt-4 font-light max-w-prose">Working as a UI Engineer, my responsibilities included establishing clear
@@ -70,81 +75,102 @@
   </section>
 
   <section class="mt-32 w-screen px-7 lg:px-14">
-  <div style="width:inherit;" class="text-white max-w-full">
-    <h4 class="text-2xl lg:text-4xl ">Work</h4>
-  </div>
-</section>
-  <section class="mt-14 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
-    <div style="width:inherit;" class="text-white max-w-full">
-      <h4 style="max-width: 40ch;" class="text-xl lg:text-2xl  font-thin">How can we design a multi-platform complex design system?</h4>
+    <div class="w-inherit text-white max-w-full">
+      <h4 class="text-2xl lg:text-4xl ">Work</h4>
     </div>
-    <div style="width:inherit" class="text-white mt-14 md:mt-0">
+  </section>
+  <section class="mt-14 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
+    <div class="w-inherit text-white max-w-full">
+      <h4 class="max-w-40ch text-xl lg:text-2xl  font-thin">How can we design a multi-platform complex design system?
+      </h4>
+    </div>
+    <div class="w-inherit text-white mt-14 md:mt-0">
       <span class="block">
         <img class="lg:max-w-lg" src="./src/resources/images/image 1.png" />
-        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Designing a scaleable data-driven enterprise application.</p>
-        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline" src="./src/resources/icons/arrow-right.svg"/></p>
+        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Designing a scaleable data-driven
+          enterprise application.</p>
+        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline"
+            src="./src/resources/icons/arrow-right.svg" /></p>
       </span>
     </div>
   </section>
 
-  <section class="mt-14 md:mt-32 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
-    <div style="width:inherit;" class="text-white max-w-full">
-      <h4 style="max-width: 40ch;" class="text-xl lg:text-2xl  font-thin">How can we design a system to improve education?</h4>
+  <section
+    class="mt-14 md:mt-32 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
+    <div class="w-inherit text-white max-w-full">
+      <h4 class="max-w-40ch md:max-w-26ch lg:max-w-prose text-xl lg:text-2xl  font-thin">How can we design a system to
+        improve education?</h4>
     </div>
-    <div style="width:inherit" class="text-white mt-14 md:mt-0">
+    <div class=" w-inherit text-white mt-14 md:mt-0">
       <span class="block">
         <img class="lg:max-w-lg" src="./src/resources/images/image 2.png" />
-        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Helping freshmen get course material without spending too much</p>
-        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline" src="./src/resources/icons/arrow-right.svg"/></p>
+        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Helping freshmen get course material
+          without spending too much</p>
+        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline"
+            src="./src/resources/icons/arrow-right.svg" /></p>
       </span>
 
       <span class="block mt-24">
         <img class="lg:max-w-lg" src="./src/resources/images/image 3.png" />
-        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Creating an E-Learning Tool for Children with Down Syndrome</p>
-        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline" src="./src/resources/icons/arrow-right.svg"/></p>
+        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Creating an E-Learning Tool for Children
+          with Down Syndrome</p>
+        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline"
+            src="./src/resources/icons/arrow-right.svg" /></p>
       </span>
 
       <span class="block mt-24">
         <img class="lg:max-w-lg" src="./src/resources/images/image 4.png" />
-        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">A Multi-Input tool for intuitive learning</p>
-        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline" src="./src/resources/icons/arrow-right.svg"/></p>
+        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">A Multi-Input tool for intuitive
+          learning</p>
+        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline"
+            src="./src/resources/icons/arrow-right.svg" /></p>
       </span>
     </div>
 
-    
+
   </section>
 
 
-  <section class="mt-14 md:mt-32 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
-    <div style="width:inherit;" class="text-white max-w-full">
-      <h4 style="max-width: 38ch;" class="text-xl lg:text-2xl  font-thin">How can we utilize technology to design a better experience?</h4>
+  <section
+    class="mt-14 md:mt-32 flex flex-wrap md:flex-nowrap w-screen content-start justify-content-between px-7 lg:px-14">
+    <div class="w-inherit text-white max-w-full">
+      <h4 class="max-w-40ch md:max-w-26ch lg:max-w-prose text-xl lg:text-2xl  font-thin">How can we utilize technology
+        to design a better experience?</h4>
     </div>
-    <div style="width:inherit" class="text-white mt-14 md:mt-0">
+    <div class="w-inherit text-white mt-14 md:mt-0">
       <span class="block">
         <img class="lg:max-w-lg" src="./src/resources/images/image 5.png" />
-        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Designing a peer-to-peer active tracking of suspected covid affected areas</p>
-        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline" src="./src/resources/icons/arrow-right.svg"/></p>
+        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Designing a peer-to-peer active tracking
+          of suspected covid affected areas</p>
+        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline"
+            src="./src/resources/icons/arrow-right.svg" /></p>
       </span>
       <span class="block  mt-24">
         <img class="lg:max-w-lg" src="./src/resources/images/image 6.png" />
-        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Improving the pre-boarding and on-boarding experience of interns</p>
-        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline" src="./src/resources/icons/arrow-right.svg"/></p>
+        <p class="mt-4 max-w-full lg:max-w-md text-lg lg:text-xl font-semibold">Improving the pre-boarding and
+          on-boarding experience of interns</p>
+        <p class="text-red-500 text-sm font-light mt-4">Read More <img class="w-6 inline"
+            src="./src/resources/icons/arrow-right.svg" /></p>
       </span>
-     
+
     </div>
 
-    
+
   </section>
 
-  <footer class="mt-32 md:mt-48 w-full mb-36 px-7 lg:px-14 text-center">
+  <footer id="contact" class="mt-32 md:mt-48 w-full mb-36 px-7 lg:px-14 text-center">
     <div class="w-14 border-t border-red-500 mb-10 mx-auto"></div>
-      <h6 class="inline  text-white text-xl">Let’s have a chat! Send me a message</h6>
-      <form action="https://formspree.io/f/xayvreyn" method="POST" class="max-w-screen-sm mx-auto mt-14">
-        <input type="text" name="_gotcha" style="display:none" />
-        <input required type="email" name="email" placeholder="Enter email address" class="rounded-md px-2 py-3 bg-slate-700 text-white w-full">
-        <textarea required rows="7" name="message" placeholder="Enter message" class="mt-7 rounded-md px-2 py-3 bg-slate-700 text-white w-full"></textarea>
-        <button type="submit" class="w-full rounded-md px-3 py-3 text-sm bg-red-500 hover:bg-red-600  transition-colors text-white mt-7 float-right">Send Message</button>
-      </form>
+    <h6 class="inline  text-white text-xl">Let’s have a chat! Send me a message</h6>
+    <form action="https://formspree.io/f/xayvreyn" method="POST" class="max-w-screen-sm mx-auto mt-14">
+      <input type="text" name="_gotcha" class="hidden" />
+      <input required type="email" name="email" placeholder="Enter email address"
+        class="rounded-md px-2 py-3 bg-slate-700 text-white w-full">
+      <textarea required rows="7" name="message" placeholder="Enter message"
+        class="mt-7 rounded-md px-2 py-3 bg-slate-700 text-white w-full"></textarea>
+      <button type="submit"
+        class="w-full rounded-md px-3 py-3 text-sm bg-red-500 hover:bg-red-600  transition-colors text-white mt-7 float-right">Send
+        Message</button>
+    </form>
   </footer>
 
 </body>

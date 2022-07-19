@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("/src/resources/fonts/SF-Pro-Display-Regular.otf");
+}
+  
+
+ 
