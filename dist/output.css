@@ -42,7 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: myFirstFont;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -1101,84 +1101,6 @@ select {
   transition-duration: 150ms;
 }
 
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Regular.otf");
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Ultralight.otf");
-
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Thin.otf");
-
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Light.otf");
-
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Regular.otf");
-
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Medium.otf");
-
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Heavy.otf");
-
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Heavy.otf");
-
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Bold.otf");
-
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: myFirstFont;
-
-  src: url("/src/resources/fonts/SF-Pro-Display-Black.otf");
-
-  font-weight: 900;
-}
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1318,6 +1240,7 @@ select {
     max-width: 37vw;
   }
 }
-  
+
+
 
  

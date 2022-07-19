@@ -2,11 +2,7 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
-    fontFamily: {
-      'sans': ['myFirstFont'],
-      
-     
-    },
+    
     extend: {
       flex: {
         '2': '1 0 auto'
