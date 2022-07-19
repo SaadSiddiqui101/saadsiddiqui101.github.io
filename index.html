@@ -139,10 +139,10 @@
   <footer class="mt-32 md:mt-48 w-full mb-36 px-7 lg:px-14 text-center">
     <div class="w-14 border-t border-red-500 mb-10 mx-auto"></div>
       <h6 class="inline  text-white text-xl">Let’s have a chat! Send me a message</h6>
-      <form class="max-w-screen-sm mx-auto mt-14">
-      
-        <input type="email" placeholder="Enter email address" class="rounded-md px-2 py-3 bg-slate-700 text-white w-full">
-        <textarea rows="7" placeholder="Enter message" class="mt-7 rounded-md px-2 py-3 bg-slate-700 text-white w-full"></textarea>
+      <form action="https://formspree.io/f/xayvreyn" method="POST" class="max-w-screen-sm mx-auto mt-14">
+        <input type="text" name="_gotcha" style="display:none" />
+        <input required type="email" name="email" placeholder="Enter email address" class="rounded-md px-2 py-3 bg-slate-700 text-white w-full">
+        <textarea required rows="7" name="message" placeholder="Enter message" class="mt-7 rounded-md px-2 py-3 bg-slate-700 text-white w-full"></textarea>
         <button type="submit" class="w-full rounded-md px-3 py-3 text-sm bg-red-500 hover:bg-red-600  transition-colors text-white mt-7 float-right">Send Message</button>
       </form>
   </footer>
