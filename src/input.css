@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero3d{
+    /* transform: scale(0.5) translateX(50%) translateY(5%); */
+    position:absolute;
+
+}
+
+@media (min-width:1024px){
+    .hero3d{
+        transform: scale(1);
+        /* left:25%; */
+    }
+}
+
 
 
  

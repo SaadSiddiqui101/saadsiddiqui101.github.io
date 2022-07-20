@@ -8,5 +8,6 @@
 7. Optimize, build css & create accessibility -> DONE 
 -----
 8. Deepsource Analyze the Project 
-9. Lighthouse Projects
+9. Lighthouse Projects -> DONE
 10. Code Project Page
+11. Resume Download Option
