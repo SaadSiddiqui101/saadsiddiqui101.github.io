@@ -10,7 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://unpkg.com/scrollreveal@4"></script>
-  <script src="/src/splineloader.js"></script>
+  <script type="module">
+    import { Application } from './src/runtime.js';
+    const canvas = document.getElementById('canvas3d');
+    const app = new Application(canvas);
+    app.load('./src/scene.splinecode');
+  </script>
 </head>
 
 <body class="bg-slate-900 mx-auto max-w-screen-2xl">
