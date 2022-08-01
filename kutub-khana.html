@@ -12,7 +12,7 @@
 <body class="mx-auto max-w-screen-2xl">
 
   <header class="relative w-full flex flex-wrap case-study-header"
-    style=" background-image: url(./src/resources/images/prj1bg.jpg);">
+    style=" background-image: url(./src/resources/images/prj2bg.jpg);">
     <nav
       class="text-white container basis-full min-w-full h-fit flex flex-row  justify-between items-baseline px-7 lg:px-14 py-7 ">
       <p class="border-t border-red-500">elvey picklepants</p>
@@ -24,7 +24,8 @@
       <span id="name_section"
         class="sm:max-w-3/5 flex-2 flex items-center max-w-full order-last sm:order-first mx-auto">
 
-        <h4 class="text-2xl md:text-4xl font-black inline-block">Designing a scalable data-driven enterprise application</h4>
+        <h4 class="text-2xl md:text-4xl font-black inline-block">Helping freshmen get course material without spending
+          too much</h4>
       </span>
     </main>
   </header>
@@ -35,91 +36,49 @@
 
 
       <h4 class="   mt-14 text-xl font-bold">Introduction</h4>
-      <p class="    mt-4 md:text-lg font-light">There are more than 2824 products currently being exported to 194
-        countries, and 4039 products are being imported from 208 countries, making import and export a massive ecosystem
-        that includes traders, banks, and 73 federal ministries that regulate the import and export.</p>
+      <p class="    mt-4 md:text-lg font-light">To provide structural education, many universities in Pakistan make
+        buying course
+        books necessary. There are many formats in which these books are available, offering a thorough knowledge of a
+        subject and also helping teachers in planning. They are available in stores, libraries, and various digital hubs
+        at different costs.</p>
       <p class="    mt-4 md:text-lg font-light">
-        Pakistan Single Window is an enterprise that set out to build a system that would improve the efficiency of
-        Pakistan’s Trade System and digitize various government and federal ministries. It will comply with the Single
-        Window standards of other countries and provide a single gateway for trade-related activities.</p>
-      <p class="    mt-4 md:text-lg font-light">
-        As a User Experience Engineer my goal was to design a modular system to help the team ideate and develop most of
-        PSW's functions with ease and efficiency. </p>
+        Acquiring these books presents itself with a few problems which discourage students. To empathize and understand
+        these problems and come up with a solution for them, I conducted interview sessions and documented the whole
+        design process.</p>
 
 
 
-      <h4 class="   mt-14 text-xl font-bold">Why did we need a modular design system?</h4>
-
-      <div class="mt-14 xl:flex     justify-center">
-        <span class="inline-block mr-4">
-          <h4 class="text-lg font-semibold">Consistency</h4>
-          <p class="xl:max-w-40ch md:text-lg font-light">For documenting our design decisions so we could reflect on them and
-            try to
-            remove inconsistencies.</p>
-        </span>
-        <span class="inline-block xl:mx-4 mt-7 xl:mt-0">
-          <h4 class="text-lg font-semibold">Scalability</h4>
-          <p class="xl:max-w-40ch md:text-lg font-light">For quick expansion without requiring lots of effort. Our team could
-            use
-            pre-existing patterns to build, test, and deploy functionality.</p>
-        </span>
-        <span class="inline-block xl:ml-4 mt-7 xl:mt-0">
-          <h4 class="text-lg font-semibold">Efficiency</h4>
-          <p class="xl:max-w-40ch md:text-lg font-light">For brainstorming and building, the process becomes much more
-            efficient when
-            there are predefined patterns than can be used by the team.</p>
-        </span>
-      </div>
-      <h4 class="   mt-14 text-xl font-bold">How did we start our journey?</h4>
+      <h4 class="   mt-14 text-xl font-bold">Phase 1 - Research</h4>
       <span class="inline-block    mt-10">
-        <h4 class="text-lg font-semibold">Mapping the architecture</h4>
-        <p class="font-light md:text-lg">Initially, we created an information architecture to map out the main functions.
-          This
-          activity gave us an insight into the scale and user flows.</p>
-        <img class="rounded-xl mt-10" src="./src/resources/images/prj1img1.jpg" />
-        <p class="font-light text-sm text-center mt-2">A structural overview of PSW's main functions</p>
-      </span>
-      <span class="inline-block    mt-10">
-        <h4 class="text-lg font-semibold">Working with Requirement Artifacts</h4>
-        <p class="font-light md:text-lg">After analyzing requirement artifacts like business requirements, and requirement
-          traceability matrices, we improved the user flow, ensuring they align with the business and product goals.</p>
-      </span>
-      <span class="inline-block    mt-10">
-        <h4 class="text-lg font-semibold">Auditing Component Library and Removing Inconsistencies</h4>
-        <p class="font-light md:text-lg">After understanding the scale, functions, and user flows, we audited the existing
-          component library and fixed any inconsistent design decisions.</p>
-      </span>
 
-      <p class="text-2xl font-light my-24">At the end of identification and research phase, we identified following
-        goals</p>
-    
-   
-      <span class="p-7 block rounded-xl" style="background-color:#232323">
-        <p class="font-bold">To provide a consistent experience across all modules and all platforms.</p>
-        <p class="mt-2">Since Pakistan Single Window (PSW) Portal supports multiple platforms and encompasses various functionalities, it was crucial to understand the need for a consistent experience.</p>
+        <p class="font-light md:text-lg">Everyone remembers buying books in their first year, but most of these books
+          were now kept in their cupboards with no further use after their semester.
+          A general statement we received while trying to dive deep into this problem was</p>
+        <p class="md:text-lg mt-3">"There is no need to buy a hard copy of the course material because there are PDFs
+          available."</p>
+        <p class="font-light md:text-lg mt-3">After doing a survey I found out that not everyone was inclined towards this
+          idea and to be precise, out of 30 respondents during the interview, we found that 27 of the respondents
+          have referred to the written course books once or more than one time.</p>
+        <img class="rounded-xl mt-10" src="./src/resources/images/prj2img2.png" />
+        <p class="font-light md:text-lg mt-10">Furthermore, I also found out that the majority of people who were either using the books every day or some days were mostly freshmen and sophomore students. </p>
+        <p class="md:text-lg mt-3">"Most of the students in the third and fourth year of their bachelor's program told us that the books they bought in the first year were still with them and that those books were of no use to them and they felt that they wasted their money."</p>
+        <p class="font-light md:text-lg mt-3">Most of the students in the third and fourth year of their bachelor's program told us that the books they bought in the first year were still with them and that those books were of no use to them and they felt that they wasted their money.</p>
       </span>
-      <span class="p-7 mt-7 block rounded-xl" style="background-color:#232323">
-        <p class="font-bold">To make the experience adaptable to data</p>
-        <p class="mt-2">One of the challenges identified was adapting the experience to changes 
-          in data. This meant considering better empty states in the absence of 
-          data, but resizable and easily navigable components when there is lots 
-          of data.</p>
-      </span>
-      <span class="p-7 mt-7 block rounded-xl" style="background-color:#232323">
-        <p class="font-bold">To reduce the learning curve of the traders new to the digital platform</p>
-        <p class="mt-2">Our target audience consisted of people who have been doing import and 
-          export related activities manually. This meant that they were not 
-          well-versed with using a digital system as a replacement. Reducing the 
-          learning curve and making it easier for users to understand and perform 
-          actions was also a challenge.</p>
-      </span>
-    
-    
-    
-      <h4 class="text-2xl font-bold mt-24">The Design</h4>
-      <p class="text-lg mt-7">Below are some of the primary UI patterns designed to help the team achieve the goal.</p>
-
       
+
+      <h4 class="   mt-14 text-xl font-bold">Phase 2 - Converting insights into actions</h4>
+      <p class="font-light md:text-lg mt-10">At the end of research phase, we organized our findings using affinity diagram</p>
+      <img class="rounded-xl mt-10" src="./src/resources/images/prj2img3.jpg" />
+      <p class="font-light md:text-lg mt-3">We highlighted the following problems that were common in many of the interviews.</p>
+      <p class="font-light md:text-lg mt-3">a. Unavailability of books</p>
+      <p class="font-light md:text-lg mt-3">b. Cost of books</p>
+      <p class="font-light md:text-lg mt-3">c. Quality of books</p>
+
+      <h4 class="text-2xl font-bold mt-24">The Design</h4>
+      <p class="text-lg mt-7">Below are some of the primary UI patterns included in our design system, identified as
+        being used repeatedly and required by the majority of our team members.</p>
+
+
       <div class="mt-7 pb-7 widget flex flex-wrap md:flex-nowrap">
 
 
@@ -132,7 +91,8 @@
         </ol>
 
         <ol class="widget-list" id="type">
-          <p class="font-light md:text-lg">Two fonts have been introduced as part of the design system. These two fonts are
+          <p class="font-light md:text-lg">Two fonts have been introduced as part of the design system. These two fonts
+            are
             Proxima Nova & Montreal. The font pairing provides a good weight variation while keeping the overall visual
             style consistent. </p>
           <img class="mt-4 rounded-xl" src="./src/resources/images/prj1img3.png" />
@@ -153,7 +113,8 @@
         </ol>
 
         <ol class="widget-list" id="grids">
-          <p class="font-light md:text-lg">We ensured that the grids displaying the huge amount of data were easily navigable by introducing various sub-functions like search, sort, collapse, lock etc.</p>
+          <p class="font-light md:text-lg">We ensured that the grids displaying the huge amount of data were easily
+            navigable by introducing various sub-functions like search, sort, collapse, lock etc.</p>
           <img class="mt-4 rounded-xl" src="./src/resources/images/prj1img6.png" />
         </ol>
 
@@ -175,15 +136,17 @@
       <p class="text-2xl font-light mt-14 md:mt-24">Future of our Design System</p>
       <span class="inline-block  mt-10">
         <h4 class="text-lg font-semibold">Benchmarks & Testing</h4>
-        <p class="font-light md:text-lg">Our Design System provides a guideline to benchmark our ideas and test and improve the system for the new cases.</p>
-       
+        <p class="font-light md:text-lg">Our Design System provides a guideline to benchmark our ideas and test and
+          improve the system for the new cases.</p>
+
       </span>
       <span class="inline-block    my-10">
         <h4 class="text-lg font-semibold">Improvement and Documentation</h4>
-        <p class="font-light md:text-lg">We continue to improve the documentation and develop use-cases to understand the application and help the engineering team use the system efficiently.</p>
-       
+        <p class="font-light md:text-lg">We continue to improve the documentation and develop use-cases to understand
+          the application and help the engineering team use the system efficiently.</p>
+
       </span>
-  </div>
+    </div>
 </body>
 
 </html>

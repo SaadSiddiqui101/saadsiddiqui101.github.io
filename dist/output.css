@@ -767,10 +767,6 @@ select {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
 .relative {
   position: relative;
 }
@@ -1368,6 +1364,10 @@ li:last-child > .widget-list-link {
     margin-top: 3.5rem;
   }
 
+  .md\:mt-24 {
+    margin-top: 6rem;
+  }
+
   .md\:mt-auto {
     margin-top: auto;
   }
@@ -1390,10 +1390,6 @@ li:last-child > .widget-list-link {
 
   .md\:mt-48 {
     margin-top: 12rem;
-  }
-
-  .md\:mt-24 {
-    margin-top: 6rem;
   }
 
   .md\:w-11\/12 {
