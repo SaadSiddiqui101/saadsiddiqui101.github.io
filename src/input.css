@@ -8,7 +8,17 @@
 
 }
 
+.bg-image-slideshow{
+  background-color: #232323;
+}
 
+.slideshow-img{
+  width: 70%;
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
 
 .tab-panes .tab-pane{
     display: none
@@ -172,6 +182,8 @@
 height: 60vh;
     background-attachment: fixed;
   }
+
+
 
   @media (min-width:1024px){
     .case-study-header{

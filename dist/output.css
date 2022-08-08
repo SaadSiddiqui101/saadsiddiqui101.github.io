@@ -803,6 +803,11 @@ select {
   margin-right: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -857,6 +862,14 @@ select {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .block {
@@ -1037,8 +1050,17 @@ select {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-7 {
   padding: 1.75rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
 }
 
 .px-7 {
@@ -1137,6 +1159,10 @@ select {
   font-weight: 100;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1166,6 +1192,28 @@ select {
 .hero3d{
   /* transform: scale(0.5) translateX(50%) translateY(5%); */
   position:absolute;
+}
+
+.bg-image-slideshow{
+  background-color: #232323;
+}
+
+.slideshow-img{
+  width: 70%;
+}
+
+.mySlides {
+  display:none
+}
+
+.w3-left, .w3-right, .w3-badge {
+  cursor:pointer
+}
+
+.w3-badge {
+  height:13px;
+  width:13px;
+  padding:0
 }
 
 .tab-panes .tab-pane{
@@ -1416,6 +1464,11 @@ li:last-child > .widget-list-link {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
