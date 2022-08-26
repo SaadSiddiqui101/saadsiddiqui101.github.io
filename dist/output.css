@@ -767,6 +767,10 @@ select {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -870,6 +874,14 @@ select {
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .block {
