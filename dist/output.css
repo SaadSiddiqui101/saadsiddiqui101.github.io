@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -355,13 +355,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -452,11 +445,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #6b7280;
-  opacity: 1;
-}
-
 input::placeholder,textarea::placeholder {
   color: #6b7280;
   opacity: 1;
@@ -510,7 +498,6 @@ select {
   background-origin: border-box;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   flex-shrink: 0;
   height: 1rem;
@@ -858,10 +845,6 @@ select {
   margin-bottom: 2.5rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -872,6 +855,10 @@ select {
 
 .mb-12 {
   margin-bottom: 3rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
 }
 
 .mb-36 {
@@ -888,6 +875,18 @@ select {
 
 .-mb-44 {
   margin-bottom: -11rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
 }
 
 .block {
@@ -946,6 +945,10 @@ select {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .min-w-full {
@@ -1040,6 +1043,21 @@ select {
   border-radius: 1.5rem;
 }
 
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-r-xl {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1081,6 +1099,10 @@ select {
   padding: 3.5rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -1117,6 +1139,10 @@ select {
 
 .pb-7 {
   padding-bottom: 1.75rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .text-left {
@@ -1458,8 +1484,16 @@ li:last-child > .widget-list-link {
     margin-top: 12rem;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:w-11\/12 {
     width: 91.666667%;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:max-w-26ch {
