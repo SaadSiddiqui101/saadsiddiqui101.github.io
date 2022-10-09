@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saad Siddiqui</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+
+</head>
+
+<body class="mx-auto max-w-screen-2xl">
+
+  <header class="relative w-full flex flex-wrap case-study-header"
+    style=" background-image: url(./src/resources/images/prj4bg.jpg);">
+    <nav
+      class="text-white container basis-full min-w-full h-fit flex flex-row  justify-between items-baseline px-7 lg:px-14 py-7 ">
+      <p class="border-t border-red-500">elvey picklepants</p>
+      <a href="#contact"><button
+          class="border rounded-md px-3 py-2 text-sm hover:bg-white hover:text-black transition-colors">Let's
+          Connect</button></a>
+    </nav>
+    <main class="text-white md:mt-14 lg:mt-0 h-fit px-7 lg:px-14 flex flex-wrap items-center grow">
+      <span id="name_section"
+        class="sm:max-w-3/5 flex-2 flex items-center max-w-full order-last sm:order-first mx-auto">
+
+        <h4 class="text-2xl md:text-4xl font-black inline-block">Designing a Multi-Input tool for intuitive learning</h4>
+      </span>
+    </main>
+  </header>
+  <div class="bg-black text-white pt-7">
+
+    <div class="px-7 lg:max-w-3/5 mx-auto ">
+
+
+
+      <h4 class="   mt-14 text-xl font-bold">Introduction</h4>
+      <p class="    mt-4 md:text-lg font-light">The recent developments in the meta-verse and the research on virtual
+        reality allowed us to explore technologies like Virtual Reality, motion gesture recognition, and human language
+        processing to create a real-world learning experience for children.</p>
+      <p class="    mt-4 md:text-lg font-light">
+        Along with the increase in such modern technologies, the cost of implementing them also increases, making it
+        harder to create a sustainable market for such products. </p>
+
+
+      <h4 class="   mt-24 text-xl font-bold">Scope of work</h4>
+      <p class="font-light md:text-lg mt-4">Input and Output (I/O) is one of the key elements from the Human-Computer
+        Interaction (HCI) perspective. In the early stages of computers, pressing keys, clicking mouse buttons, and
+        getting the output visually on screen or through the speakers as sounds were only a few methods to interact with
+        a computing device.</p>
+        <p class="font-light md:text-lg mt-4">In this era of technological advancements, we have technologies like Virtual Reality (VR) and Augmented Reality (AR), removing the boundaries between the real and the virtual world. We also have human processing technology to give commands to computers just by speaking and motion-sensing technology to detect our whole body and perform various actions through gestures.</p>
+          <p class="font-light md:text-lg mt-4">In this project, we explore one of the possible ways to combine various advanced input methods mentioned above to create an intuitive learning environment for children in a way that is both cost-effective and easy to use.</p>
+
+          <h4 class="   mt-24 text-xl font-bold">Challenges with VR and Multi-input application</h4>
+          <p class="font-light md:text-lg mt-4">Initially, we researched the present implementation of the multi-input system and all of its caveats. Following are some challenges in using VR, MR, and GR.</p>
+          <p class="text-lg font-semibold mt-14">Cost of Equipment</p>
+          <p class="font-light md:text-lg mt-4">Modern VR headsets are expensive, and the majority of our target audience can not afford them. In South Asian countries, these devices have become even more expensive due to duties and taxes on importing them.</p>
+          <p class="text-lg font-semibold mt-14">Area of Room</p>
+          <p class="font-light md:text-lg mt-4">Adequate space is required to use the VR equipment, which can be difficult for smaller living spaces.<br>
+            Another problem is that some models of VR headsets are not wireless. There can be instances in which the wires become an obstacle in the usage of the system.</p>
+          <p class="text-lg font-semibold mt-14">Application Development</p>
+          <p class="font-light md:text-lg mt-4">Since the virtual environment contains 3D-generated graphics, therefore integration becomes difficult during development.</p>
+          <p class="text-lg font-semibold mt-14">Challenge with a multi-input application</p>
+          <p class="font-light md:text-lg mt-4">One of the main challenges with designing a multi-input application is the coordination between each input method so that the user is not confused while performing them. </p>
+   
+          <h4 class="   mt-24 text-xl font-bold">The Idea</h4>
+          <p class="text-lg md:text-2xl font-semibold italic my-10">To create a cost-effective multi-input tool that will recognize motions and gestures as input for activities shown in a VR environment and allow users to execute various commands through voice.</p>
+        
+          <h4 class="   mt-24 text-xl font-bold">Design Characteristics</h4>
+          <p class="font-light md:text-lg mt-4">The first step in the plan was to gather all the requirements for the product. Fortunately, the team’s prior experience in developing video games in VR was helpful in this phase. We quickly came up with a rough sketch of how the user will be using the product. (Rough Sketch)</p>
+          <p class="font-light md:text-lg mt-4">There are a few key design decisions considering the challenges identified during the research.</p>
+          <p class="text-lg font-semibold mt-14">Using Fibrum SDK</p>
+          <p class="font-light md:text-lg mt-4">Our design didn’t need an expensive VR headset because we were not using built-in functionality, so we decided to go with the cheapest and readily available VR set.
+            While google’s cardboard SDK is a common choice, it fails to start on devices with no gyro sensors. Since most of our target audience might not be able to afford high-end mobiles with gyro, we considered Fibrum SDK.</p>
+            <p class="text-lg font-semibold mt-14">Using RGB Cameras</p>
+            <p class="font-light md:text-lg mt-4">While a better option would be to go for a depth-sensing camera, at the time of designing the product, Microsoft discontinued its Kinect project. Therefore, we decided to go with an ordinary webcam present on a laptop.</p>
+              <p class="text-lg font-semibold mt-14">Using Wireless Devices</p>
+              <p class="font-light md:text-lg mt-4">Since all the equipment is wireless, the product can be used easily without worrying about wires coming in the way.</p>
+                <p class="text-lg font-semibold mt-14">Designing Learning Activities</p>
+                <p class="font-light md:text-lg mt-4">Since our target audience comprised parents and children, we focused on making the software straightforward. We also added voice-based commands to make the experience more intuitive and immersive.<br>
+                  Using 3D development and design tools, we ensured to build an application that would incorporate fundamental concepts into the programs for the children, such as memory tests, gross motor skills, linguistics, etc.</p>
+                      
+
+
+                  <h4 class="   mt-24 text-xl font-bold">Technical Characteristics</h4>
+                  <p class="text-lg font-semibold mt-14">Motion Recognition API</p>
+          <p class="font-light md:text-lg mt-4">There were very few motion recognition APIs that worked without a depth-sensing camera when we started the project. Most of them were in their beta phase, so we decided to incorporate gestures and hand motion recognition rather than full-body motion detection.</p>
+            <p class="text-lg font-semibold mt-14">Network Device</p>
+            <p class="font-light md:text-lg mt-4">We decided to use a private User Datagram Protocol (UDP) network session for each instance of the program, reducing the overall latency due to the network being locally hosted.</p>
+              <p class="text-lg font-semibold mt-14">Language Processing API</p>
+          <p class="font-light md:text-lg mt-4">Since active language processing requires a lot of computational power, our handheld phones couldn’t keep up with two simultaneously running processes without heating up. Therefore, we decided to split the application running on laptop and mobile, connected wirelessly.</p>
+            <p class="text-lg font-semibold mt-14">Developing Learning Activities</p>
+            <p class="font-light md:text-lg mt-4">The learning modules were created using unity3D so that we could reduce the specification requirements of the device. Integrating network-based communication and other APIs was considerably easy when developing the learning modules on Unity3D.</p>
+           
+            <h4 class="   mt-24 text-xl font-bold">Results</h4>
+
+            <h4 class="   mt-24 text-xl font-bold">Key Takeaways</h4>
+            <p class="font-light md:text-lg mt-4">The project indicated the changing dynamics of human-computer interaction in education, where developing tools and applications demand a newer perspective.<br>
+              Secondly, it also showed the relation between the cost and the complexity of the product. The expensive equipment does provide extensive features that could improve the overall experience.
+              Lastly, it also demonstrated the relation between the complexity of designing interactions relative to the number of interactions in the multi-input model.</p>
+         
+        </div>
+  </div>
+</body>
+
+</html>
