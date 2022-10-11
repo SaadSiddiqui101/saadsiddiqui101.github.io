@@ -9,7 +9,7 @@ module.exports = {
       },
       maxWidth: {
         '3/5': '60%',
-        'custom3': '61%',
+        'custom3': '65%',
         '4/5': '80%',
         '37': '37vw',
         '26ch' : "26ch",
