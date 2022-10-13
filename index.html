@@ -16,9 +16,9 @@
 
   <header class="relative w-full flex flex-wrap lg:h-screen">
 
-    <div style="z-index:1;background: linear-gradient(0deg, #000000 22.37%, rgba(0, 0, 0, 0) 118.28%)" class="absolute inset-0"></div>
+    <div style="z-index:-1;background: linear-gradient(0deg, #000000 22.37%, rgba(0, 0, 0, 0) 118.28%)" class="absolute main-vid-overlay"></div>
 
-    <video style="top:-133px" class="w-full absolute inset-0" loop muted autoplay>
+    <video style="z-index:-2"  class="w-full absolute main-video" loop muted autoplay>
       <source src="./src/resources/videos/titlevid.webm" />
       <source src="./src/resources/videos/titlevid.mp4" />
     </video>
@@ -35,9 +35,9 @@
     <!-- End of Nav Section -->
 
     <!-- Main Section -->
-    <main class="text-white md:mt-14 lg:mt-0 h-fit px-7 lg:px-14 flex flex-wrap items-center grow">
+    <main class="text-white lg:mt-14 lg:mt-0 h-fit px-7 lg:px-14 flex flex-wrap items-center grow mt-32">
       <span id="name_section" class="sm:max-w-3/5 flex-2 max-w-full order-last sm:order-first">
-        <h1 class=" text-3xl lg:text-6xl font-black whitespace-nowrap">Saad Siddiqui </h1>
+        <h1 class=" text-3xl md:text-6xl lg:text-9xl  font-black whitespace-nowrap lg:leading-none">Saad Siddiqui </h1>
         <p class="xl:max-w-37 mt-3 text-base lg:text-xl w-full md:w-11/12 ">A <span class="text-red-500">Product
             Researcher</span> and <span class="text-red-500">Web 3 Enthusiast</span> working with tech like VR & AR to
           build intuitive products. </p>
