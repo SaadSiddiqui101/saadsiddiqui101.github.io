@@ -196,25 +196,7 @@ height: 60vh;
     left:0px;
     right:0px;
   }
-  
 
-  @media (min-width:640px) {
-    .main-vid-overlay{
-      bottom:-62px;
-      top:0px;
-      left:0px;
-      right:0px;
-    }
-  }
-
-  @media (min-width:768px) {
-    .main-vid-overlay{
-      bottom:-177px;
-      top:0px;
-      left:0px;
-      right:0px;
-    }
-  }
 
 
   @media (min-width:1024px){

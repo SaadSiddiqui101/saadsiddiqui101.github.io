@@ -1023,6 +1023,10 @@ select {
   justify-content: space-between;
 }
 
+.overflow-clip {
+  overflow: clip;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1421,24 +1425,6 @@ li:last-child > .widget-list-link {
   top:0px;
   left:0px;
   right:0px;
-}
-
-@media (min-width:640px) {
-  .main-vid-overlay{
-    bottom:-62px;
-    top:0px;
-    left:0px;
-    right:0px;
-  }
-}
-
-@media (min-width:768px) {
-  .main-vid-overlay{
-    bottom:-177px;
-    top:0px;
-    left:0px;
-    right:0px;
-  }
 }
 
 @media (min-width:1024px){
