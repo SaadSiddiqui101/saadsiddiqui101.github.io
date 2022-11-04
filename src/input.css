@@ -197,7 +197,17 @@ height: 60vh;
     right:0px;
   }
 
-
+.background{
+  position: absolute;
+  inset: 0;
+width: 100%;
+filter: blur(500px);
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+opacity: 0.35;
+}
 
   @media (min-width:1024px){
     .case-study-header{
