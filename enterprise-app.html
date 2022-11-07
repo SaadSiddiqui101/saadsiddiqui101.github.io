@@ -49,7 +49,7 @@
         PSW's functions with ease and efficiency. </p>
 
 
-
+        <h4 class="text-3xl font-bold mt-24">Phase 1: Identification</h4>
       <h4 class="   mt-14 text-xl font-bold">Why did we need a modular design system?</h4>
 
       <span class="p-7 block rounded-xl mt-4" style="background-color:#232323">
@@ -64,7 +64,7 @@
         <p class="font-bold">To reduce the time it takes for the team to ideate on newer modules</p>
         <p class="mt-2">Using the design system as a tool for quick ideation became our priority goal to reduce the time to bring out new ideas, reduce design from scratch for each instance and solve the problems quicker.</p>
       </span>
-
+      <h4 class="text-3xl font-bold mt-24">Phase 2: Ideation</h4>
       <h4 class="   mt-14 text-xl font-bold">How did we start our journey?</h4>
       <span class="inline-block    mt-10">
         <h4 class="text-lg font-semibold">Mapping the architecture</h4>
@@ -87,13 +87,13 @@
       
     
     
-    
-      <h4 class="text-2xl font-bold mt-24">The Design</h4>
+      <h4 class="text-3xl font-bold mt-24">Phase 3: Outcome</h4>
+      <h4 class="text-2xl font-bold mt-24">The Design System</h4>
       <p class="text-lg mt-7">Using the concepts of the atomic design system, we started managing smaller pattern libraries while building several templates and pages. </p>
       
       <div class="mt-7 pb-7 widget flex flex-wrap md:flex-nowrap">
 
-
+       
 
         <ol class="widget-list" id="atoms">
           <p class="font-light md:text-lg">The building blocks of our system include various input and action components along with our core color scheme and type properties. All the "atoms" of our design system have their properties.</p>
@@ -130,7 +130,25 @@
 
         </ul>
       </div>
+      <h4 class="text-2xl font-bold mt-24">The Visuals</h4>
+      <p class="text-lg mt-7">Our design team created different interfaces for the product using the system created.</p>
+     
+      <div class="rounded-xl bg-image-slideshow ">
+        <div class="flex items-center justify-center mt-4">
+          <div class="w3-left text-2xl mr-4" onclick="plusDivs(-1)">&#10094;</div>
+          <img alt="User Persona 1" class="mySlides " src="./src/resources/images/prj1img9.png">
+          <img alt="User Persona 2" class="mySlides " src="./src/resources/images/prj1img10.png">
+          <img alt="User Persona 3" class="mySlides " src="./src/resources/images/prj1img11.png">
 
+
+          <div class="w3-right text-2xl ml-4" onclick="plusDivs(1)">&#10095;</div>
+        </div>
+        <div class="justify-center flex pb-4">
+          <span class="w3-badge demo border mr-2 rounded-3xl inline-block" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo border rounded-3xl inline-block" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo border ml-2 rounded-3xl inline-block" onclick="currentDiv(3)"></span>
+        </div>
+      </div>
       <h4 class="text-2xl font-bold mt-24">The Impact</h4>
       <p class="mt-4 md:text-lg font-light">A clear difference in time was observed <i class="font-extralight">[approx 40% average]</i> between modules developed using our new design system and modules developed and designed from scratch.  </p>
       <img alt="Representation of design system impact" class="my-8 rounded-xl" src="./src/resources/images/prj1img8.webp" />
@@ -156,6 +174,36 @@
        
       </span>
   </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" bg-white", "");
+      }
+      console.log(slideIndex);
+      x[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " bg-white";
+    }
+  </script>
 </body>
 
 </html>

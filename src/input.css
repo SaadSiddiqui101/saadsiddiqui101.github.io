@@ -197,17 +197,24 @@ height: 60vh;
     right:0px;
   }
 
-.background{
-  position: absolute;
-  inset: 0;
-width: 100%;
-filter: blur(500px);
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-opacity: 0.35;
-}
+  .background{
+    position:absolute;
+    inset: 0;
+    width: 100%;
+    filter: blur(70px);
+    opacity: 0.35;
+    z-index: -1;
+  }
+
+  @media (max-width:1023px){
+    .back-stuff{
+     display: none;
+    }
+    .front-stuff{
+      display: none;
+    }
+  }
+
 
   @media (min-width:1024px){
     .case-study-header{
@@ -233,6 +240,22 @@ opacity: 0.35;
     .widget-list {
       
       padding-left: 28px;
+    }
+
+    .back-stuff{
+      position:absolute;
+      right:6px;
+      top:151px;
+      width:29%;
+      
+    }
+
+    .front-stuff{
+      position:absolute;
+      left:50%;
+      bottom:0px;
+      width:29%;
+      z-index: 100;
     }
 }
 
