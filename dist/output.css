@@ -785,10 +785,6 @@ select {
   order: -9999;
 }
 
-.order-2 {
-  order: 2;
-}
-
 .order-1 {
   order: 1;
 }
@@ -931,6 +927,10 @@ select {
   width: 100%;
 }
 
+.w-5\/6 {
+  width: 83.333333%;
+}
+
 .w-3\/4 {
   width: 75%;
 }
@@ -957,10 +957,6 @@ select {
 
 .w-36 {
   width: 9rem;
-}
-
-.w-5\/6 {
-  width: 83.333333%;
 }
 
 .min-w-full {
@@ -1021,10 +1017,6 @@ select {
 
 .justify-start {
   justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1172,6 +1164,10 @@ select {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-sm {
@@ -1580,16 +1576,16 @@ li:last-child > .widget-list-link {
     display: flex;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
   .md\:w-11\/12 {
     width: 91.666667%;
   }
 
   .md\:max-w-26ch {
     max-width: 26ch;
+  }
+
+  .md\:max-w-prose {
+    max-width: 65ch;
   }
 
   .md\:flex-col {
@@ -1600,12 +1596,8 @@ li:last-child > .widget-list-link {
     flex-wrap: nowrap;
   }
 
-  .md\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .md\:pl-8 {
-    padding-left: 2rem;
+  .md\:pr-10 {
+    padding-right: 2.5rem;
   }
 
   .md\:text-4xl {
