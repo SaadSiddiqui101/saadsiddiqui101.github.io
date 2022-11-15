@@ -5,19 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-  content="A case study for an application that uses a peer-to-peer network for tracking of COVID suspected areas.">
+    content="A case study for an application that uses a peer-to-peer network for tracking of COVID suspected areas.">
   <title>SmartAlert Case Study — Saad Siddiqui</title>
   <link href="./dist/output.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./src/resources/icons/favicon.svg">
 </head>
 
 <!-- <body class="mx-auto max-w-screen-2xl bg-black"> -->
-  <body class="mx-auto bg-black">
+
+<body class="mx-auto bg-black">
   <header class="relative w-full flex flex-wrap case-study-header"
     style=" background: url(./src/resources/images/prj5bg.webp);background-color:rgb(0 0 0 / var(--tw-bg-opacity));background-size: cover;background-position: left center;background-attachment: fixed;">
     <nav
       class="text-white container basis-full min-w-full h-fit flex flex-row  justify-between items-baseline px-7 lg:px-14 py-7 ">
-      <a href="/"><p class="border-t border-red-500">elvey picklepants</p></a>
+      <a href="/">
+        <p class="border-t border-red-500">elvey picklepants</p>
+      </a>
       <a href="/#contact"><button
           class="border rounded-md px-3 py-2 text-sm hover:bg-white hover:text-black transition-colors">Let's
           Connect</button></a>
@@ -26,7 +29,8 @@
       <span id="name_section"
         class="sm:max-w-custom3 flex-2 flex items-center max-w-full order-last sm:order-first mx-auto">
 
-        <h4 class="text-2xl md:text-4xl font-black inline-block">Designing a system to implement active peer-to-peer tracking of suspected covid affected areas</h4>
+        <h4 class="text-2xl md:text-4xl font-black inline-block">Designing a system to implement active peer-to-peer
+          tracking of suspected covid affected areas</h4>
       </span>
     </main>
   </header>
@@ -38,7 +42,8 @@
 
       <h4 class="   mt-14 text-xl font-bold">Introduction</h4>
       <p class="    mt-4 md:text-lg font-light">During the tough times of the pandemic, one of the main challenges was
-        to identify COVID-19 affected areas. Such information was vital for the medical staff to determine and stop the
+        to <strong style='color:#E76C3D;'>identify COVID-19 affected areas</strong>. Such information was vital for the
+        medical staff to determine and stop the
         chain transmission of the virus and reach concerned people immediately for COVID testing. The same information
         was also helpful for the general audience to avoid close contact with people who have COVID-19.</p>
       <p class="    mt-4 md:text-lg font-light">
@@ -48,7 +53,7 @@
       <div class="mt-24  flex">
         <span>
           <p class="text-lg font-semibold ">My Role</p>
-          <p class="font-light mt-2">Design</p>
+
           <p class="font-light mt-2">Research</p>
         </span>
         <span class="pl-14">
@@ -59,49 +64,60 @@
 
       </div>
 
-      <h4 class="   mt-24 text-xl font-bold">Research</h4>
-      
-      <p class="font-light md:text-lg mt-4"><strong>"COVID-19 Gov PK"</strong>, developed by the government of Pakistan, a portal containing COVID-related
+      <h4 class="   mt-24 text-3xl font-bold">Research</h4>
+
+      <p class="font-light md:text-lg mt-24"><strong style='color:#E76C3D;'><strong>"COVID-19 Gov PK"</strong>,</strong>
+        developed by the government of Pakistan, a portal containing COVID-related
         information. It provides city-wise affected count and the nearest labs and test centers.</p>
 
       <h4 class="   mt-14 text-xl font-bold">The Gap</h4>
       <p class="text-lg font-semibold mt-14">The availability of localized information</p>
       <p class="font-light md:text-lg mt-4">While the summarized version helps, sometimes localized data such as
         statistics on nearby locations is crucial for the users traveling in an emergency. According to our research,
-        several users took the warnings seriously when informed of the nearby situations. It also helped them make
-        better decisions.</p>
+        <strong style='color:#E76C3D;'>several users took the warnings seriously when informed of the nearby
+          situations</strong>. It also helped them make
+        better decisions.
+      </p>
 
       <p class="text-lg font-semibold mt-14">The validity and authentication of such information</p>
-      <p class="font-light md:text-lg mt-4">In some instances, users have reported the data as misleading and false.
+      <p class="font-light md:text-lg mt-4">In some instances, users have <strong style='color:#E76C3D;'>reported the
+          data as misleading and false</strong>.
         There is no method to authenticate the validity of the information making it more challenging due to widespread
         false news.</p>
 
       <p class="text-lg font-semibold mt-14">The time of such information</p>
-      <p class="font-light md:text-lg mt-4">The app failed to provide real-time updates. Many users reported that the
+      <p class="font-light md:text-lg mt-4">The app <strong style='color:#E76C3D;'>failed to provide real-time
+          updates</strong>. Many users reported that the
         data was never updated in various locations as well. One of the reasons for the delay in updating the
-        information is the lack of proper infrastructure to manage data and having no checks on the actual active cases
+        information is the <strong style='color:#E76C3D;'>lack of proper infrastructure</strong> to manage data and
+        having no checks on the actual active cases
         in hospitals.</p>
 
+      <span class="p-7 mt-24 block rounded-xl" style="background-color: #E76C3D">
+        <h4 class="    text-xl font-bold">Design Opportunity (HMW)</h4>
+        <p class="text-lg md:text-2xl font-semibold italic my-10">How can we help people get authenticated information
+          rapidly regarding COVID-affected areas of Pakistan?</p>
+      </span>
 
-      <h4 class="   mt-24 text-xl font-bold">Design Opportunity (HMW)</h4>
-      <p class="text-lg md:text-2xl font-semibold italic my-10">How can we help people get authenticated information
-        rapidly regarding COVID-affected areas of Pakistan?</p>
+      <h4 class="   mt-24 text-xl font-bold">Proposed Solution</h4>
+      <p class="font-light md:text-lg mt-4"><strong style='color:#E76C3D;'>Contact Tracing</strong> is one of the most
+        effective methods to reduce the spread of
+        the virus. According to the available information on CDC’s website, contact tracing starts when a suspected
+        patient is tested positive for the virus. </p>
 
-        <h4 class="   mt-24 text-xl font-bold">Proposed Solution</h4>
-        <p class="font-light md:text-lg mt-4">Contact Tracing is one of the most effective methods to reduce the spread of
-          the virus. According to the available information on CDC’s website, contact tracing starts when a suspected
-          patient is tested positive for the virus. </p>
 
-          
-          <p class="font-light md:text-lg mt-4">We can use this process to mark all the possible locations where the COVID patient might have gone before coming to the hospital. A ballpark figure is then synthesized and re-checked with the available data to obtain the correct amount of people affected in a specific area. </p>
-          <p class="text-lg font-semibold mt-14">Workflow</p>
-          <video class="w-full mt-10 rounded-xl" muted controls autoplay >
-            <source src="./src/resources/videos/prj5vid1.webm" />
-            <source src="./src/resources/videos/prj5vid1.mp4" />
-          </video>
-
-          <p class="text-lg font-semibold mt-14">Application Design</p>
-          <img alt="Final designs" class="rounded-xl mt-10" src="./src/resources/images/prj5img4.webp" />
+      <p class="font-light md:text-lg mt-4">We can use this process to mark all the possible locations where the COVID
+        patient might have gone before coming to the hospital. A ballpark figure is then synthesized and re-checked with
+        the available data to obtain the correct amount of people affected in a specific area. </p>
+      <p class="text-lg font-semibold mt-14">Workflow</p>
+      <video class="w-full mt-10 rounded-xl" muted controls autoplay>
+        <source src="./src/resources/videos/prj5vid1.webm" />
+        <source src="./src/resources/videos/prj5vid1.mp4" />
+      </video>
+      <p class="font-light text-sm text-center mt-2 ">Detailed workflow / user journey</p>
+      <p class="text-lg font-semibold mt-14">Application Design</p>
+      <img alt="Final designs" class="rounded-xl mt-10" src="./src/resources/images/prj5img4.png" />
+      <p class="font-light text-sm text-center mt-2 ">UI Designs for the application</p>
 
       <h4 class="   mt-24 text-xl font-bold">Design Considerations</h4>
 
@@ -110,7 +126,8 @@
         <span class="pl-8">
           <p class="text-lg font-semibold md:mt-14">A Peer-to-peer network</p>
           <p class="font-light md:text-lg mt-4">To tackle the infrastructure issue and provide the most updated
-            information, we decided to make the application decentralized. We relied heavily upon the authenticated
+            information, we decided to make the application <strong style='color:#E76C3D;'>decentralized</strong>. We
+            relied heavily upon the authenticated
             hospitals’ data to compare the statistics along with the frequency at which the network received data to
             manage the authenticity of the statistics.</p>
         </span>
@@ -120,10 +137,12 @@
         <img alt="Icon 2" class="w-36 mt-14 md:mt-0" src="./src/resources/icons/prj5img2.svg" />
         <span class="pl-8">
           <p class="text-lg font-semibold md:mt-14">Authentication of medical staff</p>
-          <p class="font-light md:text-lg mt-4">Authentication of medical staff is a crucial step in our data validation
+          <p class="font-light md:text-lg mt-4"><strong style='color:#E76C3D;'>Authentication of medical staff</strong>
+            is a crucial step in our data validation
             process. We use the data from the hospitals to compare the incoming reports and manage the authenticity. The
-            authentication process requires an admin who manages the accounts so that only authenticated personnel can
-            validate the information.</p>
+            authentication process requires an admin who manages the accounts so that <strong
+              style='color:#E76C3D;'>only authenticated personnel can
+              validate the information.</strong></p>
         </span>
       </span>
 
@@ -133,7 +152,8 @@
         <span class="pl-8">
           <p class="text-lg font-semibold md:mt-14">Readily available local data with Snapchat like heat-maps</p>
           <p class="font-light md:text-lg mt-4">One of the gaps found while researching existing applications is the
-            availability of local data. We decided to provide this information as heat maps inspired by Snapchat. By
+            <strong style='color:#E76C3D;'> availability of local data</strong>. We decided to provide this information
+            as heat maps inspired by Snapchat. By
             providing localized information, users will be able to take caution when traveling to affected locations.
           </p>
         </span>
@@ -141,11 +161,11 @@
 
       <h4 class="   mt-24 text-xl font-bold">Future Considerations</h4>
       <p class="text-lg font-semibold mt-14">Design Optimization</p>
-      <p class="font-light md:text-lg mt-4">We identified design optimization as one of the crucial steps to improving the authenticity of the information. By leveraging the new ideas in blockchain technology, we can improve applications' performance and enhance the network created.</p>
+      <p class="font-light md:text-lg mt-4 mb-14">We identified design optimization as one of the crucial steps to
+        improving the authenticity of the information. By leveraging the new ideas in blockchain technology, we can
+        improve applications' performance and enhance the network created.</p>
 
-        <p class="text-lg font-semibold mt-14">Multi-device application</p>
-          <p class="font-light md:text-lg mt-4 pb-14">To increase the overall usability and provide users ease in accessing the application. We decided to deliver this information on multiple platforms with similar experiences across each device.</p>
-      
+
     </div>
   </div>
 </body>
