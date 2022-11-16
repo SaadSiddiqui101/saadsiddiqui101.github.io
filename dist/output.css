@@ -813,6 +813,11 @@ select {
   margin-bottom: 2rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -1158,20 +1163,12 @@ select {
   padding-left: 2rem;
 }
 
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-
 .text-left {
   text-align: left;
 }
 
 .text-center {
   text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .text-sm {
@@ -1513,6 +1510,16 @@ li:last-child > .widget-list-link {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-purple-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity));
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:order-first {
     order: -9999;
@@ -1584,12 +1591,12 @@ li:last-child > .widget-list-link {
     width: 91.666667%;
   }
 
-  .md\:max-w-26ch {
-    max-width: 26ch;
-  }
-
   .md\:max-w-prose {
     max-width: 65ch;
+  }
+
+  .md\:max-w-26ch {
+    max-width: 26ch;
   }
 
   .md\:flex-col {
@@ -1689,7 +1696,7 @@ li:last-child > .widget-list-link {
 
 @media (min-width: 1280px) {
   .xl\:max-w-37 {
-    max-width: 37vw;
+    max-width: 45vw;
   }
 
   .xl\:items-end {
