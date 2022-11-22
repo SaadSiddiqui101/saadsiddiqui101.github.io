@@ -146,6 +146,24 @@
       <img alt="Brainstorming 2" class="rounded-xl mt-10" src="./src/resources/images/prj2img5.webp" />
       <p class="font-light text-sm text-center mt-2 ">Organization: Three possible solutions were identified</p>
 
+      <p class="text-lg font-semibold mt-14">Journey Maps</p>
+      <div class="rounded-xl bg-image-slideshow mt-4 ">
+        <div class="flex items-center justify-center">
+          <div class="w3-left text-2xl mr-4" onclick="plusDivs2(-1)">&#10094;</div>
+          <img alt="Buying Books" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img19.png">
+          <img alt="Renting Books" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img20.png">
+          <img alt="Checking out" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img21.png">
+
+
+          <div class="w3-right text-2xl ml-4" onclick="plusDivs2(1)">&#10095;</div>
+        </div>
+        <div class="justify-center flex mt-4 pb-4">
+          <span class="w3-badge demo2 border mr-2 rounded-3xl inline-block" onclick="currentDiv2(1)"></span>
+          <span class="w3-badge demo2 border rounded-3xl inline-block" onclick="currentDiv2(2)"></span>
+          <span class="w3-badge demo2 border ml-2 rounded-3xl inline-block" onclick="currentDiv2(3)"></span>
+        </div>
+      </div>
+
       <h4 class="text-3xl font-bold mt-24">Phase 3 - Implementation</h4>
       <span class="inline-block mt-14">
         <h4 class="text-lg font-semibold">The Architecture</h4>
@@ -239,7 +257,7 @@
     <script>
       var slideIndex = 1;
       showDivs(slideIndex);
-
+      showDivs2(slideIndex);
       function plusDivs(n) {
         showDivs(slideIndex += n);
       }
@@ -252,6 +270,31 @@
         var i;
         var x = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" bg-white", "");
+        }
+        console.log(slideIndex);
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " bg-white";
+      }
+
+      function plusDivs2(n) {
+        showDivs2(slideIndex += n);
+      }
+
+      function currentDiv2(n) {
+        showDivs2(slideIndex = n);
+      }
+
+      function showDivs2(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides2");
+        var dots = document.getElementsByClassName("demo2");
         if (n > x.length) { slideIndex = 1 }
         if (n < 1) { slideIndex = x.length }
         for (i = 0; i < x.length; i++) {
