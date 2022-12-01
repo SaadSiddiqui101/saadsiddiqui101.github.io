@@ -9,6 +9,9 @@
   <title>SmartAlert Case Study — Saad Siddiqui</title>
   <link href="./dist/output.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./src/resources/icons/favicon.svg">
+  <link rel="stylesheet" href="./dist/basicLightbox.min.css">
+
+  <script src="./dist/basicLightbox.min.js"></script>
 </head>
 
 <!-- <body class="mx-auto max-w-screen-2xl bg-black"> -->
@@ -116,7 +119,7 @@
       </video>
       <p class="font-light text-sm text-center mt-2 ">Detailed workflow / user journey</p>
       <p class="text-lg font-semibold mt-14">Application Design</p>
-      <img alt="Final designs" class="rounded-xl mt-10" src="./src/resources/images/prj5img4.png" />
+      <a id="lightbox" onclick="showLightbox(event)"> <img alt="Final designs" class="rounded-xl mt-10" src="./src/resources/images/prj5img4.png" /></a>
       <p class="font-light text-sm text-center mt-2 ">UI Designs for the application</p>
 
       <h4 class="   mt-24 text-xl font-bold">Design Considerations</h4>
@@ -168,6 +171,17 @@
 
     </div>
   </div>
+
+  <script>
+    function showLightbox(e) {
+      console.log()
+      const instance = basicLightbox.create(`` + document.getElementById(e.srcElement.parentElement.getAttribute("id")).innerHTML + `
+
+`);
+      instance.show()
+    }
+
+  </script>
 </body>
 
 </html>

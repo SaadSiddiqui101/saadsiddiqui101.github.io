@@ -9,6 +9,9 @@
   <title>Kutub Khana Case Study — Saad Siddiqui</title>
   <link href="./dist/output.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./src/resources/icons/favicon.svg">
+  <link rel="stylesheet" href="./dist/basicLightbox.min.css">
+
+  <script src="./dist/basicLightbox.min.js"></script>
 </head>
 
 <!-- <body class="mx-auto max-w-screen-2xl bg-black"> -->
@@ -76,15 +79,17 @@
         <p class="text-lg my-8  font-semibold italic">"I would choose books because it is much easier to
           focus. I use books for math-related subjects such as Linear Algebra. It is much easier to read equations in
           printed format than on a screen."</p>
+          <a id="lightbox" onclick="showLightbox(event)">
         <img alt="Survey Results: Usage of course books." class="rounded-xl mt-10" src="./src/resources/images/prj2img2.webp" />
-
+</a>
         <p class="font-light text-sm text-center mt-2 ">Survey Results: Usage of course books.</p>
        
         <p class="font-light md:text-lg mt-8">I approached a group of university students for <strong style="color:orange;"> qualitative interviews. </strong> Our interviews with students gave us lots of insights which we organized
           using an <strong style='color:orange;'>affinity diagram</strong> below.</p>
 
-       
+          <a id="lightbox2" onclick="showLightbox(event)">
         <img alt="Affinity Diagram" class="rounded-xl mt-10" src="./src/resources/images/prj2img3.webp" />
+        </a>
         <p class="font-light text-sm text-center mt-2 ">Organization of problems identified during interviews</p>
 
       
@@ -128,9 +133,9 @@
       <div class="rounded-xl bg-image-slideshow p-14">
         <div class="flex items-center justify-center">
           <div class="w3-left text-2xl mr-4" onclick="plusDivs(-1)">&#10094;</div>
-          <img alt="User Persona 1" class="mySlides slideshow-img" src="./src/resources/images/prj2img9.webp">
-          <img alt="User Persona 2" class="mySlides slideshow-img" src="./src/resources/images/prj2img10.webp">
-          <img alt="User Persona 3" class="mySlides slideshow-img" src="./src/resources/images/prj2img11.webp">
+          <a id="lightbox3" onclick="showLightbox(event)"><img alt="User Persona 1" class="mySlides slideshow-img" src="./src/resources/images/prj2img9.webp"></a>
+            <a id="lightbox4" onclick="showLightbox(event)"><img alt="User Persona 2" class="mySlides slideshow-img" src="./src/resources/images/prj2img10.webp"></a>
+              <a id="lightbox5" onclick="showLightbox(event)"><img alt="User Persona 3" class="mySlides slideshow-img" src="./src/resources/images/prj2img11.webp"></a>
 
 
           <div class="w3-right text-2xl ml-4" onclick="plusDivs(1)">&#10095;</div>
@@ -147,18 +152,18 @@
       <p class="font-light md:text-lg mt-3">Afterward, I held <strong style='color:orange;'>brainstorming sessions</strong> and <strong style='color:orange;'>general interviews</strong> with the students
         to gain their insights on what they thought an optimal solution could be. These ideas were then grouped and an
         optimal solution was selected that would cater to most if not all the problems we have identified.</p>
-      <img alt="Brainstorming 1" class="rounded-xl mt-10" src="./src/resources/images/prj2img4.webp" />
+        <a id="lightbox6" onclick="showLightbox(event)">  <img alt="Brainstorming 1" class="rounded-xl mt-10" src="./src/resources/images/prj2img4.webp" /></a>
       <p class="font-light text-sm text-center mt-2 ">Organization: We used post-its to organize and group different ideas.</p>
-      <img alt="Brainstorming 2" class="rounded-xl mt-10" src="./src/resources/images/prj2img5.webp" />
+      <a id="lightbox7" onclick="showLightbox(event)"> <img alt="Brainstorming 2" class="rounded-xl mt-10" src="./src/resources/images/prj2img5.webp" /></a>
       <p class="font-light text-sm text-center mt-2 ">Organization: Three possible solutions were identified</p>
 
       <p class="text-lg font-semibold mt-14">Journey Maps</p>
       <div class="rounded-xl bg-image-slideshow mt-4 ">
         <div class="flex items-center justify-center">
           <div class="w3-left text-2xl mr-4" onclick="plusDivs2(-1)">&#10094;</div>
-          <img alt="Buying Books" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img19.png">
-          <img alt="Renting Books" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img20.png">
-          <img alt="Checking out" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img21.png">
+          <a id="lightbox8" onclick="showLightbox(event)"> <img alt="Buying Books" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img19.png"></a>
+            <a id="lightbox9" onclick="showLightbox(event)"> <img alt="Renting Books" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img20.png"></a>
+              <a id="lightbox10" onclick="showLightbox(event)"><img alt="Checking out" class="mySlides2 slideshow-img2 rounded-xl" src="./src/resources/images/prj2img21.png"></a>
 
 
           <div class="w3-right text-2xl ml-4" onclick="plusDivs2(1)">&#10095;</div>
@@ -175,7 +180,7 @@
         <h4 class="text-lg font-semibold">The Architecture</h4>
         <p class="font-light md:text-lg mt-3">I designed a <strong style='color:orange;'>high-level user flow architecture</strong>, covering the basic
           functionalities of the application.</p>
-        <img alt="Architecture Diagram" class="rounded-xl mt-10" src="./src/resources/images/prj2img6.webp" />
+          <a id="lightbox11" onclick="showLightbox(event)">  <img alt="Architecture Diagram" class="rounded-xl mt-10" src="./src/resources/images/prj2img6.webp" /></a>
         <p class="font-light text-sm text-center mt-2 ">Architectural Diagram of the solution</p>
 
       </span>
@@ -184,16 +189,16 @@
         <h4 class="text-lg font-semibold">The Wireframes</h4>
         <p class="font-light md:text-lg mt-3"><strong style='color:orange;'>Low-fed and Hi-fed wireframes</strong> and screen designs of the above-mentioned
           functions were created in Figma</p>
-        <img alt="Wireframes" class="rounded-xl mt-10" src="./src/resources/images/prj2img7.webp" />
+          <a id="lightbox12" onclick="showLightbox(event)"><img alt="Wireframes" class="rounded-xl mt-10" src="./src/resources/images/prj2img7.webp" /></a>
         <p class="font-light text-sm text-center mt-2 ">Wireframes of the solution</p>
 
       </span>
       <h4 class="text-2xl font-bold mt-32">Quantative Usability Testing and End-User Acceptance Test</h4>
       <p class="font-light md:text-lg mt-4">To test and verify our solution, we approached our users for moderated testing. Our test included indicators like <strong style='color:orange;'>success rate, completition time, time taken at each section</strong> etc.</p>
-      <img alt="Wireframes" class="rounded-xl mt-10" src="./src/resources/images/prj2img17.jpg" />
+      <a id="lightbox13" onclick="showLightbox(event)"><img alt="Test 1" class="rounded-xl mt-10" src="./src/resources/images/prj2img17.jpg" /></a>
       <p class="font-light text-sm text-center mt-2 ">Success for indivisual task</p>
      
-      <img alt="Wireframes" class="rounded-xl mt-10" src="./src/resources/images/prj2img16.jpg" />
+      <a id="lightbox14" onclick="showLightbox(event)"><img alt="Test 2" class="rounded-xl mt-10" src="./src/resources/images/prj2img16.jpg" /></a>
       <p class="font-light text-sm text-center mt-2 ">Average completion time of each task</p>
 
       <p class="text-lg font-semibold mt-14">Key Points</p>
@@ -318,6 +323,16 @@
         x[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " bg-white";
       }
+    </script>
+    <script>
+      function showLightbox(e) {
+        console.log()
+        const instance = basicLightbox.create(`` + document.getElementById(e.srcElement.parentElement.getAttribute("id")).innerHTML + `
+  
+  `);
+        instance.show()
+      }
+
     </script>
 </body>
 
