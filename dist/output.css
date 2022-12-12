@@ -1480,7 +1480,7 @@ li:last-child > .widget-list-link {
   inset: 0;
   width: 100%;
   filter: blur(70px);
-  opacity: 0.35;
+  opacity: 0.25;
   z-index: -1;
 }
 
@@ -1572,8 +1572,12 @@ li:last-child > .widget-list-link {
     display: none;
   }
 
-  .sm\:w-4\/12 {
-    width: 33.333333%;
+  .sm\:w-4 {
+    width: 1rem;
+  }
+
+  .sm\:w-special {
+    width: 30.333%;
   }
 
   .sm\:max-w-3\/5 {
@@ -1727,6 +1731,11 @@ li:last-child > .widget-list-link {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1740,6 +1749,21 @@ li:last-child > .widget-list-link {
 
   .xl\:text-8xl {
     font-size: 6rem;
+    line-height: 1;
+  }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .xl\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 

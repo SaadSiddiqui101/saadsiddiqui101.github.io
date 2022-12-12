@@ -13,10 +13,11 @@ module.exports = {
         '4/5': '80%',
         '37': '45vw',
         '26ch' : "26ch",
-        '40ch' : "40ch"
+        '40ch' : "40ch",
       },
       width: {
         'inherit': 'inherit',
+        'special': '30.333%'
       }
     },
   },
