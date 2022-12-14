@@ -818,6 +818,16 @@ select {
   margin-bottom: 2rem;
 }
 
+.mx-14 {
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1036,10 +1046,6 @@ select {
   align-items: baseline;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -1154,6 +1160,21 @@ select {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
 }
 
 .pt-7 {
@@ -1572,10 +1593,6 @@ li:last-child > .widget-list-link {
     display: none;
   }
 
-  .sm\:w-4 {
-    width: 1rem;
-  }
-
   .sm\:w-special {
     width: 30.333%;
   }
@@ -1672,6 +1689,11 @@ li:last-child > .widget-list-link {
 }
 
 @media (min-width: 1024px) {
+  .lg\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -1686,6 +1708,14 @@ li:last-child > .widget-list-link {
 
   .lg\:mt-32 {
     margin-top: 8rem;
+  }
+
+  .lg\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
   }
 
   .lg\:block {
@@ -1717,8 +1747,13 @@ li:last-child > .widget-list-link {
     padding-right: 3.5rem;
   }
 
-  .lg\:text-xl {
-    font-size: 1.25rem;
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 
@@ -1732,8 +1767,8 @@ li:last-child > .widget-list-link {
     line-height: 2rem;
   }
 
-  .lg\:text-lg {
-    font-size: 1.125rem;
+  .lg\:text-xl {
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
@@ -1745,21 +1780,6 @@ li:last-child > .widget-list-link {
 
   .xl\:items-end {
     align-items: flex-end;
-  }
-
-  .xl\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .xl\:text-7xl {
