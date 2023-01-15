@@ -7,7 +7,12 @@
     position:absolute;
 
 }
-
+.work-img-width{
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
 .main-video{
   top: 0;
   bottom: 0;

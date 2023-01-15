@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@splinetool/runtime": "^0.9.80",
-    "basiclightbox": "^5.0.4"
+    "basiclightbox": "^5.0.4",
+    "http-server": "^14.1.1"
   }
 }
