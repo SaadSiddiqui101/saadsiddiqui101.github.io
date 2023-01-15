@@ -1031,10 +1031,6 @@ select {
   scroll-behavior: smooth;
 }
 
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -1117,11 +1113,6 @@ select {
   padding-bottom: 0.5rem;
 }
 
-.py-11 {
-  padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1195,11 +1186,6 @@ select {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-light {
@@ -1531,11 +1517,6 @@ li:last-child > .widget-list-link {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.hover\:underline:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
 @media (min-width: 640px) {
   .sm\:order-first {
     order: -9999;
@@ -1543,6 +1524,14 @@ li:last-child > .widget-list-link {
 
   .sm\:mt-0 {
     margin-top: 0px;
+  }
+
+  .sm\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .sm\:w-special {
+    width: 30.333%;
   }
 
   .sm\:max-w-3\/5 {
@@ -1563,12 +1552,20 @@ li:last-child > .widget-list-link {
     margin-right: 2.5rem;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
+  .md\:mt-auto {
+    margin-top: auto;
   }
 
-  .md\:mt-32 {
-    margin-top: 8rem;
+  .md\:mb-auto {
+    margin-bottom: auto;
+  }
+
+  .md\:ml-auto {
+    margin-left: auto;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:mt-48 {
@@ -1609,11 +1606,6 @@ li:last-child > .widget-list-link {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1621,16 +1613,20 @@ li:last-child > .widget-list-link {
     margin-top: 0px;
   }
 
+  .lg\:mr-14 {
+    margin-right: 3.5rem;
+  }
+
+  .lg\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:max-w-3\/5 {
     max-width: 60%;
-  }
-
-  .lg\:max-w-lg {
-    max-width: 32rem;
-  }
-
-  .lg\:max-w-md {
-    max-width: 28rem;
   }
 
   .lg\:px-14 {
@@ -1638,39 +1634,20 @@ li:last-child > .widget-list-link {
     padding-right: 3.5rem;
   }
 
-  .lg\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width: 1280px) {
   .xl\:items-end {
     align-items: flex-end;
-  }
-
-  .xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .xl\:leading-none {
-    line-height: 1;
   }
 }
 
