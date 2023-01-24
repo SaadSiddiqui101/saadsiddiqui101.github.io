@@ -781,21 +781,35 @@ select {
   order: 9999;
 }
 
-.order-first {
-  order: -9999;
-}
-
 .order-1 {
   order: 1;
+}
+
+.order-first {
+  order: -9999;
 }
 
 .float-right {
   float: right;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .my-10 {
@@ -811,6 +825,11 @@ select {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .mt-4 {
@@ -837,6 +856,10 @@ select {
   margin-bottom: 1rem;
 }
 
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -845,28 +868,16 @@ select {
   margin-top: 6rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-10 {
   margin-top: 2.5rem;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .mt-3 {
@@ -885,8 +896,20 @@ select {
   margin-top: 1.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mb-36 {
   margin-bottom: 9rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .-mb-44 {
@@ -1123,6 +1146,21 @@ select {
   padding-bottom: 0.75rem;
 }
 
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .pt-7 {
   padding-top: 1.75rem;
 }
@@ -1135,20 +1173,28 @@ select {
   padding-bottom: 3.5rem;
 }
 
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
 .pl-14 {
   padding-left: 3.5rem;
 }
 
-.pb-7 {
-  padding-bottom: 1.75rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .pb-4 {
   padding-bottom: 1rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
+.pb-7 {
+  padding-bottom: 1.75rem;
 }
 
 .pb-8 {
@@ -1178,14 +1224,14 @@ select {
   line-height: 1.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-light {
@@ -1196,16 +1242,16 @@ select {
   font-weight: 600;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-black {
   font-weight: 900;
 }
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-extralight {
-  font-weight: 200;
 }
 
 .italic {
@@ -1548,10 +1594,6 @@ li:last-child > .widget-list-link {
     margin-top: 3.5rem;
   }
 
-  .md\:mr-10 {
-    margin-right: 2.5rem;
-  }
-
   .md\:mt-auto {
     margin-top: auto;
   }
@@ -1632,11 +1674,6 @@ li:last-child > .widget-list-link {
   .lg\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
-  }
-
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-4xl {
