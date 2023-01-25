@@ -953,6 +953,22 @@ select {
   height: 100%;
 }
 
+.h-3\/5 {
+  height: 60%;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -979,6 +995,30 @@ select {
 
 .w-36 {
   width: 9rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-special {
+  width: 30.333%;
 }
 
 .min-w-full {
@@ -1636,6 +1676,14 @@ li:last-child > .widget-list-link {
     display: flex;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:max-w-prose {
     max-width: 65ch;
   }
@@ -1650,6 +1698,10 @@ li:last-child > .widget-list-link {
 
   .md\:pr-10 {
     padding-right: 2.5rem;
+  }
+
+  .md\:pl-3 {
+    padding-left: 0.75rem;
   }
 
   .md\:text-4xl {
@@ -1669,6 +1721,10 @@ li:last-child > .widget-list-link {
 }
 
 @media (min-width: 1024px) {
+  .lg\:m-3 {
+    margin: 0.75rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -1685,8 +1741,28 @@ li:last-child > .widget-list-link {
     margin-top: 6rem;
   }
 
+  .lg\:mb-24 {
+    margin-bottom: 6rem;
+  }
+
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
   .lg\:block {
     display: block;
+  }
+
+  .lg\:h-auto {
+    height: auto;
+  }
+
+  .lg\:w-special {
+    width: 30.333%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:min-w-fit {
