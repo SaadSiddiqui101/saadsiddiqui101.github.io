@@ -27,7 +27,7 @@
 <body class="mx-auto bg-black">
 
   <header class="">
-    <nav
+    <!-- <nav
       class="text-white container basis-full min-w-full h-fit flex flex-row  justify-between items-baseline px-7 lg:px-14 py-7 ">
       <a href="/">
         <p class="border-t border-red-500">elvey picklepants</p>
@@ -35,7 +35,7 @@
       <a href="/#contact"><button
           class="border rounded-md px-3 py-2 text-sm hover:bg-white hover:text-black transition-colors">Let's
           Connect</button></a>
-    </nav>
+    </nav> -->
     <main class="text-white   h-fit  items-center grow">
       <img class="mb-24" src="./src/resources/images/prj1.png" />
       <span id="name_section"
@@ -90,14 +90,27 @@
 
 
       <h4 class="text-3xl font-medium mt-24">Journey</h4>
-      <img alt="Representation of design system impact"
-      class="mt-8" src="./src/resources/images/prj1im10.png" />
-    
+      <img alt="Representation of design system impact" class="mt-8" src="./src/resources/images/prj1im10.png" />
+      <h4 class="   mt-14 text-xl ">Mapping Architecture</h4>
+
+      <p class="    mt-4 md:text-lg font-light">
+        Initially, we created an information architecture to map out the main functions. This activity gave us an insight into the scale and user flows.</p>
+      <h4 class="   mt-14 text-xl ">Working with Requirement Artifacts</h4>
+
+      <p class="    mt-4 md:text-lg font-light">
+        After analyzing requirement artifacts like business requirements, and requirement traceability matrices, we improved the user flow, ensuring they align with the business and product goals.</p>
+      <h4 class="   mt-14 text-xl ">Auditing Component Library</h4>
+
+      <p class="    mt-4 md:text-lg font-light">
+        After understanding the scale, functions, and user flows, we audited the existing component library and mapped out the component's usage in various modules.</p>
+      <h4 class="   mt-14 text-xl ">Identifying Patterns</h4>
+
+      <p class="    mt-4 md:text-lg font-light">
+        It was important for us to understand not only how many times each component is being used but also how they are being used. This led us to identify various interface patterns within our application.</p>
+     
       <h4 class="text-3xl font-medium mt-24">Foundation</h4>
 
-      <p class="text-lg mt-7 font-light">By following the atomic approach, we focused initially on the atoms, the
-        building blocks of our design system, crafted keeping the scalability in mind. All of our components are built
-        from using these properties. </p>
+      <p class="text-lg mt-7 font-light">By following the atomic approach, we focused initially on the building blocks of our design system, keeping scalability in mind. All of our components are built using these properties. Since the design system is for a web application, we kept the foundation platform agnostic. </p>
       <a id="lightbox4" onclick="showLightbox(event)"><img alt="Atoms" class="mt-10"
           src="./src/resources/images/prj1im2.png" /></a>
 
@@ -105,60 +118,51 @@
 
       <div class="flex my-14 flex-wrap items-center">
         <img alt="Atoms" style="width:50%;height: auto;" class="pr-3" src="./src/resources/images/prj1im3.png" />
-        <p style="width:50%" class="text-lg mt-7 pl-3 font-light">We introduced a complete color scheme along with a
-          typographic scale that ensured our company's branding. We also made sure that the colors choosen provided
-          enough contrast through WCAG 2.0 guide. We tested these colors in both light and dark schemes to make sure
-          that the teams using our system have multiple options. </p>
+        <p style="width:50%" class="text-lg mt-7 pl-3 font-light">We introduced a color scheme along with a typographic scale that ensured our company's branding and messaging. We also made sure that the colors chosen provided enough contrast through WCAG 2.0 guide by testing these colors in both light and dark schemes to make sure that the teams using our system have multiple options.  </p>
 
       </div>
 
       <h4 class="text-3xl font-medium mt-24">Component Library</h4>
-      <p class="text-lg mt-7 font-light">By following the atomic approach, we focused initially on the atoms, the
-        building blocks of our design system, crafted keeping the scalability in mind. All of our components are built
-        from using these properties. </p>
+      <p class="text-lg mt-7 font-light"> After intensive research and inventory, we compiled all of our components within the system in the form of a library. Since we are using React JS on the front end, it is easier to isolate components on the development side as well. </p>
     </div>
-    <img alt="Atoms" class="mt-24"
-        src="./src/resources/images/prj1im5.png" />
+    <img alt="Atoms" class="mt-24" src="./src/resources/images/prj1im5.png" />
 
     <div class="lg:max-w-3/5 mx-auto ">
 
       <div class="flex my-14 flex-wrap items-center">
         <img alt="Atoms" style="width:50%;height: auto;" class="pr-3" src="./src/resources/images/prj1im7.png" />
-        <p style="width:50%" class="text-lg mt-7 pl-3 font-light">We introduced a complete color scheme along with a
-          typographic scale that ensured our company's branding. We also made sure that the colors choosen provided
-          enough contrast through WCAG 2.0 guide. We tested these colors in both light and dark schemes to make sure
-          that the teams using our system have multiple options. </p>
+        <p style="width:50%" class="text-lg mt-7 pl-3 font-light">Along with each refined component we provided all the properties like padding, border, and all the possible states within the component. 
+        </p>
 
       </div>
 
 
       <h4 class="text-3xl font-medium mt-24">Pattern and Processes</h4>
-      <p class="text-lg mt-7 font-light">By following the atomic approach, we focused initially on the atoms, the
-        building blocks of our design system, crafted keeping the scalability in mind. All of our components are built
-        from using these properties. </p>
+      <p class="text-lg mt-7 font-light">Since our application had multiple instances where reusable processes were required, we identified those patterns & processes at the start and provided them within our design system. </p>
 
-        </div>
-        <img alt="Atoms" class="mt-24"
-        src="./src/resources/images/prj1im8.png" />
-        <div class="lg:max-w-3/5 mx-auto ">
-          <h4 class="text-3xl font-medium mt-24">Impact</h4>
-          <p class="text-lg mt-7 font-light">A clear difference in time was observed [approx 40% average] between modules developed using our new design system and modules developed and designed from scratch.  </p>
-          <a id="lightbox11" onclick="showLightbox(event)"> <img alt="Representation of design system impact"
-            class="mt-8 rounded-xl" src="./src/resources/images/prj1im9.png" /></a>
+    </div>
+    <img alt="Atoms" class="mt-24" src="./src/resources/images/prj1im8.png" />
+    <div class="lg:max-w-3/5 mx-auto ">
+      <h4 class="text-3xl font-medium mt-24">Impact</h4>
+      <p class="text-lg mt-7 font-light">A clear difference in time was observed [approx 40% average] between modules
+        developed using our new design system and modules developed and designed from scratch. </p>
+      <a id="lightbox11" onclick="showLightbox(event)"> <img alt="Representation of design system impact"
+          class="mt-8 " src="./src/resources/images/prj1im9.png" /></a>
 
-            <h4 class="   mt-14 text-xl font-medium">Whats Next?</h4>
-            <span class="inline-block  mt-10">
-              <h4 class="text-lg font-semibold">Benchmarks & Testing</h4>
-              <p class="font-light md:text-lg">Our Design System provides a guideline to benchmark our ideas and test and
-                improve the system for new cases.</p>
-      
-            </span>
-            <span class="inline-block    my-10">
-              <h4 class="text-lg font-semibold">Improvement and Documentation</h4>
-              <p class="font-light md:text-lg">We continue to improve the documentation and develop use cases to understand
-                the application and help the engineering team use the system efficiently.</p>
-      
-            </span>
+      <h4 class="   mt-14 text-xl font-medium">Whats Next?</h4>
+      <span class="inline-block  mt-10">
+        
+        <h4 class="text-xl ">Benchmarks & Testing</h4>
+        <p class="font-light md:text-lg">Our Design System provides a guideline to benchmark our ideas and test and
+          improve the system for new cases.</p>
+
+      </span>
+      <span class="inline-block    my-10">
+        <h4 class="text-xl">Improvement and Documentation</h4>
+        <p class="font-light md:text-lg">We continue to improve the documentation and develop use cases to understand
+          the application and help the engineering team use the system efficiently.</p>
+
+      </span>
     </div>
 
     <script>
