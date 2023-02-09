@@ -1529,6 +1529,10 @@ li:last-child > .widget-list-link {
     margin-right: 0px;
   }
 
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:w-special {
     width: 30.333%;
   }
