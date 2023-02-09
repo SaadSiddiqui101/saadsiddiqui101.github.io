@@ -19,6 +19,9 @@ module.exports = {
       width: {
         'inherit': 'inherit',
         'special': '30.333%'
+      },
+      height: {
+        'workh': '29rem'
       }
     },
   },

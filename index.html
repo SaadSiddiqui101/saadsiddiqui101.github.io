@@ -38,7 +38,7 @@
     <span class=" z-10 w-full h-full flex flex-wrap">
     <!-- Nav Section -->
     <nav
-      class="container basis-full min-w-full lg:min-w-fit  h-fit flex flex-row  justify-between items-baseline lg:max-w-1200 mx-auto py-7 mb-10 px-4 lg:px-0">
+      class="container basis-full min-w-full lg:min-w-fit  h-fit flex flex-row  justify-between items-baseline lg:max-w-1200 mx-auto py-7 mb-10 px-7 lg:px-14 ">
       <p class="border-t border-red-500">Saad Siddiqui</p>
       <a href="#contact"><button
           class="border  px-3 py-2 text-sm hover:bg-red-500 hover:text-white transition-colors">Let's
@@ -47,10 +47,10 @@
     <!-- End of Nav Section -->
 
     <!-- Main Section -->
-    <main id="expHeading" class="mx-auto lg:max-w-1200 px-4 lg:px-0  rounded-xl flex  h-fit   lg:mt-24 mb-12 ">
+    <main id="expHeading" class="mx-auto lg:max-w-1200 px-7 lg:px-14  rounded-xl flex  h-fit   lg:mt-24 mb-12 ">
       <span id="name_section"  class=" flex-2 max-w-full order-last sm:order-first mt-14 sm:mt-0">
-        <span class="hero-text">
-        <p  class="lg:w-4/5 mt-3  w-full ">
+        <span class="hero-text xl:w-4/5 block">
+        <p  class="mt-3  w-full ">
           <p class="inline text-2xl lg:text-4xl" data-textify>A</p><p class="inline text-2xl lg:text-4xl text-red-500" data-textify>Product Designer</p><p class="inline text-2xl lg:text-4xl" data-textify>and</p><p class="inline text-2xl lg:text-4xl text-red-500" data-textify>Engineer,</p><p class="inline text-2xl lg:text-4xl" data-textify>using design practices to drive innovation and create empathy at every stage of the product design journey.</p>   </p>
       </span>
         <ul class="mt-5">
@@ -73,19 +73,30 @@
     </span>
   </header>
 
-  <section class="mt-24 lg:max-w-1200 px-4 lg:px-0 mx-auto w-screen">
+  <section class="mt-24 lg:max-w-1200 px-7 lg:px-14 mx-auto w-full">
     <div class="w-inherit max-w-full">
-      <p id="workHeading" class="text-2xl">My Work</p>
+      <p id="workHeading" class="text-2xl text-gray-400">My Work</p>
     </div>
   
   <section class="mt-10 content-start justify-content-between ">
-    <div id="workPost1" class="w-inherit w-full text-white mt-14 md:mt-0 ">
-      <span class="block hover:scale-95 transition-transform duration-300 ease-in-out">
-        <a href="./enterprise-app"> 
-        <img alt="PSW Project"   class="work-img-width"  src="./src/resources/images/image-1.png" />
-        </a>
+    <div id="workPost1" class="w-inherit w-full text-white mt-14 md:mt-0 lg:h-workh overflow-clip ">
+      <a href="./enterprise-app">
+      <span style="background-color:#2B3E63" class="flex flex-wrap   hover:scale-95 transition-transform duration-300 ease-in-out">
+ 
+        <span class="lg:w-2/5 block lg:py-14 lg:pl-14 lg:pr-0 p-8">
+          <h5 class="text-3xl font-semibold">Empowering an enterprise-level team for efficient and effective co-creation</h5>
+        <p>Nov 2022</p>
+        <p class="mt-8">Created a modular design system that allows cross-team ideation and development in an optimized way.</p>
+        <p class="mt-8 ">Results</p>
+        <span class="flex flex-wrap mt-2">
+        <p class="w-auto border-r-2 pr-4 mr-4"><span class="text-4xl font-bold">100+</span><br>Design token</p><p class="w-auto"><span class="text-4xl font-bold">40%</span><br>Reduction in time</p>
+        </span>
+       
+      </span>
+      <img alt="PSW Project"   class="lg:w-3/5 pt-14 pl-8"  src="./src/resources/images/image-1.png" />
 
       </span>
+    </a>
     </div>
   </section>
 
@@ -94,20 +105,48 @@
    
     <div class=" w-inherit w-full md:mt-0">
 
-      <span id="workPost3" class="block">
-      <span  class="block hover:scale-95 transition-transform duration-300 ease-in-out">
-        <a href="./in-brain"> 
-        <img alt="E-Learning Tool"    src="./src/resources/images/image-3.png" />
-       </a>
-      </span>
-    </span>
-    <span id="workPost2" class="block">
-      <span  class="block mt-14 hover:scale-95 transition-transform duration-300 ease-in-out">
-        <a href="./kutub-khana"> 
-        <img alt="Kutub Khana"  style="width: 100%; width: -moz-available; width: -webkit-fill-available;width: fill-available;"  src="./src/resources/images/image-2.png" />
-        </a>
-      </span>
-    </span>
+      <div id="workPost3" class="w-inherit w-full text-white mt-14 md:mt-0 lg:h-workh overflow-clip ">
+        <a href="./in-brain">
+        <span style="background-color:#FF7266" class="flex flex-wrap   hover:scale-95 transition-transform duration-300 ease-in-out">
+   
+          <span class="lg:w-2/5 block lg:py-14 lg:pl-14 lg:pr-0 p-8">
+            <h5 class="text-3xl font-semibold">Creating an e-learning platform for children with down syndrome</h5>
+          <p>2019 - 2020</p>
+          <p class="mt-8">Researched for an effective way to create a mobile education platform for children with special needs.</p>
+          <p class="mt-8 ">Results</p>
+          <span class="flex flex-wrap mt-2">
+          <p class="w-auto  pr-4 mr-4">Identified the market gap and ideated on one of the possible ways for solving the problem.
+
+          </p>
+          </span>
+         
+        </span>
+        <img alt="PSW Project"   class="lg:w-3/5 pt-14 pl-8"  src="./src/resources/images/image-3.png" />
+  
+        </span>
+      </a>
+      </div>
+
+      <div id="workPost2" class="w-inherit w-full text-white mt-14  lg:h-workh overflow-clip ">
+        <a href="./kutub-khana">
+        <span style="background-color:#F2A35E" class="flex flex-wrap   hover:scale-95 transition-transform duration-300 ease-in-out">
+   
+          <span class="lg:w-2/5 block lg:py-14 lg:pl-14 lg:pr-0 p-8">
+            <h5 class="text-3xl font-semibold">Helping freshmen get <br> course material without spending  too much</h5>
+          <p>2019</p>
+          <p class="mt-8">I designed a solution for students to be able easily <br> buy or rent books from other students.</p>
+          <p class="mt-8 ">Results</p>
+          <span class="flex flex-wrap mt-2">
+          <p class="w-auto  pr-4 mr-4">Launched an in-house app called “Kutub-khana”
+          </p>
+          </span>
+         
+        </span>
+        <img alt="PSW Project"   class="lg:w-3/5 pt-14 pl-8"  src="./src/resources/images/image-2.png" />
+  
+        </span>
+      </a>
+      </div>
       
     </div>
 
@@ -117,11 +156,12 @@
 
   </section>
 
-  <footer id="contact" class="mt-32 md:mt-48 w-full mb-80 lg:max-w-1200 px-4 lg:px-0 mx-auto  text-center">
+  <footer id="contact" class="mt-32  w-full mb-32 lg:max-w-1200 px-7 lg:px-14 mx-auto  text-center">
     <div class="w-14 border-t border-red-500 mb-10 mx-auto"></div>
-    <p data-textify class="inline text-4xl font-medium text-gray-400">Have a project in mind?</p>
-    <p data-textify class="text-2xl mt-2"> Let's connect</p>
+    <p data-textify class="inline text-2xl font-medium text-gray-400">Have a project in mind?</p>
+    <p data-textify class=" mt-2"> Let's connect</p>
    <a href="mailto:saad.siddiqui2014@gmail.com"><button class="mt-8 border-red-500 border-2 text-red-500 hover:bg-red-500 py-4 px-8 hover:text-white">Send an email</button></a> 
+  
   </footer>
 
   <script>
