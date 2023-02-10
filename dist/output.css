@@ -1409,7 +1409,6 @@ li:last-child > .widget-list-link {
   background-size: cover;
   background-position: center;
   height: 60vh;
-  background-attachment: fixed;
 }
 
 .main-vid-overlay{
@@ -1542,6 +1541,10 @@ li:last-child > .widget-list-link {
     width: 60%;
   }
 
+  .md\:bg-fixed {
+    background-attachment: fixed;
+  }
+
   .md\:object-cover {
     -o-object-fit: cover;
        object-fit: cover;
@@ -1565,11 +1568,6 @@ li:last-child > .widget-list-link {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }
 
@@ -1628,14 +1626,6 @@ li:last-child > .widget-list-link {
 
   .lg\:w-1\/2 {
     width: 50%;
-  }
-
-  .lg\:w-2\/5 {
-    width: 40%;
-  }
-
-  .lg\:w-3\/5 {
-    width: 60%;
   }
 
   .lg\:min-w-fit {
