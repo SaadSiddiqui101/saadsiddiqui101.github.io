@@ -81,7 +81,6 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 
-
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and *not* Next.js
@@ -103,3 +102,21 @@ typings/
 # TernJS port file
 .tern-port
 .vscode/settings.json
+
+# skydev-extension: managed .skydev rules (begin)
+# Ignore Sky Dev workspace data; keep deep_spec versioned.
+.skydev/*
+!.skydev/deep_spec/
+!.skydev/deep_spec/**
+
+# Ignore transient property-test artifacts.
+property_tests/_deps/
+property_tests/.staging/
+property_tests/toolchain-probe-cache.json
+property_tests/**/build/
+property_tests/**/corpus/
+property_tests/**/dist/
+property_tests/**/logs/
+property_tests/**/crashes/
+property_tests/**/crash-*.txt
+# skydev-extension: managed .skydev rules (end)
