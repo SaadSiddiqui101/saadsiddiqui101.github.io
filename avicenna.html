@@ -212,7 +212,9 @@
       .section-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease, padding 0.4s ease;
+        transition:
+          max-height 0.4s ease,
+          padding 0.4s ease;
         padding: 0;
         font-size: 14px;
         line-height: 20px;
@@ -259,61 +261,67 @@
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
       }
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-.sticky-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 20px 130px;
-      background: var(--bg);
-      z-index: 100;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .sticky-header.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .sticky-header .breadcrumb {
-      font-size: 14px;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-    .sticky-header .breadcrumb a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-    .sticky-header .breadcrumb a:hover { text-decoration: underline; }
-    .sticky-header .breadcrumb .current {
-      color: var(--text);
-      font-weight: 500;
-    }
-    .sticky-header .sticky-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 1023px) {
-      .page {
-        padding: 0 5% 80px;
+      .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 130px;
+        background: var(--bg);
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 20px;
       }
-      .sticky-header { padding: 20px 5%; }
+      .sticky-header.visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .sticky-header .breadcrumb {
+        font-size: 14px;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+      .sticky-header .breadcrumb a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .sticky-header .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .sticky-header .breadcrumb .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .sticky-header .sticky-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 1023px) {
+        .page {
+          padding: 0 5% 80px;
+        }
+        .sticky-header {
+          padding: 20px 5%;
+        }
         .content-grid {
           grid-template-columns: 1fr;
           gap: 40px;
@@ -337,9 +345,12 @@
     </style>
   </head>
   <body>
-    <div class="gradient-overlay" style="transform:rotate(180deg)"></div>
+    <div class="gradient-overlay" style="transform: rotate(180deg)"></div>
     <div class="sticky-header">
-      <p class="breadcrumb"><a href="./index.html">Home</a> / <span class="current">Avicenna 2025</span></p>
+      <p class="breadcrumb">
+        <a href="./index.html">Home</a> /
+        <span class="current">Avicenna 2025</span>
+      </p>
       <p class="sticky-title">Designing AI for Modern Healthcare Workflows</p>
     </div>
 
@@ -367,7 +378,9 @@
         <a href="./index.html">Home</a> /
         <span class="current">Avicenna 2025</span>
       </p>
-      <h1 class="hero-title fade-in">Designing AI for Modern Healthcare Workflows</h1>
+      <h1 class="hero-title fade-in">
+        Designing AI for Modern Healthcare Workflows
+      </h1>
 
       <div class="content-grid">
         <div class="content-column">
@@ -382,10 +395,16 @@
             </div>
             <div class="section-content">
               <p>
-                Avicenna, a med-tech solution designed to bridge the gap between patient care and administrative compliance. The platform empowers physicians to record and transcribe patient sessions in real-time, leveraging AI to automate the burdensome task of filing insurance claims.
+                Avicenna, a med-tech solution designed to bridge the gap between
+                patient care and administrative compliance. The platform
+                empowers physicians to record and transcribe patient sessions in
+                real-time, leveraging AI to automate the burdensome task of
+                filing insurance claims.
               </p>
               <p>
-               I led the end-to-end design strategy—from foundational branding and logo development to a scalable, cross-platform design system for desktop and mobile.
+                I led the end-to-end design strategy—from foundational branding
+                and logo development to a scalable, cross-platform design system
+                for desktop and mobile.
               </p>
             </div>
           </div>
@@ -400,11 +419,25 @@
               />
             </div>
             <div class="section-content">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                  <li style="margin-bottom:8px">Physicians are often overwhelmed by administrative "paperwork." The challenge was to design a recording interface that felt invisible during a session while remaining highly functional afterward.</li>
-                  <li style="margin-bottom:8px">Navigating the rigid constraints of HIPAA compliance required a meticulous approach to data privacy. I had to ensure that the UX never compromised sensitive patient information while still providing the doctor with actionable transcriptions.</li>
-                  <li style="margin-bottom:8px">Maintaining the density of medical data across a mobile-first responsive framework without losing the utility of the dashboard's analytical insights.</li>
-                </ul>
+              <ul style="list-style-type: disc; padding-left: 20px">
+                <li style="margin-bottom: 8px">
+                  Physicians are often overwhelmed by administrative
+                  "paperwork." The challenge was to design a recording interface
+                  that felt invisible during a session while remaining highly
+                  functional afterward.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Navigating the rigid constraints of HIPAA compliance required
+                  a meticulous approach to data privacy. I had to ensure that
+                  the UX never compromised sensitive patient information while
+                  still providing the doctor with actionable transcriptions.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Maintaining the density of medical data across a mobile-first
+                  responsive framework without losing the utility of the
+                  dashboard's analytical insights.
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -418,12 +451,29 @@
               />
             </div>
             <div class="section-content">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                  <li style="margin-bottom:8px">I mapped out the doctor’s journey from "entry to export," focusing on a "One-Tap" recording start to minimize distractions during patient consultations.</li>
-                  <li style="margin-bottom:8px">Designed a high-density dashboard that prioritizes "Time Saved" and "Session Completion" metrics, giving doctors a clear view of their daily efficiency at a glance.</li>
-                  <li style="margin-bottom:8px">I implemented a "Zero-Storage" philosophy for sensitive identifiers within the UI, ensuring the platform acted as a conduit for transcription rather than a high-risk data repository.</li>
-                  <li style="margin-bottom: 8px;">Developed a cohesive visual language that scales from detailed desktop analytics to simplified mobile recording controls, ensuring a seamless handoff between devices.</li>
-                </ul>
+              <ul style="list-style-type: disc; padding-left: 20px">
+                <li style="margin-bottom: 8px">
+                  I mapped out the doctor’s journey from "entry to export,"
+                  focusing on a "One-Tap" recording start to minimize
+                  distractions during patient consultations.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Designed a high-density dashboard that prioritizes "Time
+                  Saved" and "Session Completion" metrics, giving doctors a
+                  clear view of their daily efficiency at a glance.
+                </li>
+                <li style="margin-bottom: 8px">
+                  I implemented a "Zero-Storage" philosophy for sensitive
+                  identifiers within the UI, ensuring the platform acted as a
+                  conduit for transcription rather than a high-risk data
+                  repository.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Developed a cohesive visual language that scales from detailed
+                  desktop analytics to simplified mobile recording controls,
+                  ensuring a seamless handoff between devices.
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -437,11 +487,23 @@
               />
             </div>
             <div class="section-content">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li style="margin-bottom:8px">Delivered a comprehensive, development-ready design system that moved the product from concept to a high-fidelity, functional prototype.</li>
-                    <li style="margin-bottom:8px">The final designs successfully automated the transcription-to-claim pipeline, significantly reducing the manual documentation time per patient.</li>
-                    <li style="margin-bottom:8px">Established a robust brand and UI framework that allows the product to evolve from a transcription tool into a full-scale medical suite.</li>
-                </ul>
+              <ul style="list-style-type: disc; padding-left: 20px">
+                <li style="margin-bottom: 8px">
+                  Delivered a comprehensive, development-ready design system
+                  that moved the product from concept to a high-fidelity,
+                  functional prototype.
+                </li>
+                <li style="margin-bottom: 8px">
+                  The final designs successfully automated the
+                  transcription-to-claim pipeline, significantly reducing the
+                  manual documentation time per patient.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Established a robust brand and UI framework that allows the
+                  product to evolve from a transcription tool into a full-scale
+                  medical suite.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -459,13 +521,13 @@
               alt="Project screenshot"
             />
           </div>
-           <div class="image-container image-container-2">
+          <div class="image-container image-container-2">
             <img
               src="./src/resources/images/astera_3.jpg"
               alt="Project screenshot"
             />
           </div>
-           <div class="image-container image-container-2">
+          <div class="image-container image-container-2">
             <img
               src="./src/resources/images/astera_4.jpg"
               alt="Project screenshot"
@@ -476,36 +538,44 @@
     </div>
 
     <script>
-    const stickyHeader = document.querySelector('.sticky-header');
-    const contentColumn = document.querySelector('.content-column');
-    const headerOffset = document.querySelector('.header').offsetTop + document.querySelector('.header').offsetHeight + 100;
+      const stickyHeader = document.querySelector(".sticky-header");
+      const contentColumn = document.querySelector(".content-column");
+      const headerOffset =
+        document.querySelector(".header").offsetTop +
+        document.querySelector(".header").offsetHeight +
+        100;
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > headerOffset) {
-        stickyHeader.classList.add('visible');
-        contentColumn.style.top = '100px';
-      } else {
-        stickyHeader.classList.remove('visible');
-        contentColumn.style.top = '60px';
-      }
-    });
-
-    const fadeElements = document.querySelectorAll('.header, .hero-title, .accordion-item, .image-container');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 100);
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > headerOffset) {
+          stickyHeader.classList.add("visible");
+          contentColumn.style.top = "100px";
+        } else {
+          stickyHeader.classList.remove("visible");
+          contentColumn.style.top = "60px";
         }
       });
-    }, { threshold: 0.1 });
-    fadeElements.forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-  </script>
-  <script>
+
+      const fadeElements = document.querySelectorAll(
+        ".header, .hero-title, .accordion-item, .image-container",
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+              }, index * 100);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      fadeElements.forEach((el) => {
+        el.classList.add("fade-in");
+        observer.observe(el);
+      });
+    </script>
+    <script>
       document.querySelectorAll(".accordion-item").forEach((item) => {
         const icon = item.querySelector(".accordion-icon");
         const updateIcon = () => {
