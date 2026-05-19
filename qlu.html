@@ -258,6 +258,14 @@
         /* aspect-ratio: 630 / 629; */
       }
 
+      body {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      body.loaded {
+        opacity: 1;
+      }
+
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
@@ -524,6 +532,10 @@
     </div>
 
     <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+
       const stickyHeader = document.querySelector(".sticky-header");
       const contentColumn = document.querySelector(".content-column");
       const headerOffset =

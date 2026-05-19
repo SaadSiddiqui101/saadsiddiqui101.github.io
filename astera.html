@@ -293,6 +293,14 @@
     border-bottom-right-radius: 16px;
       }
 
+      body {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      body.loaded {
+        opacity: 1;
+      }
+
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
@@ -580,11 +588,25 @@
               alt="Project screenshot"
             />
           </div>
+          <div class="image-container image-container-2 lottie-wrapper-another">
+            <dotlottie-player
+              src="./src/resources/lotties/astera_7.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              style="width: 100%; height: auto"
+            ></dotlottie-player>
+          </div>
         </div>
       </div>
     </div>
 
     <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+
       const stickyHeader = document.querySelector(".sticky-header");
       const contentColumn = document.querySelector(".content-column");
       const headerOffset =
