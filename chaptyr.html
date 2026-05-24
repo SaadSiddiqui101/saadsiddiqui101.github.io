@@ -8,6 +8,7 @@
       content="Astera - Enterprise Data Integration Platform Case Study by Saad Siddiqui"
     />
     <title>Building Data Integration Platform - Astera 2022</title>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
     <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -256,6 +257,40 @@
       .image-container-2 {
         width: 100%;
         /* aspect-ratio: 630 / 629; */
+      }
+
+      dotlottie-player {
+        width: 100%;
+      }
+
+      .lottie-wrapper {
+        position: relative;
+        overflow: hidden;
+      }
+      .lottie-wrapper::after {
+        content: "";
+        position: absolute;
+        bottom: 15px;
+        left: 0px;
+        right: 0px;
+        height: 11%;
+        background: #B7D0F6;
+        pointer-events: none;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+
+      .lottie-wrapper-another::after {
+       content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 0px;
+    right: 0px;
+    height: 11%;
+    background: #BDC7D2;
+    pointer-events: none;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
       }
 
       body {
@@ -510,27 +545,47 @@
         <div class="images-column">
           <div class="image-container image-container-1">
             <img
-              src="./src/resources/images/astera_1.jpg"
+              src="./src/resources/images/Chapty_1.jpg"
+              alt="Project screenshot"
+            />
+          </div>
+           <div class="image-container image-container-2 lottie-wrapper-another">
+            <dotlottie-player
+              src="./src/resources/lotties/chaptyr_3.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              style="width: 100%; height: auto"
+            ></dotlottie-player>
+          </div>
+          <div class="image-container image-container-2">
+            <img
+              src="./src/resources/images/Chaptyr_3.jpg"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
             <img
-              src="./src/resources/images/astera_2.jpg"
+              src="./src/resources/images/Chaptyr_4.jpg"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
             <img
-              src="./src/resources/images/astera_3.jpg"
+              src="./src/resources/images/Chaptyr_5.jpg"
               alt="Project screenshot"
             />
           </div>
-          <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/astera_4.jpg"
-              alt="Project screenshot"
-            />
+           <div class="image-container image-container-2 lottie-wrapper">
+            <dotlottie-player
+              src="./src/resources/lotties/chaptyr_6.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              style="width: 100%; height: auto"
+            ></dotlottie-player>
           </div>
         </div>
       </div>
