@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pakistan Single Window case study by Saad Siddiqui"
+    />
+    <title>Digitizing Trade and Regulatory Operations - Pakistan Single Window 2020</title>
+    <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/case-study.css" />
+  </head>
+  <body>
+    <div class="sticky-header">
+      <p class="breadcrumb">
+        <a href="./index.html">Home</a> /
+        <span class="current">Pakistan Single Window 2020</span>
+      </p>
+      <p class="sticky-title">Digitizing Trade and Regulatory Operations</p>
+    </div>
+
+    <div class="page">
+      <header class="header fade-in">
+        <div class="bot-logo-wrapper">
+          <div class="bot-container">
+            <img
+              src="./src/resources/icons/logo.svg"
+              alt="Logo"
+              class="bot-logo"
+            />
+          </div>
+        </div>
+      </header>
+
+      <p class="breadcrumb">
+        <a href="./index.html">Home</a> /
+        <span class="current">Pakistan Single Window 2020</span>
+      </p>
+      <h1 class="hero-title fade-in">Digitizing Trade and Regulatory Operations</h1>
+
+      <div class="content-grid">
+        <div class="content-column">
+          <div class="accordion-item open">
+            <div class="section-header">
+              <h3>Overview</h3>
+              <img
+                src="./src/resources/icons/plus.svg"
+                alt="toggle"
+                class="accordion-icon"
+              />
+            </div>
+            <div class="section-content">
+              <p>
+                Pakistan Single Window brings trade-facing workflows into a
+                unified digital service for businesses, regulators, and
+                operational teams.
+              </p>
+              <p>
+                My work focused on making fragmented regulatory processes easier
+                to understand, navigate, and complete across a high-stakes public
+                service environment.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="section-header">
+              <h3>Challenge</h3>
+              <img
+                src="./src/resources/icons/plus.svg"
+                alt="toggle"
+                class="accordion-icon"
+              />
+            </div>
+            <div class="section-content">
+              <ul>
+                <li>Mapping dense trade and compliance procedures into clear digital flows.</li>
+                <li>Supporting multiple user types with different levels of regulatory familiarity.</li>
+                <li>Making status, requirements, and next actions legible throughout long workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="section-header">
+              <h3>Solution</h3>
+              <img
+                src="./src/resources/icons/plus.svg"
+                alt="toggle"
+                class="accordion-icon"
+              />
+            </div>
+            <div class="section-content">
+              <ul>
+                <li>Structured core user journeys around task clarity, progress, and document readiness.</li>
+                <li>Designed interface patterns for forms, workflow states, review steps, and account actions.</li>
+                <li>Aligned product experience and visual language so the service felt consistent across touchpoints.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="section-header">
+              <h3>Outcome</h3>
+              <img
+                src="./src/resources/icons/plus.svg"
+                alt="toggle"
+                class="accordion-icon"
+              />
+            </div>
+            <div class="section-content">
+              <ul>
+                <li>Created a clearer foundation for users moving through trade and regulatory tasks.</li>
+                <li>Helped reduce ambiguity around process status, required information, and next steps.</li>
+                <li>Established reusable patterns for a broad public-sector product surface.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="images-column">
+          <div class="image-container media-panel">
+            <span class="media-panel-label">Product + Branding</span>
+            <img src="./src/resources/logos/psw.svg" alt="Pakistan Single Window" />
+            <p class="media-panel-copy">
+              A public-sector product system shaped around clarity, trust, and
+              procedural confidence for people moving through trade operations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+
+      const stickyHeader = document.querySelector(".sticky-header");
+      const contentColumn = document.querySelector(".content-column");
+      const headerOffset =
+        document.querySelector(".header").offsetTop +
+        document.querySelector(".header").offsetHeight +
+        100;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > headerOffset) {
+          stickyHeader.classList.add("visible");
+          contentColumn.style.top = "100px";
+        } else {
+          stickyHeader.classList.remove("visible");
+          contentColumn.style.top = "60px";
+        }
+      });
+
+      const fadeElements = document.querySelectorAll(
+        ".header, .hero-title, .accordion-item, .image-container",
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+              }, index * 100);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      fadeElements.forEach((el) => {
+        el.classList.add("fade-in");
+        observer.observe(el);
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".accordion-item").forEach((item) => {
+        const icon = item.querySelector(".accordion-icon");
+        const updateIcon = () => {
+          icon.style.opacity = "0";
+          setTimeout(() => {
+            icon.src = item.classList.contains("open")
+              ? "./src/resources/icons/minus.svg"
+              : "./src/resources/icons/plus.svg";
+            icon.style.opacity = "1";
+          }, 150);
+        };
+        item.querySelector(".section-header").addEventListener("click", () => {
+          const isOpening = !item.classList.contains("open");
+          document.querySelectorAll(".accordion-item").forEach((i) => {
+            i.classList.remove("open");
+            const ic = i.querySelector(".accordion-icon");
+            ic.src = "./src/resources/icons/plus.svg";
+            ic.style.opacity = "1";
+          });
+          if (isOpening) {
+            item.classList.add("open");
+            updateIcon();
+          }
+        });
+        updateIcon();
+      });
+    </script>
+  </body>
+</html>

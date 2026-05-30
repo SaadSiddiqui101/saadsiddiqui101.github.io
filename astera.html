@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       *,
       *::before,
@@ -386,6 +391,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="./src/case-study.css" />
   </head>
   <body>
     <div class="gradient-overlay" style="transform: rotate(180deg)"></div>
@@ -398,7 +404,7 @@
     </div>
 
     <div class="page">
-      <header class="header fade-in">
+      <header class="header">
         <div class="bot-logo-wrapper">
           <div class="bot-container">
             <img
@@ -421,7 +427,7 @@
         <a href="./index.html">Home</a> /
         <span class="current">Astera 2022</span>
       </p>
-      <h1 class="hero-title fade-in">Building Data Integration Platform</h1>
+      <h1 class="hero-title">Building Data Integration Platform</h1>
 
       <div class="content-grid">
         <div class="content-column">
@@ -551,8 +557,6 @@
               src="./src/resources/lotties/astera_2.json"
               background="transparent"
               speed="1"
-              loop
-              autoplay
               style="width: 100%; height: auto"
             ></dotlottie-player>
           </div>
@@ -561,8 +565,6 @@
               src="./src/resources/lotties/astera_3.json"
               background="transparent"
               speed="1"
-              loop
-              autoplay
               style="width: 100%; height: auto"
             ></dotlottie-player>
           </div>
@@ -571,8 +573,6 @@
               src="./src/resources/lotties/astera_4.json"
               background="transparent"
               speed="1"
-              loop
-              autoplay
               style="width: 100%; height: auto"
             ></dotlottie-player>
           </div>
@@ -593,8 +593,6 @@
               src="./src/resources/lotties/astera_7.json"
               background="transparent"
               speed="1"
-              loop
-              autoplay
               style="width: 100%; height: auto"
             ></dotlottie-player>
           </div>
@@ -624,37 +622,14 @@
         }
       });
 
-      const fadeElements = document.querySelectorAll(
-        ".header, .hero-title, .accordion-item, .image-container",
-      );
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add("visible");
-              }, index * 100);
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      fadeElements.forEach((el) => {
-        el.classList.add("fade-in");
-        observer.observe(el);
-      });
     </script>
     <script>
       document.querySelectorAll(".accordion-item").forEach((item) => {
         const icon = item.querySelector(".accordion-icon");
         const updateIcon = () => {
-          icon.style.opacity = "0";
-          setTimeout(() => {
-            icon.src = item.classList.contains("open")
-              ? "./src/resources/icons/minus.svg"
-              : "./src/resources/icons/plus.svg";
-            icon.style.opacity = "1";
-          }, 150);
+          icon.src = item.classList.contains("open")
+            ? "./src/resources/icons/minus.svg"
+            : "./src/resources/icons/plus.svg";
         };
         item.querySelector(".section-header").addEventListener("click", () => {
           const isOpening = !item.classList.contains("open");
@@ -662,7 +637,6 @@
             i.classList.remove("open");
             const ic = i.querySelector(".accordion-icon");
             ic.src = "./src/resources/icons/plus.svg";
-            ic.style.opacity = "1";
           });
           if (isOpening) {
             item.classList.add("open");
