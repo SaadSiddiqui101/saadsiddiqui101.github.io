@@ -393,7 +393,7 @@
     </style>
     <link rel="stylesheet" href="./src/case-study.css" />
   </head>
-  <body>
+  <body class="astera-case">
     <div class="gradient-overlay" style="transform: rotate(180deg)"></div>
     <div class="sticky-header">
       <p class="breadcrumb">
@@ -404,7 +404,7 @@
     </div>
 
     <div class="page">
-      <header class="header">
+      <header class="header fade-in">
         <div class="bot-logo-wrapper">
           <div class="bot-container">
             <img
@@ -427,7 +427,7 @@
         <a href="./index.html">Home</a> /
         <span class="current">Astera 2022</span>
       </p>
-      <h1 class="hero-title">Building Data Integration Platform</h1>
+      <h1 class="hero-title fade-in">Building Data Integration Platform</h1>
 
       <div class="content-grid">
         <div class="content-column">
@@ -611,6 +611,25 @@
         }
       });
 
+      const fadeElements = document.querySelectorAll(
+        ".header, .hero-title, .accordion-item, .image-container",
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+              }, index * 100);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      fadeElements.forEach((el) => {
+        el.classList.add("fade-in");
+        observer.observe(el);
+      });
     </script>
     <script>
       document.querySelectorAll(".accordion-item").forEach((item) => {
