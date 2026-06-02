@@ -375,10 +375,10 @@ a {
   height: 14px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
-  box-shadow:
+  /* box-shadow:
     -8px 8px 0 -6px #fff,
-    8px -8px 0 -6px #fff;
-  transform: translate(-50%, -50%) rotate(45deg);
+    8px -8px 0 -6px #fff; */
+  transform: translate(-73%, -50%) rotate(45deg);
 }
 
 .before-after-range {
