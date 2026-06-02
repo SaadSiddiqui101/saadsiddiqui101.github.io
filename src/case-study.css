@@ -31,7 +31,8 @@ body {
 
 .astera-case,
 .chaptyr-case,
-.qlu-case {
+.qlu-case,
+.psw-case {
   --panel-bg: #bec8d2;
 }
 
@@ -228,7 +229,8 @@ a {
 
 .astera-case .images-column,
 .chaptyr-case .images-column,
-.qlu-case .images-column {
+.qlu-case .images-column,
+.psw-case .images-column {
   background: #bec8d2;
 }
 
@@ -463,6 +465,7 @@ dotlottie-player {
 }
 
 .sticky-header .sticky-title {
+  padding-bottom: 3px;
   color: var(--text) !important;
   font-family: var(--font-display) !important;
   font-size: 18px !important;

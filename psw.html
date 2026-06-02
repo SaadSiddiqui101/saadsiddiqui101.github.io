@@ -5,23 +5,400 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Pakistan Single Window case study by Saad Siddiqui"
+      content="Pakistan Single Window - Digitizing Trade and Regulatory Operations Case Study by Saad Siddiqui"
     />
-    <title>Digitizing Trade and Regulatory Operations - Pakistan Single Window 2020</title>
+    <title>Digitizing Trade and Regulatory Operations - PSW 2020</title>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
     <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #0f0f0f;
+        --bg-card: #121212;
+        --bg-surface: #121212;
+        --accent: #1051b9;
+        --text: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.5);
+        --text-body: rgba(255, 255, 255, 0.75);
+        --font-display: "Darker Grotesque", sans-serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 14px;
+        line-height: normal;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      .gradient-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 327px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(16, 81, 185, 0.2)
+        );
+        opacity: 0.2;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .page {
+        /* max-width: 1280px; */
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        padding: 0 130px 120px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-top: 95px;
+        margin-bottom: 52px;
+      }
+
+      .bot-logo-wrapper {
+        width: 35px;
+        height: 35px;
+      }
+      .bot-container {
+        width: 35px;
+        height: 35px;
+        position: relative;
+      }
+      .bot-logo {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .bot-eyes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      .bot-eye {
+        position: absolute;
+        width: 17.5px;
+        height: 17.5px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition:
+          height 0.15s ease,
+          top 0.15s ease,
+          width 0.15s ease;
+      }
+      .bot-eye.left {
+        left: 8%;
+      }
+      .bot-eye.right {
+        right: 8%;
+      }
+      .bot-pupil {
+        position: absolute;
+        width: 6px;
+        height: 12px;
+        background: url("./src/resources/icons/eye.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: blinkLeft 5s infinite;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease;
+      }
+      @keyframes blinkLeft {
+        0%,
+        96%,
+        100% {
+          height: 12px;
+        }
+        98% {
+          height: 2px;
+        }
+      }
+
+      .breadcrumb {
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+      .breadcrumb a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .breadcrumb .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: 67.449px;
+        font-weight: 600;
+        line-height: 1;
+        color: var(--text);
+        margin-bottom: 76px;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 372px 1fr;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .content-column {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 60px;
+        align-self: start;
+      }
+
+      .accordion-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 26px 0;
+        cursor: pointer;
+      }
+
+      .section-header h3 {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--text);
+      }
+
+      .accordion-icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      .section-content {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          padding 0.4s ease;
+        padding: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.14px;
+        color: var(--text-body);
+      }
+      .accordion-item.open .section-content {
+        max-height: 500px;
+        padding-bottom: 24px;
+      }
+      .section-content p {
+        margin: 0;
+      }
+
+      .images-column {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .image-container {
+        background: var(--bg-card);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .image-container-1 {
+        width: 100%;
+        /* aspect-ratio: 630 / 466; */
+      }
+
+      .image-container-2 {
+        width: 100%;
+        /* aspect-ratio: 630 / 629; */
+      }
+
+      dotlottie-player {
+        width: 100%;
+      }
+
+      .lottie-wrapper {
+        position: relative;
+        overflow: hidden;
+      }
+      .lottie-wrapper::after {
+        content: "";
+        position: absolute;
+        bottom: 42px;
+        left: 0px;
+        right: 0px;
+        height: 11%;
+        background: #d6e8f5;
+        pointer-events: none;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+
+      .lottie-wrapper-another::after {
+       content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 0px;
+    right: 0px;
+    height: 11%;
+    background: #73b6ff;
+    pointer-events: none;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+      }
+
+      body {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      body.loaded {
+        opacity: 1;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 130px;
+        background: var(--bg);
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .sticky-header.visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .sticky-header .breadcrumb {
+        font-size: 14px;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+      .sticky-header .breadcrumb a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .sticky-header .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .sticky-header .breadcrumb .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .sticky-header .sticky-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 1023px) {
+        .page {
+          padding: 0 5% 80px;
+        }
+        .sticky-header {
+          padding: 20px 5%;
+        }
+        .content-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-title {
+          font-size: 52px;
+        }
+      }
+      @media (max-width: 767px) {
+        .page {
+          padding: 0 20px 60px;
+        }
+        .hero-title {
+          font-size: 40px;
+        }
+        .header {
+          padding-top: 40px;
+          gap: 16px;
+        }
+      }
+    </style>
     <link rel="stylesheet" href="./src/case-study.css" />
   </head>
-  <body>
+  <body class="astera-case">
+    <div class="gradient-overlay" style="transform: rotate(180deg)"></div>
     <div class="sticky-header">
       <p class="breadcrumb">
         <a href="./index.html">Home</a> /
-        <span class="current">Pakistan Single Window 2020</span>
+        <span class="current">PSW 2020</span>
       </p>
       <p class="sticky-title">Digitizing Trade and Regulatory Operations</p>
     </div>
@@ -35,13 +412,20 @@
               alt="Logo"
               class="bot-logo"
             />
+            <div class="bot-eyes">
+              <div class="bot-eye left">
+                <div class="bot-pupil"></div>
+              </div>
+              <div class="bot-eye right">
+                <div class="bot-pupil"></div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-
       <p class="breadcrumb">
         <a href="./index.html">Home</a> /
-        <span class="current">Pakistan Single Window 2020</span>
+        <span class="current">PSW 2020</span>
       </p>
       <h1 class="hero-title fade-in">Digitizing Trade and Regulatory Operations</h1>
 
@@ -80,7 +464,7 @@
               />
             </div>
             <div class="section-content">
-              <ul>
+               <ul>
                 <li>Mapping dense trade and compliance procedures into clear digital flows.</li>
                 <li>Supporting multiple user types with different levels of regulatory familiarity.</li>
                 <li>Making status, requirements, and next actions legible throughout long workflows.</li>
@@ -116,7 +500,7 @@
               />
             </div>
             <div class="section-content">
-              <ul>
+               <ul>
                 <li>Created a clearer foundation for users moving through trade and regulatory tasks.</li>
                 <li>Helped reduce ambiguity around process status, required information, and next steps.</li>
                 <li>Established reusable patterns for a broad public-sector product surface.</li>
@@ -126,13 +510,67 @@
         </div>
 
         <div class="images-column">
-          <div class="image-container media-panel">
-            <span class="media-panel-label">Product + Branding</span>
-            <img src="./src/resources/logos/psw.svg" alt="Pakistan Single Window" />
-            <p class="media-panel-copy">
-              A public-sector product system shaped around clarity, trust, and
-              procedural confidence for people moving through trade operations.
-            </p>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_1.png"
+              alt="Project screenshot"
+            />
+          </div>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_2.png"
+              alt="Project screenshot"
+            />
+          </div>
+          <div class="image-container image-container-2 lottie-wrapper">
+            <dotlottie-player
+              src="./src/resources/lotties/psw_3.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              style="width: 100%; height: auto"
+            ></dotlottie-player>
+          </div>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_3.png"
+              alt="Project screenshot"
+            />
+          </div>
+           <div class="image-container image-container-2 lottie-wrapper-another">
+            <dotlottie-player
+              src="./src/resources/lotties/psw_5.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              style="width: 100%; height: auto"
+            ></dotlottie-player>
+          </div>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_4.png"
+              alt="Project screenshot"
+            />
+          </div>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_5.png"
+              alt="Project screenshot"
+            />
+          </div>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_6.png"
+              alt="Project screenshot"
+            />
+          </div>
+          <div class="image-container image-container-1">
+            <img
+              src="./src/resources/images/psw_7.png"
+              alt="Project screenshot"
+            />
           </div>
         </div>
       </div>
@@ -184,13 +622,9 @@
       document.querySelectorAll(".accordion-item").forEach((item) => {
         const icon = item.querySelector(".accordion-icon");
         const updateIcon = () => {
-          icon.style.opacity = "0";
-          setTimeout(() => {
-            icon.src = item.classList.contains("open")
-              ? "./src/resources/icons/minus.svg"
-              : "./src/resources/icons/plus.svg";
-            icon.style.opacity = "1";
-          }, 150);
+          icon.src = item.classList.contains("open")
+            ? "./src/resources/icons/minus.svg"
+            : "./src/resources/icons/plus.svg";
         };
         item.querySelector(".section-header").addEventListener("click", () => {
           const isOpening = !item.classList.contains("open");
@@ -198,7 +632,6 @@
             i.classList.remove("open");
             const ic = i.querySelector(".accordion-icon");
             ic.src = "./src/resources/icons/plus.svg";
-            ic.style.opacity = "1";
           });
           if (isOpening) {
             item.classList.add("open");
