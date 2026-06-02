@@ -8,6 +8,20 @@
       content="Avicenna - AI Healthcare Workflow Case Study by Saad Siddiqui"
     />
     <title>Designing AI for Modern Healthcare Workflows - Avicenna 2025</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BNHYDW2GZF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BNHYDW2GZF");
+    </script>
     <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -19,347 +33,10 @@
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      :root {
-        --bg: #0f0f0f;
-        --bg-card: #121212;
-        --bg-surface: #121212;
-        --accent: #1051b9;
-        --text: #ffffff;
-        --text-muted: rgba(255, 255, 255, 0.5);
-        --text-body: rgba(255, 255, 255, 0.75);
-        --font-display: "Darker Grotesque", sans-serif;
-        --font-body: "Inter", sans-serif;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background-color: var(--bg);
-        color: var(--text);
-        font-family: var(--font-body);
-        font-size: 14px;
-        line-height: normal;
-        min-height: 100vh;
-        position: relative;
-        overflow-x: hidden;
-      }
-
-      .gradient-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 327px;
-        background: linear-gradient(
-          to bottom,
-          transparent,
-          rgba(16, 81, 185, 0.2)
-        );
-        opacity: 0.2;
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      .page {
-        /* max-width: 1280px; */
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-        padding: 0 130px 120px;
-      }
-
-      .header {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding-top: 95px;
-        margin-bottom: 52px;
-      }
-
-      .bot-logo-wrapper {
-        width: 35px;
-        height: 35px;
-      }
-      .bot-container {
-        width: 35px;
-        height: 35px;
-        position: relative;
-      }
-      .bot-logo {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      .bot-eyes {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-      }
-      .bot-eye {
-        position: absolute;
-        width: 17.5px;
-        height: 17.5px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition:
-          height 0.15s ease,
-          top 0.15s ease,
-          width 0.15s ease;
-      }
-      .bot-eye.left {
-        left: 8%;
-      }
-      .bot-eye.right {
-        right: 8%;
-      }
-      .bot-pupil {
-        position: absolute;
-        width: 6px;
-        height: 12px;
-        background: url("./src/resources/icons/eye.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        animation: blinkLeft 5s infinite;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: transform 0.1s ease;
-      }
-      @keyframes blinkLeft {
-        0%,
-        96%,
-        100% {
-          height: 12px;
-        }
-        98% {
-          height: 2px;
-        }
-      }
-
-      .breadcrumb {
-        font-size: 14px;
-        color: var(--text-muted);
-      }
-      .breadcrumb a {
-        color: var(--text-muted);
-        text-decoration: none;
-      }
-      .breadcrumb a:hover {
-        text-decoration: underline;
-      }
-      .breadcrumb .current {
-        color: var(--text);
-        font-weight: 500;
-      }
-
-      .hero-title {
-        font-family: var(--font-display);
-        font-size: 67.449px;
-        font-weight: 600;
-        line-height: 1;
-        color: var(--text);
-        margin-bottom: 76px;
-      }
-
-      .content-grid {
-        display: grid;
-        grid-template-columns: 372px 1fr;
-        gap: 24px;
-        align-items: start;
-      }
-
-      .content-column {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        top: 60px;
-        align-self: start;
-      }
-
-      .accordion-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .section-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 26px 0;
-        cursor: pointer;
-      }
-
-      .section-header h3 {
-        font-size: 18px;
-        font-weight: 400;
-        color: var(--text);
-      }
-
-      .accordion-icon {
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0;
-        transition: opacity 0.2s ease;
-      }
-
-      .section-content {
-        max-height: 0;
-        overflow: hidden;
-        transition:
-          max-height 0.4s ease,
-          padding 0.4s ease;
-        padding: 0;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.14px;
-        color: var(--text-body);
-      }
-      .accordion-item.open .section-content {
-        max-height: 500px;
-        padding-bottom: 24px;
-      }
-      .section-content p {
-        margin: 0;
-      }
-
-      .images-column {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-
-      .image-container {
-        background: var(--bg-card);
-        border-radius: 16px;
-        overflow: hidden;
-      }
-
-      .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-
-      .image-container-1 {
-        width: 100%;
-        /* aspect-ratio: 630 / 466; */
-      }
-
-      .image-container-2 {
-        width: 100%;
-        /* aspect-ratio: 630 / 629; */
-      }
-
-      body {
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      }
-      body.loaded {
-        opacity: 1;
-      }
-
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
-      }
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .sticky-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 20px 130px;
-        background: var(--bg);
-        z-index: 100;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-      .sticky-header.visible {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .sticky-header .breadcrumb {
-        font-size: 14px;
-        color: var(--text-muted);
-        white-space: nowrap;
-      }
-      .sticky-header .breadcrumb a {
-        color: var(--text-muted);
-        text-decoration: none;
-      }
-      .sticky-header .breadcrumb a:hover {
-        text-decoration: underline;
-      }
-      .sticky-header .breadcrumb .current {
-        color: var(--text);
-        font-weight: 500;
-      }
-      .sticky-header .sticky-title {
-        font-family: var(--font-display);
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--text);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      @media (max-width: 1023px) {
-        .page {
-          padding: 0 5% 80px;
-        }
-        .sticky-header {
-          padding: 20px 5%;
-        }
-        .content-grid {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-        .hero-title {
-          font-size: 52px;
-        }
-      }
-      @media (max-width: 767px) {
-        .page {
-          padding: 0 20px 60px;
-        }
-        .hero-title {
-          font-size: 40px;
-        }
-        .header {
-          padding-top: 40px;
-          gap: 16px;
-        }
-      }
-    </style>
     <link rel="stylesheet" href="./src/case-study.css" />
   </head>
-  <body>
-    <div class="gradient-overlay" style="transform: rotate(180deg)"></div>
+  <body class="avicenna-case">
+    <div class="gradient-overlay is-rotated"></div>
     <div class="sticky-header">
       <p class="breadcrumb">
         <a href="./index.html">Home</a> /
@@ -433,20 +110,20 @@
               />
             </div>
             <div class="section-content">
-              <ul style="list-style-type: disc; padding-left: 20px">
-                <li style="margin-bottom: 8px">
+              <ul>
+                <li>
                   Physicians are often overwhelmed by administrative
                   "paperwork." The challenge was to design a recording interface
                   that felt invisible during a session while remaining highly
                   functional afterward.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   Navigating the rigid constraints of HIPAA compliance required
                   a meticulous approach to data privacy. I had to ensure that
                   the UX never compromised sensitive patient information while
                   still providing the doctor with actionable transcriptions.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   Maintaining the density of medical data across a mobile-first
                   responsive framework without losing the utility of the
                   dashboard's analytical insights.
@@ -465,24 +142,24 @@
               />
             </div>
             <div class="section-content">
-              <ul style="list-style-type: disc; padding-left: 20px">
-                <li style="margin-bottom: 8px">
+              <ul>
+                <li>
                   I mapped out the doctor’s journey from "entry to export,"
                   focusing on a "One-Tap" recording start to minimize
                   distractions during patient consultations.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   Designed a high-density dashboard that prioritizes "Time
                   Saved" and "Session Completion" metrics, giving doctors a
                   clear view of their daily efficiency at a glance.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   I implemented a "Zero-Storage" philosophy for sensitive
                   identifiers within the UI, ensuring the platform acted as a
                   conduit for transcription rather than a high-risk data
                   repository.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   Developed a cohesive visual language that scales from detailed
                   desktop analytics to simplified mobile recording controls,
                   ensuring a seamless handoff between devices.
@@ -501,18 +178,18 @@
               />
             </div>
             <div class="section-content">
-              <ul style="list-style-type: disc; padding-left: 20px">
-                <li style="margin-bottom: 8px">
+              <ul>
+                <li>
                   Delivered a comprehensive, development-ready design system
                   that moved the product from concept to a high-fidelity,
                   functional prototype.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   The final designs successfully automated the
                   transcription-to-claim pipeline, significantly reducing the
                   manual documentation time per patient.
                 </li>
-                <li style="margin-bottom: 8px">
+                <li>
                   Established a robust brand and UI framework that allows the
                   product to evolve from a transcription tool into a full-scale
                   medical suite.
@@ -578,10 +255,10 @@
       window.addEventListener("scroll", () => {
         if (window.scrollY > headerOffset) {
           stickyHeader.classList.add("visible");
-          contentColumn.style.top = "100px";
+          contentColumn.classList.add("content-column--sticky-active");
         } else {
           stickyHeader.classList.remove("visible");
-          contentColumn.style.top = "60px";
+          contentColumn.classList.remove("content-column--sticky-active");
         }
       });
 
@@ -609,12 +286,12 @@
       document.querySelectorAll(".accordion-item").forEach((item) => {
         const icon = item.querySelector(".accordion-icon");
         const updateIcon = () => {
-          icon.style.opacity = "0";
+          icon.classList.add("is-transitioning");
           setTimeout(() => {
             icon.src = item.classList.contains("open")
               ? "./src/resources/icons/minus.svg"
               : "./src/resources/icons/plus.svg";
-            icon.style.opacity = "1";
+            icon.classList.remove("is-transitioning");
           }, 150);
         };
         item.querySelector(".section-header").addEventListener("click", () => {
@@ -623,7 +300,7 @@
             i.classList.remove("open");
             const ic = i.querySelector(".accordion-icon");
             ic.src = "./src/resources/icons/plus.svg";
-            ic.style.opacity = "1";
+            ic.classList.remove("is-transitioning");
           });
           if (isOpening) {
             item.classList.add("open");

@@ -1,490 +1,467 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design System — Saad Siddiqui</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System — Saad Siddiqui</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BNHYDW2GZF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    :root {
-      /* Backgrounds */
-      --bg-primary:   #0f0f0f;
-      --bg-card:      #121212;
-      --bg-tool:      #181818; /* Surface Dark — used by tool cards, article source section */
-      --bg-article:   #212121;
+      gtag("config", "G-BNHYDW2GZF");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/design-system.css" />
+  </head>
+  <body>
+    <button
+      class="theme-toggle"
+      onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'; this.textContent = document.documentElement.dataset.theme === 'light' ? '🌙 Dark' : '☀️ Light'"
+    >
+      ☀️ Light
+    </button>
 
-      /* Accents */
-      --accent-blue:        #2591cd;
-      --accent-teal:        #67CDBE;
-      --accent-purple:      #C088EA;
-      --accent-blue-violet: #5D8BD7;
+    <h1>Design System<span>.</span></h1>
+    <p class="subtitle">
+      Extracted from Saad Siddiqui's portfolio — Experiments file
+    </p>
 
-      /* Text */
-      --text-primary: #ffffff;
-      --text-muted:   rgba(255,255,255,0.4);
-      --text-body:    rgba(237,237,237,0.75);
+    <!-- COLORS -->
+    <section class="section">
+      <p class="section-label">Colors</p>
 
-      /* Borders / dividers */
-      --border:       rgba(255,255,255,0.08);
-      --border-soft:  rgba(255,255,255,0.06);
-
-      /* Component internals */
-      --tool-card-title:      #ededed;
-      --article-title-color:  #ededed;
-      --article-body-color:   rgba(237,237,237,0.75);
-      --icon-stroke:          white;
-      --anatomy-strong:       rgba(255,255,255,0.6);
-      --anatomy-bg:           rgba(255,255,255,0.03);
-      --anatomy-border:       rgba(255,255,255,0.06);
-      --icon-placeholder-bg:  rgba(255,255,255,0.06);
-      --play-btn-bg:          rgba(255,255,255,0.15);
-
-      /* Spacing scale */
-      --space-1:  4px;
-      --space-2:  8px;
-      --space-3: 12px;
-      --space-4: 16px;
-      --space-5: 24px;
-      --space-6: 30px;
-      --space-7: 36px;
-      --space-8: 46px;
-      --space-9: 56px;
-
-      /* Radius */
-      --radius-sm:  8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-      --radius-xl: 37px;
-
-      /* Typography */
-      --font-display: 'Darker Grotesque', sans-serif;
-      --font-body:    'Inter', sans-serif;
-
-      /* Background pattern */
-      --dot-color: rgba(255,255,255,0.07);
-      --dot-size:  24px;
-    }
-
-    [data-theme="light"] {
-      --bg-primary:   #f5f5f5;
-      --bg-card:      #ebebeb;
-      --bg-tool:      #e0e0e0;
-      --bg-article:   #d6d6d6;
-
-      --text-primary: #0f0f0f;
-      --text-muted:   rgba(15,15,15,0.45);
-      --text-body:    rgba(30,30,30,0.7);
-
-      --border:       rgba(0,0,0,0.08);
-      --border-soft:  rgba(0,0,0,0.06);
-
-      --tool-card-title:      #1a1a1a;
-      --article-title-color:  #1a1a1a;
-      --article-body-color:   rgba(30,30,30,0.7);
-      --icon-stroke:          #0f0f0f;
-      --anatomy-strong:       rgba(0,0,0,0.55);
-      --anatomy-bg:           rgba(0,0,0,0.03);
-      --anatomy-border:       rgba(0,0,0,0.08);
-      --icon-placeholder-bg:  rgba(0,0,0,0.07);
-      --play-btn-bg:          rgba(0,0,0,0.12);
-    }
-
-    body { background-color: var(--bg-primary); background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 24px 24px; color: var(--text-primary); font-family: var(--font-body); padding: 60px 40px; max-width: 1280px; margin: 0 auto; transition: background-color 0.2s, color 0.2s; }
-
-    [data-theme="light"] body,
-    [data-theme="light"] {
-      background-image: radial-gradient(circle, rgba(0,0,0,0.07) 1px, transparent 1px);
-    }
-
-    /* Theme toggle */
-    .theme-toggle { position:fixed; top:24px; right:24px; background:var(--bg-tool); border:1px solid var(--border); color:var(--text-primary); font-family:var(--font-body); font-size:13px; font-weight:500; padding:8px 16px; border-radius:20px; cursor:pointer; z-index:100; transition:background 0.2s, color 0.2s; }
-    .theme-toggle:hover { background:var(--bg-article); }
-
-    /* Layout */
-    .section { margin-bottom: 80px; }
-    .section-label { font-size: 13px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-    .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
-    h1 { font-family: var(--font-display); font-size: 48px; font-weight: 600; margin-bottom: 8px; }
-    h1 span { color: var(--accent-blue); }
-    .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 60px; }
-    /* Swatches */
-    .swatch-group { display:flex; flex-direction:column; gap:6px; }
-    .swatch { width:120px; height:80px; border-radius:12px; }
-    .swatch-name { font-size:13px; font-weight:500; color:var(--text-primary); }
-    .swatch-val  { font-size:11px; color:var(--text-muted); font-family:monospace; }
-
-    /* Typography */
-    .type-row { display:flex; flex-direction:column; gap:10px; padding-bottom:32px; border-bottom:1px solid var(--border-soft); }
-    .type-meta { display:flex; align-items:center; gap:12px; }
-    .type-tag  { font-size:11px; font-weight:600; background:var(--anatomy-bg); color:var(--text-muted); padding:3px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:0.05em; border:1px solid var(--anatomy-border); }
-    .type-info { font-size:12px; color:var(--text-muted); font-family:monospace; }
-
-    /* Spacing */
-    .sp-row  { display:flex; align-items:center; gap:16px; }
-    .sp-bar  { height:16px; background:var(--accent-blue); border-radius:3px; min-width:4px; }
-    .sp-label{ font-size:13px; color:var(--text-muted); font-family:monospace; }
-
-    /* Border radius */
-    .radius-item { display:flex; flex-direction:column; gap:8px; align-items:center; }
-    .radius-box  { width:80px; height:80px; background:var(--bg-tool); border:1px solid var(--border); }
-    .radius-label{ font-size:13px; font-weight:500; color:var(--text-primary); }
-    .radius-sub  { font-size:11px; color:var(--text-muted); }
-
-    /* Components */
-    .nav-link { font-size:14px; color:var(--text-primary); text-decoration:none; cursor:pointer; }
-    .nav-link:hover { color:var(--accent-blue); }
-
-    .project-item { display:flex; justify-content:space-between; align-items:center; }
-    .project-title { font-size:18px; color:var(--text-primary); margin-bottom:8px; }
-    .project-meta  { font-size:14px; color:var(--text-muted); }
-    .project-divider { border:none; border-top:1px solid var(--border); margin-bottom:40px; }
-
-    .tool-card { background:var(--bg-tool); border-radius:var(--radius-md); padding:24px; width:330px; }
-    .tool-card-title { font-size:18px; font-weight:500; color:var(--tool-card-title); }
-    .tool-icon-placeholder { width:57px; height:57px; background:var(--icon-placeholder-bg); border-radius:var(--radius-sm); }
-
-    .t-char  { position:relative; width:217px; height:217px; border-radius:37px; overflow:hidden; flex-shrink:0; }
-    .t-avatar{ position:absolute; top:40px; left:40px; width:137px; height:137px; border-radius:23px; }
-    .t-play  { position:absolute; top:153px; left:85px; width:48px; height:48px; background:var(--play-btn-bg); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--text-primary); cursor:pointer; backdrop-filter:blur(4px); }
-
-    .article-card { position:relative; width:671px; max-width:100%; height:223px; }
-    .article-source-section { position:absolute; top:0; left:0; width:100%; height:223px; background:var(--bg-tool); border-radius:var(--radius-md); overflow:hidden; }
-    .article-source { position:absolute; bottom:9px; left:20px; font-size:14px; color:var(--text-muted); font-family:var(--font-body); }
-    .article-content-section { position:absolute; top:0; left:0; width:100%; height:190px; background:var(--bg-article); border-radius:var(--radius-md); overflow:hidden; }
-    .article-title { position:absolute; top:25px; left:21px; right:21px; font-size:18px; font-weight:500; color:var(--article-title-color); line-height:24px; }
-    .article-body  { position:absolute; top:69px; left:21px; width:620px; max-width:calc(100% - 42px); font-size:14px; color:var(--article-body-color); line-height:24px; }
-    .article-fade  { position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(transparent, var(--bg-article)); }
-
-    .anatomy-box { padding:12px 16px; background:var(--anatomy-bg); border-radius:8px; border:1px solid var(--anatomy-border); margin-top:12px; }
-    .anatomy-box p { font-size:11px; color:var(--text-muted); line-height:1.7; }
-    .anatomy-box strong { color:var(--anatomy-strong); }
-
-    /* Responsiveness */
-    .bp-row   { display:grid; grid-template-columns:100px 160px 1fr; gap:16px; align-items:start; padding:16px 0; border-bottom:1px solid var(--border-soft); }
-    .bp-badge { font-size:11px; font-weight:600; padding:4px 10px; border-radius:4px; text-align:center; }
-    .bp-range { font-size:13px; color:var(--text-primary); font-family:monospace; padding-top:3px; }
-    .bp-desc  { font-size:13px; color:var(--text-muted); line-height:1.6; }
-    .bp-preview { background:var(--bg-tool); border:1px solid var(--border); border-radius:4px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; color:var(--text-muted); font-size:11px; }
-  </style>
-</head>
-<body>
-
-  <button class="theme-toggle" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'; this.textContent = document.documentElement.dataset.theme === 'light' ? '🌙 Dark' : '☀️ Light'">☀️ Light</button>
-
-  <h1>Design System<span>.</span></h1>
-  <p class="subtitle">Extracted from Saad Siddiqui's portfolio — Experiments file</p>
-
-  <!-- COLORS -->
-  <section class="section">
-    <p class="section-label">Colors</p>
-
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Backgrounds</p>
-    <div class="row" style="margin-bottom:32px;">
-      <div class="swatch-group">
-        <div class="swatch" style="background:#0f0f0f;border:1px solid rgba(255,255,255,0.1);"></div>
-        <p class="swatch-name">Primary BG</p><p class="swatch-val">#0f0f0f</p>
+      <p class="ds-eyebrow">Backgrounds</p>
+      <div class="row ds-row-gap-32">
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-primary"></div>
+          <p class="swatch-name">Primary BG</p>
+          <p class="swatch-val">#0f0f0f</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-card"></div>
+          <p class="swatch-name">Card BG</p>
+          <p class="swatch-val">#121212</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-tool"></div>
+          <p class="swatch-name">Surface Dark</p>
+          <p class="swatch-val">#181818</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-article"></div>
+          <p class="swatch-name">Article Card</p>
+          <p class="swatch-val">#212121</p>
+        </div>
       </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:#121212;"></div>
-        <p class="swatch-name">Card BG</p><p class="swatch-val">#121212</p>
-      </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:#181818;"></div>
-        <p class="swatch-name">Surface Dark</p><p class="swatch-val">#181818</p>
-      </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:#212121;"></div>
-        <p class="swatch-name">Article Card</p><p class="swatch-val">#212121</p>
-      </div>
-    </div>
 
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Accents</p>
-    <div class="row" style="margin-bottom:32px;">
-      <div class="swatch-group">
-        <div class="swatch" style="background:#2591cd;"></div>
-        <p class="swatch-name">Accent Blue</p><p class="swatch-val">#2591cd</p>
+      <p class="ds-eyebrow">Accents</p>
+      <div class="row ds-row-gap-32">
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-blue"></div>
+          <p class="swatch-name">Accent Blue</p>
+          <p class="swatch-val">#2591cd</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-teal"></div>
+          <p class="swatch-name">Accent Teal</p>
+          <p class="swatch-val">#67CDBE</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-purple"></div>
+          <p class="swatch-name">Accent Purple</p>
+          <p class="swatch-val">#C088EA</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-blue-violet"></div>
+          <p class="swatch-name">Blue-Violet</p>
+          <p class="swatch-val">#5D8BD7</p>
+        </div>
       </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:#67CDBE;"></div>
-        <p class="swatch-name">Accent Teal</p><p class="swatch-val">#67CDBE</p>
-      </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:#C088EA;"></div>
-        <p class="swatch-name">Accent Purple</p><p class="swatch-val">#C088EA</p>
-      </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:#5D8BD7;"></div>
-        <p class="swatch-name">Blue-Violet</p><p class="swatch-val">#5D8BD7</p>
-      </div>
-    </div>
 
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Text</p>
-    <div class="row">
-      <div class="swatch-group">
-        <div class="swatch" style="background:#0f0f0f;border:1px solid var(--border);"></div>
-        <p class="swatch-name">Primary (Dark)</p><p class="swatch-val">#0f0f0f</p>
+      <p class="ds-eyebrow">Text</p>
+      <div class="row">
+        <div class="swatch-group">
+          <div class="swatch swatch--text-dark"></div>
+          <p class="swatch-name">Primary (Dark)</p>
+          <p class="swatch-val">#0f0f0f</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--muted-dark"></div>
+          <p class="swatch-name">Muted (Dark)</p>
+          <p class="swatch-val">black / 45%</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--body-dark"></div>
+          <p class="swatch-name">Body (Dark)</p>
+          <p class="swatch-val">#1e1e1e / 70%</p>
+        </div>
       </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:rgba(0,0,0,0.45);border:1px solid var(--border);"></div>
-        <p class="swatch-name">Muted (Dark)</p><p class="swatch-val">black / 45%</p>
+      <div class="row ds-row-offset-sm">
+        <div class="swatch-group">
+          <div class="swatch swatch--text-light"></div>
+          <p class="swatch-name">Primary (Light)</p>
+          <p class="swatch-val">#ffffff</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--muted-light"></div>
+          <p class="swatch-name">Muted (Light)</p>
+          <p class="swatch-val">white / 40%</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--body-light"></div>
+          <p class="swatch-name">Body (Light)</p>
+          <p class="swatch-val">#ededed / 75%</p>
+        </div>
       </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:rgba(30,30,30,0.7);border:1px solid var(--border);"></div>
-        <p class="swatch-name">Body (Dark)</p><p class="swatch-val">#1e1e1e / 70%</p>
+      <p class="ds-eyebrow ds-eyebrow--top">Background Pattern</p>
+      <div class="row row--pattern">
+        <div class="pattern-sample"></div>
+        <div>
+          <p class="pattern-title">Dot Grid</p>
+          <p class="pattern-code">
+            radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent
+            1px)<br />
+            background-size: 24px 24px<br />
+            Light theme: rgba(0,0,0,0.07)
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="row" style="margin-top:16px;">
-      <div class="swatch-group">
-        <div class="swatch" style="background:#ffffff;border:1px solid var(--border);"></div>
-        <p class="swatch-name">Primary (Light)</p><p class="swatch-val">#ffffff</p>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="section">
+      <p class="section-label">Typography</p>
+      <div class="type-stack">
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Display</span
+            ><span class="type-info">Darker Grotesque SemiBold · 67px</span>
+          </div>
+          <p class="type-display-sample">
+            I Design Stuff<span class="type-dot">.</span>
+          </p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Section Label</span
+            ><span class="type-info">Inter Medium · 20px</span>
+          </div>
+          <p class="type-section-sample">What others say</p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Card Title</span
+            ><span class="type-info">Inter Medium · 18px</span>
+          </div>
+          <p class="type-card-title-sample">Article Title</p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Body</span
+            ><span class="type-info"
+              >Inter Regular · 14px · line-height 24px</span
+            >
+          </div>
+          <p class="type-body-sample">
+            Saad Siddiqui possesses a unique talent for transforming complex
+            ideas into intuitive and visually appealing designs.
+          </p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Caption / Link</span
+            ><span class="type-info">Inter Regular · 14px</span>
+          </div>
+          <p class="type-caption-sample">Astera — Nov 2022</p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Footer</span
+            ><span class="type-info">Inter Regular · 16px</span>
+          </div>
+          <p class="type-footer-sample">© 2023 Made by Ugur Turgut</p>
+        </div>
       </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:rgba(255,255,255,0.4);border:1px solid var(--border);"></div>
-        <p class="swatch-name">Muted (Light)</p><p class="swatch-val">white / 40%</p>
+    </section>
+
+    <!-- SPACING -->
+    <section class="section">
+      <p class="section-label">Spacing Scale</p>
+      <div class="spacing-stack">
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--1"></div>
+          <span class="sp-label">space-1 · 4px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--2"></div>
+          <span class="sp-label">space-2 · 8px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--3"></div>
+          <span class="sp-label">space-3 · 12px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--4"></div>
+          <span class="sp-label">space-4 · 16px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--5"></div>
+          <span class="sp-label">space-5 · 24px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--6"></div>
+          <span class="sp-label">space-6 · 30px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--7"></div>
+          <span class="sp-label">space-7 · 36px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--8"></div>
+          <span class="sp-label">space-8 · 46px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--9"></div>
+          <span class="sp-label">space-9 · 56px</span>
+        </div>
       </div>
-      <div class="swatch-group">
-        <div class="swatch" style="background:rgba(237,237,237,0.75);border:1px solid var(--border);"></div>
-        <p class="swatch-name">Body (Light)</p><p class="swatch-val">#ededed / 75%</p>
+    </section>
+
+    <!-- BORDER RADIUS -->
+    <section class="section">
+      <p class="section-label">Border Radius</p>
+      <div class="row">
+        <div class="radius-item">
+          <div class="radius-box radius-box--sm"></div>
+          <p class="radius-label">sm · 8px</p>
+          <p class="radius-sub">Tool icons</p>
+        </div>
+        <div class="radius-item">
+          <div class="radius-box radius-box--md"></div>
+          <p class="radius-label">md · 12px</p>
+          <p class="radius-sub">Cards</p>
+        </div>
+        <div class="radius-item">
+          <div class="radius-box radius-box--lg"></div>
+          <p class="radius-label">lg · 16px</p>
+          <p class="radius-sub">Hero image</p>
+        </div>
+        <div class="radius-item">
+          <div class="radius-box radius-box--xl"></div>
+          <p class="radius-label">xl · 37px</p>
+          <p class="radius-sub">Testimonial avatars</p>
+        </div>
       </div>
-    </div>
-    <p style="font-size:12px;color:var(--text-muted);margin-top:32px;margin-bottom:16px;">Background Pattern</p>
-    <div class="row" style="align-items:center;gap:24px;">
-      <div style="width:120px;height:80px;border-radius:12px;background-color:var(--bg-primary);background-image:radial-gradient(circle,rgba(255,255,255,0.07) 1px,transparent 1px);background-size:24px 24px;border:1px solid var(--border);flex-shrink:0;"></div>
-      <div>
-        <p style="font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:4px;">Dot Grid</p>
-        <p style="font-size:11px;color:var(--text-muted);font-family:monospace;line-height:1.8;">
-          radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)<br/>
-          background-size: 24px 24px<br/>
-          Light theme: rgba(0,0,0,0.07)
+    </section>
+
+    <!-- COMPONENTS -->
+    <section class="section">
+      <p class="section-label">Components</p>
+
+      <!-- Nav link -->
+      <p class="ds-eyebrow">Nav Links</p>
+      <div class="row row--component-spaced">
+        <a class="nav-link">Connect on LinkedIn</a>
+        <a class="nav-link">View Dribbble</a>
+        <a class="nav-link">Download Resume</a>
+      </div>
+
+      <!-- Project row -->
+      <p class="ds-eyebrow">Project List Item</p>
+      <div class="project-item component-block">
+        <div>
+          <p class="project-title">Building Data Integration Platform</p>
+          <p class="project-meta">Astera — Nov 2022</p>
+        </div>
+        <div class="project-action-sample">
+          <span class="component-tag">Product</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <hr class="project-divider component-block" />
+
+      <!-- Tool card -->
+      <p class="ds-eyebrow">Tool Card</p>
+      <div class="tool-card component-block">
+        <p class="tool-card-title">Research &amp; Testing</p>
+        <div class="tool-icons">
+          <div class="tool-icon-placeholder"></div>
+          <div class="tool-icon-placeholder"></div>
+          <div class="tool-icon-placeholder"></div>
+          <div class="tool-icon-placeholder"></div>
+        </div>
+      </div>
+
+      <!-- Testimonial Character -->
+      <p class="ds-eyebrow">Testimonial Character</p>
+      <p class="component-note">
+        A 217×217px rounded avatar container. Holds an illustrated character
+        inside a teal-gradient inner frame (137×137px, radius 23px). A play
+        button overlays the bottom center — clicking it plays a recorded
+        testimonial message.
+      </p>
+      <div class="testimonial-variants">
+        <!-- Teal variant -->
+        <div class="testimonial-variant">
+          <div class="t-char t-char--teal">
+            <div class="t-avatar t-avatar--teal"></div>
+            <div class="t-play">▶</div>
+          </div>
+          <span class="variant-caption">Teal</span>
+        </div>
+        <!-- Blue-violet variant -->
+        <div class="testimonial-variant">
+          <div class="t-char t-char--blue-violet">
+            <div class="t-avatar t-avatar--blue-violet"></div>
+            <div class="t-play">▶</div>
+          </div>
+          <span class="variant-caption">Blue-Violet</span>
+        </div>
+        <!-- Purple variant -->
+        <div class="testimonial-variant">
+          <div class="t-char t-char--purple">
+            <div class="t-avatar t-avatar--purple"></div>
+            <div class="t-play">▶</div>
+          </div>
+          <span class="variant-caption">Purple</span>
+        </div>
+      </div>
+      <div class="anatomy-box">
+        <p>
+          <strong>Anatomy:</strong> Outer container 217×217px · radius 37px ·
+          subtle gradient bg per accent color<br />
+          <strong>Avatar:</strong> 137×137px · radius 23px · solid accent color
+          gradient · positioned top:40px left:40px<br />
+          <strong>Play Button:</strong> 48×48px · centered horizontally ·
+          positioned top:153px · triggers recorded message
         </p>
       </div>
-    </div>
 
-  </section>
-
-
-
-  <!-- TYPOGRAPHY -->
-  <section class="section">
-    <p class="section-label">Typography</p>
-    <div style="display:flex;flex-direction:column;gap:40px;">
-
-      <div class="type-row">
-        <div class="type-meta"><span class="type-tag">Display</span><span class="type-info">Darker Grotesque SemiBold · 67px</span></div>
-        <p style="font-family:var(--font-display);font-size:67px;font-weight:600;line-height:1.1;">I Design Stuff<span style="color:var(--accent-blue)">.</span></p>
-      </div>
-
-
-      <div class="type-row">
-        <div class="type-meta"><span class="type-tag">Section Label</span><span class="type-info">Inter Medium · 20px</span></div>
-        <p style="font-size:20px;font-weight:500;color:var(--text-muted);">What others say</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-meta"><span class="type-tag">Card Title</span><span class="type-info">Inter Medium · 18px</span></div>
-        <p style="font-size:18px;font-weight:500;color:var(--tool-card-title);">Article Title</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-meta"><span class="type-tag">Body</span><span class="type-info">Inter Regular · 14px · line-height 24px</span></div>
-        <p style="font-size:14px;font-weight:400;color:var(--text-body);line-height:24px;max-width:560px;">Saad Siddiqui possesses a unique talent for transforming complex ideas into intuitive and visually appealing designs.</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-meta"><span class="type-tag">Caption / Link</span><span class="type-info">Inter Regular · 14px</span></div>
-        <p style="font-size:14px;font-weight:400;color:var(--text-muted);">Astera — Nov 2022</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-meta"><span class="type-tag">Footer</span><span class="type-info">Inter Regular · 16px</span></div>
-        <p style="font-size:16px;font-weight:400;color:var(--text-muted);">© 2023 Made by Ugur Turgut</p>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <!-- SPACING -->
-  <section class="section">
-    <p class="section-label">Spacing Scale</p>
-    <div style="display:flex;flex-direction:column;gap:12px;">
-      <div class="sp-row"><div class="sp-bar" style="width:4px;"></div><span class="sp-label">space-1 · 4px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:8px;"></div><span class="sp-label">space-2 · 8px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:12px;"></div><span class="sp-label">space-3 · 12px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:16px;"></div><span class="sp-label">space-4 · 16px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:24px;"></div><span class="sp-label">space-5 · 24px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:30px;"></div><span class="sp-label">space-6 · 30px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:36px;"></div><span class="sp-label">space-7 · 36px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:46px;"></div><span class="sp-label">space-8 · 46px</span></div>
-      <div class="sp-row"><div class="sp-bar" style="width:56px;"></div><span class="sp-label">space-9 · 56px</span></div>
-    </div>
-  </section>
-
-
-
-  <!-- BORDER RADIUS -->
-  <section class="section">
-    <p class="section-label">Border Radius</p>
-    <div class="row">
-      <div class="radius-item"><div class="radius-box" style="border-radius:8px;"></div><p class="radius-label">sm · 8px</p><p class="radius-sub">Tool icons</p></div>
-      <div class="radius-item"><div class="radius-box" style="border-radius:12px;"></div><p class="radius-label">md · 12px</p><p class="radius-sub">Cards</p></div>
-      <div class="radius-item"><div class="radius-box" style="border-radius:16px;"></div><p class="radius-label">lg · 16px</p><p class="radius-sub">Hero image</p></div>
-      <div class="radius-item"><div class="radius-box" style="border-radius:37px;"></div><p class="radius-label">xl · 37px</p><p class="radius-sub">Testimonial avatars</p></div>
-    </div>
-  </section>
-
-
-
-  <!-- COMPONENTS -->
-  <section class="section">
-    <p class="section-label">Components</p>
-
-    <!-- Nav link -->
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Nav Links</p>
-    <div class="row" style="margin-bottom:40px;align-items:center;">
-      <a class="nav-link">Connect on LinkedIn</a>
-      <a class="nav-link">View Dribbble</a>
-      <a class="nav-link">Download Resume</a>
-    </div>
-
-    <!-- Project row -->
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Project List Item</p>
-    <div class="project-item" style="margin-bottom:40px;">
-      <div>
-        <p class="project-title">Building Data Integration Platform</p>
-        <p class="project-meta">Astera — Nov 2022</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="font-size:14px;color:var(--text-primary);">Product</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-    </div>
-    <hr class="project-divider" style="margin-bottom:40px;" />
-
-    <!-- Tool card -->
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Tool Card</p>
-    <div class="tool-card" style="margin-bottom:40px;">
-      <p class="tool-card-title">Research &amp; Testing</p>
-      <div style="display:flex;gap:12px;margin-top:16px;">
-        <div class="tool-icon-placeholder"></div>
-        <div class="tool-icon-placeholder"></div>
-        <div class="tool-icon-placeholder"></div>
-        <div class="tool-icon-placeholder"></div>
-      </div>
-    </div>
-
-    <!-- Testimonial Character -->
-    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">Testimonial Character</p>
-    <p style="font-size:11px;color:var(--text-muted);margin-bottom:16px;line-height:1.6;">A 217×217px rounded avatar container. Holds an illustrated character inside a teal-gradient inner frame (137×137px, radius 23px). A play button overlays the bottom center — clicking it plays a recorded testimonial message.</p>
-    <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px;">
-      <!-- Teal variant -->
-      <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
-        <div class="t-char" style="background:linear-gradient(rgba(255,255,255,0.04),rgba(255,255,255,0)),linear-gradient(rgba(103,205,190,0),rgba(103,205,190,0.11));">
-          <div class="t-avatar" style="background:linear-gradient(rgba(255,255,255,0.04),rgba(255,255,255,0)),linear-gradient(90deg,rgb(103,205,190),rgb(103,205,190));"></div>
-          <div class="t-play">▶</div>
-        </div>
-        <span style="font-size:11px;color:var(--text-muted);">Teal</span>
-      </div>
-      <!-- Blue-violet variant -->
-      <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
-        <div class="t-char" style="background:linear-gradient(rgba(255,255,255,0.04),rgba(255,255,255,0)),linear-gradient(rgba(93,139,215,0),rgba(93,139,215,0.11));">
-          <div class="t-avatar" style="background:linear-gradient(rgba(255,255,255,0.04),rgba(255,255,255,0)),linear-gradient(90deg,rgb(93,139,215),rgb(93,139,215));"></div>
-          <div class="t-play">▶</div>
-        </div>
-        <span style="font-size:11px;color:var(--text-muted);">Blue-Violet</span>
-      </div>
-      <!-- Purple variant -->
-      <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
-        <div class="t-char" style="background:linear-gradient(rgba(255,255,255,0.04),rgba(255,255,255,0)),linear-gradient(rgba(192,136,234,0),rgba(192,136,234,0.11));">
-          <div class="t-avatar" style="background:linear-gradient(rgba(255,255,255,0.04),rgba(255,255,255,0)),linear-gradient(90deg,rgb(192,136,234),rgb(192,136,234));"></div>
-          <div class="t-play">▶</div>
-        </div>
-        <span style="font-size:11px;color:var(--text-muted);">Purple</span>
-      </div>
-    </div>
-    <div class="anatomy-box">
-      <p>
-        <strong>Anatomy:</strong> Outer container 217×217px · radius 37px · subtle gradient bg per accent color<br/>
-        <strong>Avatar:</strong> 137×137px · radius 23px · solid accent color gradient · positioned top:40px left:40px<br/>
-        <strong>Play Button:</strong> 48×48px · centered horizontally · positioned top:153px · triggers recorded message
+      <!-- Article card -->
+      <p class="ds-eyebrow ds-eyebrow--article">Article Card</p>
+      <p class="component-note">
+        Two stacked layers. The darker "Article Source Section" (#181818, 235px)
+        sits behind and reveals a source label at the bottom. The "Article
+        Content Section" (#212121, 206px) overlays on top with the title and
+        body text.
       </p>
-    </div>
-
-    <!-- Article card -->
-    <p style="font-size:12px;color:var(--text-muted);margin-top:40px;margin-bottom:16px;">Article Card</p>
-    <p style="font-size:11px;color:var(--text-muted);margin-bottom:16px;line-height:1.6;">Two stacked layers. The darker "Article Source Section" (#181818, 235px) sits behind and reveals a source label at the bottom. The "Article Content Section" (#212121, 206px) overlays on top with the title and body text.</p>
-    <div class="article-card">
-      <!-- Article Source Section — darker layer behind, taller, shows source label at bottom -->
-      <div class="article-source-section">
-        <p class="article-source">LinkedIn</p>
+      <div class="article-card">
+        <!-- Article Source Section — darker layer behind, taller, shows source label at bottom -->
+        <div class="article-source-section">
+          <p class="article-source">LinkedIn</p>
+        </div>
+        <!-- Article Content Section — lighter layer on top, shorter, reveals source below -->
+        <div class="article-content-section">
+          <p class="article-title">Article Title</p>
+          <p class="article-body">
+            Saad Siddiqui possesses a unique talent for transforming complex
+            ideas into intuitive and visually appealing designs. Saad Siddiqui
+            has a deep understanding of user experience principles, ensuring
+            that each design decision is based on empathy and usability. Whether
+            it involves wireframing, prototyping, webpage designing or research.
+          </p>
+          <div class="article-fade"></div>
+        </div>
       </div>
-      <!-- Article Content Section — lighter layer on top, shorter, reveals source below -->
-      <div class="article-content-section">
-        <p class="article-title">Article Title</p>
-        <p class="article-body">Saad Siddiqui possesses a unique talent for transforming complex ideas into intuitive and visually appealing designs. Saad Siddiqui has a deep understanding of user experience principles, ensuring that each design decision is based on empathy and usability. Whether it involves wireframing, prototyping, webpage designing or research.</p>
-        <div class="article-fade"></div>
+      <div class="anatomy-box">
+        <p>
+          <strong>Article Source Section:</strong> #181818 · 671×235px · radius
+          12px · source label (Inter Regular 14px, white/40%) pinned bottom-left
+          at 24px<br />
+          <strong>Article Content Section:</strong> #212121 · 671×206px · radius
+          12px · stacked on top · title (Inter Medium 18px) at top:25px · body
+          (Inter Regular 14px, line-height 24px) at top:69px · fade gradient at
+          bottom
+        </p>
       </div>
-    </div>
-    <div class="anatomy-box">
-      <p>
-        <strong>Article Source Section:</strong> #181818 · 671×235px · radius 12px · source label (Inter Regular 14px, white/40%) pinned bottom-left at 24px<br/>
-        <strong>Article Content Section:</strong> #212121 · 671×206px · radius 12px · stacked on top · title (Inter Medium 18px) at top:25px · body (Inter Regular 14px, line-height 24px) at top:69px · fade gradient at bottom
-      </p>
-    </div>
-  </section>
+    </section>
 
-
-
-  <!-- RESPONSIVENESS GUIDE -->
-  <section class="section">
-    <p class="section-label">Responsiveness Guide</p>
-    <div style="display:flex;flex-direction:column;gap:0;">
-
-      <div class="bp-row">
-        <div class="bp-badge" style="background:rgba(37,145,205,0.15);color:#2591cd;">Desktop</div>
-        <div class="bp-range">≥ 1280px</div>
-        <div class="bp-desc">Full layout. Content column: 671px centered within 1280px canvas. Left offset ~300px.</div>
+    <!-- RESPONSIVENESS GUIDE -->
+    <section class="section">
+      <p class="section-label">Responsiveness Guide</p>
+      <div class="bp-stack">
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--desktop">Desktop</div>
+          <div class="bp-range">≥ 1280px</div>
+          <div class="bp-desc">
+            Full layout. Content column: 671px centered within 1280px canvas.
+            Left offset ~300px.
+          </div>
+        </div>
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--laptop">Laptop</div>
+          <div class="bp-range">1024px – 1279px</div>
+          <div class="bp-desc">
+            Content column scales to ~65% viewport. Reduce hero font to ~52px.
+            Maintain side padding ≥ 40px.
+          </div>
+        </div>
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--tablet">Tablet</div>
+          <div class="bp-range">768px – 1023px</div>
+          <div class="bp-desc">
+            Single column layout. Tool cards stack 1-per-row. Nav links collapse
+            to vertical list. Hero font ~40px.
+          </div>
+        </div>
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--mobile">Mobile</div>
+          <div class="bp-range">< 768px</div>
+          <div class="bp-desc">
+            Full-width content, 20px side padding. Hero font ~32px. Project rows
+            stack vertically. Testimonial cards scroll horizontally.
+          </div>
+        </div>
       </div>
-      <div class="bp-row">
-        <div class="bp-badge" style="background:rgba(103,205,190,0.15);color:#67CDBE;">Laptop</div>
-        <div class="bp-range">1024px – 1279px</div>
-        <div class="bp-desc">Content column scales to ~65% viewport. Reduce hero font to ~52px. Maintain side padding ≥ 40px.</div>
+
+      <div class="bp-preview-section">
+        <p class="ds-eyebrow ds-eyebrow--preview">Breakpoint Preview</p>
+        <div class="bp-preview-row">
+          <div class="bp-preview bp-preview--desktop">
+            <span>Desktop</span><span class="bp-preview-sub">1280px</span>
+          </div>
+          <div class="bp-preview bp-preview--laptop">
+            <span>Laptop</span><span class="bp-preview-sub">1024px</span>
+          </div>
+          <div class="bp-preview bp-preview--tablet">
+            <span>Tablet</span><span class="bp-preview-sub">768px</span>
+          </div>
+          <div class="bp-preview bp-preview--mobile">
+            <span class="bp-preview-sub--mobile">Mobile</span>
+          </div>
+        </div>
       </div>
-      <div class="bp-row">
-        <div class="bp-badge" style="background:rgba(192,136,234,0.15);color:#C088EA;">Tablet</div>
-        <div class="bp-range">768px – 1023px</div>
-        <div class="bp-desc">Single column layout. Tool cards stack 1-per-row. Nav links collapse to vertical list. Hero font ~40px.</div>
-      </div>
-      <div class="bp-row">
-        <div class="bp-badge" style="background:rgba(93,139,215,0.15);color:#5D8BD7;">Mobile</div>
-        <div class="bp-range">< 768px</div>
-        <div class="bp-desc">Full-width content, 20px side padding. Hero font ~32px. Project rows stack vertically. Testimonial cards scroll horizontally.</div>
-      </div>
+    </section>
 
-    </div>
-
-    <div style="margin-top:40px;">
-      <p style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">Breakpoint Preview</p>
-      <div style="display:flex;gap:12px;align-items:flex-end;">
-        <div class="bp-preview" style="width:120px;height:80px;"><span>Desktop</span><span style="font-size:10px;">1280px</span></div>
-        <div class="bp-preview" style="width:96px;height:70px;"><span>Laptop</span><span style="font-size:10px;">1024px</span></div>
-        <div class="bp-preview" style="width:72px;height:60px;"><span>Tablet</span><span style="font-size:10px;">768px</span></div>
-        <div class="bp-preview" style="width:36px;height:64px;border-radius:8px;"><span style="font-size:9px;">Mobile</span></div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- FOOTER -->
-  <footer style="border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;color:var(--text-muted);font-size:14px;">
-    <span>Design System — Saad Siddiqui Portfolio</span>
-    <span>Extracted via Figma MCP · 2026</span>
-  </footer>
-
-</body>
+    <!-- FOOTER -->
+    <footer class="design-system-footer">
+      <span>Design System — Saad Siddiqui Portfolio</span>
+      <span>Extracted via Figma MCP · 2026</span>
+    </footer>
+  </body>
 </html>
