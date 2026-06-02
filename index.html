@@ -98,8 +98,20 @@
         <div class="hero-copy reveal-item">
           <div>
             <p class="intro-kicker">Hi, I'm Saad Siddiqui</p>
-            <h1>I Design Stuff<span>.</span></h1>
+            <h1>I Design Stuff</h1>
           </div>
+          <!-- Bot -->
+             <div class="bot-container" style="top:-10px;left:18px" id="bot">
+          <img src="./src/resources/icons/logo.svg" alt="Logo" class="bot-logo" />
+          <div class="bot-eyes">
+            <div class="bot-eye left" id="leftEye">
+              <div class="bot-pupil" id="leftPupil"></div>
+            </div>
+            <div class="bot-eye right" id="rightEye">
+              <div class="bot-pupil" id="rightPupil"></div>
+            </div>
+          </div>
+        </div>
         </div>
         <div
           class="hero-visual reveal-item"
@@ -307,6 +319,71 @@
         <span>Thanks for visiting. Stay awesome</span>
       </footer>
     </main>
+
+    <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    // Observe single-element animations
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+
+    // Observe stagger containers — also mark children as anim so they start hidden
+    document.querySelectorAll('.anim-stagger').forEach(el => {
+      el.querySelectorAll(':scope > *').forEach(child => child.style.opacity = '0');
+      observer.observe(el);
+    });
+
+    // ── Interactive Bot ──
+    const bot = document.getElementById('bot');
+    const leftEye = document.getElementById('leftEye');
+    const rightEye = document.getElementById('rightEye');
+    const leftPupil = document.getElementById('leftPupil');
+    const rightPupil = document.getElementById('rightPupil');
+
+    // Track cursor and move pupils
+    document.addEventListener('mousemove', (e) => {
+      const botRect = bot.getBoundingClientRect();
+      const botCenterX = botRect.left + botRect.width / 2;
+      const botCenterY = botRect.top + botRect.height / 2;
+
+      // Calculate angle and distance from bot center to cursor
+      const angle = Math.atan2(e.clientY - botCenterY, e.clientX - botCenterX);
+      const distance = Math.min(1, Math.hypot(e.clientX - botCenterX, e.clientY - botCenterY));
+
+      // Move pupils based on cursor position (smaller range for tiny eyes)
+      const moveX = Math.cos(angle) * distance *5;
+      const moveY = Math.sin(angle) * distance *5;
+
+      if(!leftEye.classList.contains('squint') && !rightEye.classList.contains('squint')){
+      leftPupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+      rightPupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+      }else{
+      leftPupil.style.transform = `translate(calc(-50%), calc(-15%))`;
+      rightPupil.style.transform = `translate(calc(-50%), calc(-15%))`;
+      }
+    });
+
+    // Squint on hover
+    bot.addEventListener('mouseenter', () => {
+      leftEye.classList.add('squint');
+      rightEye.classList.add('squint');
+    });
+
+    bot.addEventListener('mouseleave', () => {
+      leftEye.classList.remove('squint');
+      rightEye.classList.remove('squint');
+    });
+  </script>
 
     <script>
       (() => {
