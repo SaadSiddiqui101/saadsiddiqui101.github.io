@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System — Saad Siddiqui</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BNHYDW2GZF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BNHYDW2GZF");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/design-system.css" />
+  </head>
+  <body>
+    <button
+      class="theme-toggle"
+      onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'; this.textContent = document.documentElement.dataset.theme === 'light' ? '🌙 Dark' : '☀️ Light'"
+    >
+      ☀️ Light
+    </button>
+
+    <h1>Design System<span>.</span></h1>
+    <p class="subtitle">
+      Extracted from Saad Siddiqui's portfolio — Experiments file
+    </p>
+
+    <!-- COLORS -->
+    <section class="section">
+      <p class="section-label">Colors</p>
+
+      <p class="ds-eyebrow">Backgrounds</p>
+      <div class="row ds-row-gap-32">
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-primary"></div>
+          <p class="swatch-name">Primary BG</p>
+          <p class="swatch-val">#0f0f0f</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-card"></div>
+          <p class="swatch-name">Card BG</p>
+          <p class="swatch-val">#121212</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-tool"></div>
+          <p class="swatch-name">Surface Dark</p>
+          <p class="swatch-val">#181818</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--bg-article"></div>
+          <p class="swatch-name">Article Card</p>
+          <p class="swatch-val">#212121</p>
+        </div>
+      </div>
+
+      <p class="ds-eyebrow">Accents</p>
+      <div class="row ds-row-gap-32">
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-blue"></div>
+          <p class="swatch-name">Accent Blue</p>
+          <p class="swatch-val">#2591cd</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-teal"></div>
+          <p class="swatch-name">Accent Teal</p>
+          <p class="swatch-val">#67CDBE</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-purple"></div>
+          <p class="swatch-name">Accent Purple</p>
+          <p class="swatch-val">#C088EA</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--accent-blue-violet"></div>
+          <p class="swatch-name">Blue-Violet</p>
+          <p class="swatch-val">#5D8BD7</p>
+        </div>
+      </div>
+
+      <p class="ds-eyebrow">Text</p>
+      <div class="row">
+        <div class="swatch-group">
+          <div class="swatch swatch--text-dark"></div>
+          <p class="swatch-name">Primary (Dark)</p>
+          <p class="swatch-val">#0f0f0f</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--muted-dark"></div>
+          <p class="swatch-name">Muted (Dark)</p>
+          <p class="swatch-val">black / 45%</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--body-dark"></div>
+          <p class="swatch-name">Body (Dark)</p>
+          <p class="swatch-val">#1e1e1e / 70%</p>
+        </div>
+      </div>
+      <div class="row ds-row-offset-sm">
+        <div class="swatch-group">
+          <div class="swatch swatch--text-light"></div>
+          <p class="swatch-name">Primary (Light)</p>
+          <p class="swatch-val">#ffffff</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--muted-light"></div>
+          <p class="swatch-name">Muted (Light)</p>
+          <p class="swatch-val">white / 40%</p>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch swatch--body-light"></div>
+          <p class="swatch-name">Body (Light)</p>
+          <p class="swatch-val">#ededed / 75%</p>
+        </div>
+      </div>
+      <p class="ds-eyebrow ds-eyebrow--top">Background Pattern</p>
+      <div class="row row--pattern">
+        <div class="pattern-sample"></div>
+        <div>
+          <p class="pattern-title">Dot Grid</p>
+          <p class="pattern-code">
+            radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent
+            1px)<br />
+            background-size: 24px 24px<br />
+            Light theme: rgba(0,0,0,0.07)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="section">
+      <p class="section-label">Typography</p>
+      <div class="type-stack">
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Display</span
+            ><span class="type-info">Darker Grotesque SemiBold · 67px</span>
+          </div>
+          <p class="type-display-sample">
+            I Design Stuff<span class="type-dot">.</span>
+          </p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Section Label</span
+            ><span class="type-info">Inter Medium · 20px</span>
+          </div>
+          <p class="type-section-sample">What others say</p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Card Title</span
+            ><span class="type-info">Inter Medium · 18px</span>
+          </div>
+          <p class="type-card-title-sample">Article Title</p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Body</span
+            ><span class="type-info"
+              >Inter Regular · 14px · line-height 24px</span
+            >
+          </div>
+          <p class="type-body-sample">
+            Saad Siddiqui possesses a unique talent for transforming complex
+            ideas into intuitive and visually appealing designs.
+          </p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Caption / Link</span
+            ><span class="type-info">Inter Regular · 14px</span>
+          </div>
+          <p class="type-caption-sample">Astera — Nov 2022</p>
+        </div>
+
+        <div class="type-row">
+          <div class="type-meta">
+            <span class="type-tag">Footer</span
+            ><span class="type-info">Inter Regular · 16px</span>
+          </div>
+          <p class="type-footer-sample">© 2023 Made by Ugur Turgut</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPACING -->
+    <section class="section">
+      <p class="section-label">Spacing Scale</p>
+      <div class="spacing-stack">
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--1"></div>
+          <span class="sp-label">space-1 · 4px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--2"></div>
+          <span class="sp-label">space-2 · 8px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--3"></div>
+          <span class="sp-label">space-3 · 12px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--4"></div>
+          <span class="sp-label">space-4 · 16px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--5"></div>
+          <span class="sp-label">space-5 · 24px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--6"></div>
+          <span class="sp-label">space-6 · 30px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--7"></div>
+          <span class="sp-label">space-7 · 36px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--8"></div>
+          <span class="sp-label">space-8 · 46px</span>
+        </div>
+        <div class="sp-row">
+          <div class="sp-bar sp-bar--9"></div>
+          <span class="sp-label">space-9 · 56px</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BORDER RADIUS -->
+    <section class="section">
+      <p class="section-label">Border Radius</p>
+      <div class="row">
+        <div class="radius-item">
+          <div class="radius-box radius-box--sm"></div>
+          <p class="radius-label">sm · 8px</p>
+          <p class="radius-sub">Tool icons</p>
+        </div>
+        <div class="radius-item">
+          <div class="radius-box radius-box--md"></div>
+          <p class="radius-label">md · 12px</p>
+          <p class="radius-sub">Cards</p>
+        </div>
+        <div class="radius-item">
+          <div class="radius-box radius-box--lg"></div>
+          <p class="radius-label">lg · 16px</p>
+          <p class="radius-sub">Hero image</p>
+        </div>
+        <div class="radius-item">
+          <div class="radius-box radius-box--xl"></div>
+          <p class="radius-label">xl · 37px</p>
+          <p class="radius-sub">Testimonial avatars</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPONENTS -->
+    <section class="section">
+      <p class="section-label">Components</p>
+
+      <!-- Nav link -->
+      <p class="ds-eyebrow">Nav Links</p>
+      <div class="row row--component-spaced">
+        <a class="nav-link">Connect on LinkedIn</a>
+        <a class="nav-link">View Dribbble</a>
+        <a class="nav-link">Download Resume</a>
+      </div>
+
+      <!-- Project row -->
+      <p class="ds-eyebrow">Project List Item</p>
+      <div class="project-item component-block">
+        <div>
+          <p class="project-title">Building Data Integration Platform</p>
+          <p class="project-meta">Astera — Nov 2022</p>
+        </div>
+        <div class="project-action-sample">
+          <span class="component-tag">Product</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <hr class="project-divider component-block" />
+
+      <!-- Tool card -->
+      <p class="ds-eyebrow">Tool Card</p>
+      <div class="tool-card component-block">
+        <p class="tool-card-title">Research &amp; Testing</p>
+        <div class="tool-icons">
+          <div class="tool-icon-placeholder"></div>
+          <div class="tool-icon-placeholder"></div>
+          <div class="tool-icon-placeholder"></div>
+          <div class="tool-icon-placeholder"></div>
+        </div>
+      </div>
+
+      <!-- Testimonial Character -->
+      <p class="ds-eyebrow">Testimonial Character</p>
+      <p class="component-note">
+        A 217×217px rounded avatar container. Holds an illustrated character
+        inside a teal-gradient inner frame (137×137px, radius 23px). A play
+        button overlays the bottom center — clicking it plays a recorded
+        testimonial message.
+      </p>
+      <div class="testimonial-variants">
+        <!-- Teal variant -->
+        <div class="testimonial-variant">
+          <div class="t-char t-char--teal">
+            <div class="t-avatar t-avatar--teal"></div>
+            <div class="t-play">▶</div>
+          </div>
+          <span class="variant-caption">Teal</span>
+        </div>
+        <!-- Blue-violet variant -->
+        <div class="testimonial-variant">
+          <div class="t-char t-char--blue-violet">
+            <div class="t-avatar t-avatar--blue-violet"></div>
+            <div class="t-play">▶</div>
+          </div>
+          <span class="variant-caption">Blue-Violet</span>
+        </div>
+        <!-- Purple variant -->
+        <div class="testimonial-variant">
+          <div class="t-char t-char--purple">
+            <div class="t-avatar t-avatar--purple"></div>
+            <div class="t-play">▶</div>
+          </div>
+          <span class="variant-caption">Purple</span>
+        </div>
+      </div>
+      <div class="anatomy-box">
+        <p>
+          <strong>Anatomy:</strong> Outer container 217×217px · radius 37px ·
+          subtle gradient bg per accent color<br />
+          <strong>Avatar:</strong> 137×137px · radius 23px · solid accent color
+          gradient · positioned top:40px left:40px<br />
+          <strong>Play Button:</strong> 48×48px · centered horizontally ·
+          positioned top:153px · triggers recorded message
+        </p>
+      </div>
+
+      <!-- Article card -->
+      <p class="ds-eyebrow ds-eyebrow--article">Article Card</p>
+      <p class="component-note">
+        Two stacked layers. The darker "Article Source Section" (#181818, 235px)
+        sits behind and reveals a source label at the bottom. The "Article
+        Content Section" (#212121, 206px) overlays on top with the title and
+        body text.
+      </p>
+      <div class="article-card">
+        <!-- Article Source Section — darker layer behind, taller, shows source label at bottom -->
+        <div class="article-source-section">
+          <p class="article-source">LinkedIn</p>
+        </div>
+        <!-- Article Content Section — lighter layer on top, shorter, reveals source below -->
+        <div class="article-content-section">
+          <p class="article-title">Article Title</p>
+          <p class="article-body">
+            Saad Siddiqui possesses a unique talent for transforming complex
+            ideas into intuitive and visually appealing designs. Saad Siddiqui
+            has a deep understanding of user experience principles, ensuring
+            that each design decision is based on empathy and usability. Whether
+            it involves wireframing, prototyping, webpage designing or research.
+          </p>
+          <div class="article-fade"></div>
+        </div>
+      </div>
+      <div class="anatomy-box">
+        <p>
+          <strong>Article Source Section:</strong> #181818 · 671×235px · radius
+          12px · source label (Inter Regular 14px, white/40%) pinned bottom-left
+          at 24px<br />
+          <strong>Article Content Section:</strong> #212121 · 671×206px · radius
+          12px · stacked on top · title (Inter Medium 18px) at top:25px · body
+          (Inter Regular 14px, line-height 24px) at top:69px · fade gradient at
+          bottom
+        </p>
+      </div>
+    </section>
+
+    <!-- RESPONSIVENESS GUIDE -->
+    <section class="section">
+      <p class="section-label">Responsiveness Guide</p>
+      <div class="bp-stack">
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--desktop">Desktop</div>
+          <div class="bp-range">≥ 1280px</div>
+          <div class="bp-desc">
+            Full layout. Content column: 671px centered within 1280px canvas.
+            Left offset ~300px.
+          </div>
+        </div>
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--laptop">Laptop</div>
+          <div class="bp-range">1024px – 1279px</div>
+          <div class="bp-desc">
+            Content column scales to ~65% viewport. Reduce hero font to ~52px.
+            Maintain side padding ≥ 40px.
+          </div>
+        </div>
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--tablet">Tablet</div>
+          <div class="bp-range">768px – 1023px</div>
+          <div class="bp-desc">
+            Single column layout. Tool cards stack 1-per-row. Nav links collapse
+            to vertical list. Hero font ~40px.
+          </div>
+        </div>
+        <div class="bp-row">
+          <div class="bp-badge bp-badge--mobile">Mobile</div>
+          <div class="bp-range">< 768px</div>
+          <div class="bp-desc">
+            Full-width content, 20px side padding. Hero font ~32px. Project rows
+            stack vertically. Testimonial cards scroll horizontally.
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-preview-section">
+        <p class="ds-eyebrow ds-eyebrow--preview">Breakpoint Preview</p>
+        <div class="bp-preview-row">
+          <div class="bp-preview bp-preview--desktop">
+            <span>Desktop</span><span class="bp-preview-sub">1280px</span>
+          </div>
+          <div class="bp-preview bp-preview--laptop">
+            <span>Laptop</span><span class="bp-preview-sub">1024px</span>
+          </div>
+          <div class="bp-preview bp-preview--tablet">
+            <span>Tablet</span><span class="bp-preview-sub">768px</span>
+          </div>
+          <div class="bp-preview bp-preview--mobile">
+            <span class="bp-preview-sub--mobile">Mobile</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="design-system-footer">
+      <span>Design System — Saad Siddiqui Portfolio</span>
+      <span>Extracted via Figma MCP · 2026</span>
+    </footer>
+  </body>
+</html>

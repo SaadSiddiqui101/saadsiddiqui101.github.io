@@ -1,197 +1,565 @@
 <!doctype html>
-<html lang="en" class="overflow-x-hidden scroll-smooth">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Saad Siddiqui - Product Designer. A showcase of design and research work across enterprise, edtech, medtech and more."
+    />
+    <title>Saad Siddiqui</title>
+    <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.documentElement.classList.add("reveal-ready");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BNHYDW2GZF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="A showcase of my design and research work for various products featuring technologies like virtual and augemented reality. ">
-  <title>Saad Siddiqui</title>
-  <link href="./dist/output.css" rel="stylesheet" />
-  <script src="https://unpkg.com/scrollreveal@4.0.9"></script>
-  <script src="./Textify.min.js"></script>
-  <link rel="shortcut icon" href="./src/resources/icons/favicon.svg">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNHYDW2GZF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag("config", "G-BNHYDW2GZF");
+    </script>
+    <link rel="stylesheet" href="./src/home.css" />
+  </head>
+  <body>
+    <aside class="system-rail" aria-label="System index">
+      <div class="rail-content">
+        <nav aria-label="Page sections">
+          <p class="rail-title reveal" data-reveal>// System Index</p>
+          <div
+            class="rail-nav reveal-stagger"
+            data-reveal-stagger
+            data-reveal-delay="90"
+            data-reveal-step="55"
+          >
+            <a class="reveal-item" href="#project-directory"
+              >Project Directory</a
+            >
+            <a class="reveal-item" href="#design-principles"
+              >Design Principles</a
+            >
+            <a class="reveal-item" href="#about-me">About Me</a>
+          </div>
+        </nav>
+        <div
+          class="rail-pattern reveal"
+          data-reveal
+          data-reveal-delay="240"
+          aria-hidden="true"
+        >
+          <canvas class="rail-pattern-canvas"></canvas>
+        </div>
+        <div
+          class="rail-social reveal-stagger"
+          data-reveal-stagger
+          data-reveal-delay="320"
+          data-reveal-step="60"
+        >
+          <a
+            class="reveal-item"
+            href="https://www.linkedin.com/in/saad-siddiqui-5528191aa/"
+            target="_blank"
+            rel="noopener"
+            >Connect on LinkedIn</a
+          >
+          <a
+            class="reveal-item"
+            href="https://dribbble.com/elveyui"
+            target="_blank"
+            rel="noopener"
+            >View Dribbble</a
+          >
+          <a
+            class="reveal-item"
+            href="./src/resources/documents/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Download Resume</a
+          >
+        </div>
+      </div>
+    </aside>
 
-  gtag('config', 'G-BNHYDW2GZF');
-</script>
-<body class=" mx-auto max-w-screen-2xl">
+    <main class="page-main">
+      <header class="hero reveal-stagger" data-reveal-stagger>
+        <div class="hero-copy reveal-item">
+          <div>
+            <p class="intro-kicker">Hi, I'm Saad Siddiqui</p>
+            <h1>I Design Stuff</h1>
+          </div>
+          <!-- Bot -->
+             <div class="bot-container" style="top:-10px;left:18px" id="bot">
+          <img src="./src/resources/icons/logo.svg" alt="Logo" class="bot-logo" />
+          <div class="bot-eyes">
+            <div class="bot-eye left" id="leftEye">
+              <div class="bot-pupil" id="leftPupil"></div>
+            </div>
+            <div class="bot-eye right" id="rightEye">
+              <div class="bot-pupil" id="rightPupil"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div
+          class="hero-visual reveal-item"
+          aria-label="Portfolio work preview"
+        >
+          <img
+            src="./src/resources/figma/experiments-hero.png"
+            alt="Dashboard interface preview"
+          />
+        </div>
+      </header>
 
-  <!-- <img alt="background blur" src="./src/resources/images/b8c2ccf.png" class="background" /> -->
+      <section
+        class="content-section project-directory reveal"
+        id="project-directory"
+        data-reveal
+      >
+        <div class="section-grid">
+          <h2 class="section-label">// Project Directory</h2>
+          <div
+            class="project-list reveal-stagger"
+            data-reveal-stagger
+            data-reveal-step="65"
+          >
+            <a class="project-row reveal-item" href="./astera.html">
+              <span class="project-number">01</span>
+              <span>
+                <span class="project-meta">Astera &mdash; Nov 2022</span>
+                <span class="project-title"
+                  >Designing Enterprise Data Integration Platform</span
+                >
+              </span>
+              <span class="project-action"
+                >Product
+                <img
+                  src="./src/resources/icons/fluent_open-32-filled.svg"
+                  alt=""
+              /></span>
+            </a>
+            <hr class="project-divider reveal-item" />
 
-  <header class="relative w-full flex flex-wrap overflow-clip ">
+            <a class="project-row reveal-item" href="./chaptyr.html">
+              <span class="project-number">02</span>
+              <span>
+                <span class="project-meta">Chaptyr &mdash; Dec 2025</span>
+                <span class="project-title"
+                  >AI-Native Learning Experience Platform</span
+                >
+              </span>
+              <span class="project-action"
+                >Product + Branding
+                <img
+                  src="./src/resources/icons/fluent_open-32-filled.svg"
+                  alt=""
+              /></span>
+            </a>
+            <hr class="project-divider reveal-item" />
 
-   
- 
+            <a class="project-row reveal-item" href="./qlu.html">
+              <span class="project-number">03</span>
+              <span>
+                <span class="project-meta">QLU.ai &mdash; Jan 2025</span>
+                <span class="project-title"
+                  >Cross-Product Design System at Scale</span
+                >
+              </span>
+              <span class="project-action"
+                >Design System
+                <img
+                  src="./src/resources/icons/fluent_open-32-filled.svg"
+                  alt=""
+              /></span>
+            </a>
+            <hr class="project-divider reveal-item" />
 
-    <!-- <video style="z-index:-2;opacity:0.2"  class="w-full absolute  inset-0" loop muted autoplay >
-      <source src="./src/resources/videos/titlevid.webm" />
-      <source src="./src/resources/videos/titlevid.mp4" />
-    </video> -->
-  
-    <span class=" z-10 w-full h-full flex flex-wrap">
-    <!-- Nav Section -->
-    <nav
-      class="container basis-full min-w-full lg:min-w-fit  h-fit flex flex-row  justify-between items-baseline lg:max-w-1200 mx-auto py-7 mb-10 px-4 lg:px-14 ">
-      <p class="border-t border-red-500">Saad Siddiqui</p>
-      <a href="#contact"><button
-          class="border  px-3 py-2 text-sm hover:bg-red-500 hover:text-white transition-colors">Let's
-          Connect</button></a>
-    </nav>
-    <!-- End of Nav Section -->
+            <a class="project-row reveal-item" href="./psw.html">
+              <span class="project-number">04</span>
+              <span>
+                <span class="project-meta"
+                  >Pakistan Single Window &mdash; Feb 2020</span
+                >
+                <span class="project-title"
+                  >Digitizing Trade and Regulatory Operations</span
+                >
+              </span>
+              <span class="project-action"
+                >Product + Design System
+                <img
+                  src="./src/resources/icons/fluent_open-32-filled.svg"
+                  alt=""
+              /></span>
+            </a>
+            <hr class="project-divider reveal-item" />
 
-    <!-- Main Section -->
-    <main id="expHeading" class="mx-auto lg:max-w-1200 px-4 lg:px-14  rounded-xl flex  h-fit   lg:mt-24 mb-12 ">
-      <span id="name_section"  class=" flex-2 max-w-full order-last sm:order-first mt-14 sm:mt-0">
-        <span class="hero-text xl:w-4/5 block">
-        <p  class="mt-3  w-full ">
-          <p class="inline text-2xl lg:text-4xl" data-textify>A</p><p class="inline text-2xl lg:text-4xl text-red-500" data-textify>Product Designer</p><p class="inline text-2xl lg:text-4xl" data-textify>and</p><p class="inline text-2xl lg:text-4xl text-red-500" data-textify>Engineer,</p><p class="inline text-2xl lg:text-4xl" data-textify>using design practices to drive innovation and create empathy at every stage of the product design journey.</p>   </p>
-      </span>
-        <ul class="mt-5">
-          <li class="inline mr-2 hover:text-red-500"><a target="_blank" href="./src/resources/documents/resume.pdf"><span class="hidden sm:inline">Download</span> Resume</a></li>
-          <li class="inline  ">|</li>
-          <li class="inline mx-2 hover:text-red-500"><a href="https://www.linkedin.com/in/saad-siddiqui-5528191aa/"><span class="hidden sm:inline">View</span> linkedin</a></li>
-          <li class="inline  ">|</li>
-          <li class="inline mx-2 hover:text-red-500"><a href="https://dribbble.com/elveyui">Dribbble</a></li>
-       
-        </ul>
-      </span>
-<!--      
-      <img alt="Saad Siddiqui" style="width:35%" src="./src/resources/images/profile.jpg"
-        class="  md:mt-auto  md:mb-auto  sm:w-special mx-auto sm:mr-0 relative lg:mr-14 md:ml-auto lg:ml-0  lg:block rounded-xl"
-         height="auto" />
-         -->
+            <a class="project-row reveal-item" href="./avicenna.html">
+              <span class="project-number">05</span>
+              <span>
+                <span class="project-meta">Avicenna &mdash; Dec 2025</span>
+                <span class="project-title"
+                  >Designing AI for Modern Healthcare Workflows</span
+                >
+              </span>
+              <span class="project-action"
+                >Product + Branding
+                <img
+                  src="./src/resources/icons/fluent_open-32-filled.svg"
+                  alt=""
+              /></span>
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <section
+        class="content-section principles reveal"
+        id="design-principles"
+        data-reveal
+      >
+        <div class="section-grid">
+          <h2 class="section-label">// Design Principles</h2>
+          <div
+            class="principle-board reveal-stagger"
+            data-reveal-stagger
+            data-reveal-step="80"
+          >
+            <article class="principle-card reveal-item">
+              <div class="principle-caption">
+                <span class="principle-code">DP-01</span>
+                <span class="principle-name">Precise</span>
+              </div>
+              <img src="./src/resources/figma/principle-precise.svg" alt="" />
+            </article>
+
+            <article class="principle-card reveal-item">
+              <div class="principle-caption">
+                <span class="principle-code">DP-02</span>
+                <span class="principle-name">Calm</span>
+              </div>
+              <img src="./src/resources/figma/principle-calm.svg" alt="" />
+            </article>
+
+            <article class="principle-card reveal-item">
+              <div class="principle-caption">
+                <span class="principle-code">DP-03</span>
+                <span class="principle-name">Everlasting</span>
+              </div>
+              <img
+                src="./src/resources/figma/principle-everlasting.svg"
+                alt=""
+              />
+            </article>
+
+            <article class="principle-card reveal-item">
+              <div class="principle-caption">
+                <span class="principle-code">DP-04</span>
+                <span class="principle-name">Thorough</span>
+              </div>
+              <img src="./src/resources/figma/principle-thorough.svg" alt="" />
+            </article>
+
+            <article class="principle-card reveal-item">
+              <div class="principle-caption">
+                <span class="principle-code">DP-05</span>
+                <span class="principle-name">Minimal</span>
+              </div>
+              <img src="./src/resources/figma/principle-minimal.svg" alt="" />
+            </article>
+
+            <article class="principle-card reveal-item">
+              <div class="principle-caption">
+                <span class="principle-code">DP-06</span>
+                <span class="principle-name">Clarity</span>
+              </div>
+              <img src="./src/resources/figma/principle-clarity.svg" alt="" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section about reveal" id="about-me" data-reveal>
+        <div class="section-grid">
+          <h2 class="section-label">// About Me</h2>
+          <div
+            class="about-copy reveal-stagger"
+            data-reveal-stagger
+            data-reveal-step="90"
+          >
+            <p class="reveal-item">
+              I work across product strategy, interaction design, systems
+              thinking, and visual craft to turn dense workflows into interfaces
+              people can move through with confidence.
+            </p>
+            <p class="reveal-item">
+              My work spans enterprise data platforms, AI learning tools,
+              healthcare workflows, trade operations, and design systems. I like
+              quiet, exacting interfaces: clear hierarchy, practical motion, and
+              the kind of details that make complex software feel composed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>&copy; 2026 Made by Saad Siddiqui</span>
+        <span>Thanks for visiting. Stay awesome</span>
+      </footer>
     </main>
-    <!-- End of Main Section-->
-    </span>
-  </header>
 
-  <section class="mt-24 lg:max-w-1200 px-4 lg:px-14 mx-auto w-full">
-    <div class="w-inherit max-w-full">
-      <p id="workHeading" class="text-2xl text-gray-400">My Work</p>
-    </div>
-  
-  <section class="mt-10 content-start justify-content-between ">
-    <div id="workPost1" class="w-inherit w-full text-white mt-14 md:mt-0 lg:h-workh overflow-clip ">
-      <a href="./enterprise-app">
-      <span style="background-color:#2B3E63" class="flex flex-wrap   hover:scale-95 transition-transform duration-300 ease-in-out">
- 
-        <span class="md:w-2/5 block lg:py-14 lg:pl-14 lg:pr-0 p-4">
-          <h5 class="text-lg md:text-xl lg:text-3xl font-semibold">Empowering an enterprise-level team for efficient and effective co-creation</h5>
-        <p>Nov 2022</p>
-        <p class="mt-8">Created a modular design system that allows cross-team ideation and development in an optimized way.</p>
-        <p class="mt-8 ">Results</p>
-        <span class="flex flex-wrap mt-2 ">
-        <p class="w-auto mr-4 pr-4 border-r-2"><span class="text-2xl md:text-4xl font-bold">100+</span><br>Design token</p><p class="w-auto"><span class="text-2xl md:text-4xl font-bold">40%</span><br>Reduction in time</p>
-        </span>
-       
-      </span>
-      <img alt="PSW Project"   class="md:w-3/5 pt-14 pl-4 lg:pl-8 md:object-cover md:object-left"  src="./src/resources/images/image-1.png" />
+    <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
 
-      </span>
-    </a>
-    </div>
-  </section>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  <section
-    class=" mt-14  content-start justify-content-between">
-   
-    <div class=" w-inherit w-full md:mt-0">
+    // Observe single-element animations
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
-      <div id="workPost3" class="w-inherit w-full text-white mt-14 md:mt-0 lg:h-workh overflow-clip ">
-        <a href="./in-brain">
-        <span style="background-color:#FF7266" class="flex flex-wrap   hover:scale-95 transition-transform duration-300 ease-in-out">
-   
-          <span class="md:w-2/5 block lg:py-14 lg:pl-14 lg:pr-0 p-4">
-            <h5 class="text-lg md:text-xl lg:text-3xl font-semibold">Creating an e-learning platform for children with down syndrome</h5>
-          <p>2019 - 2020</p>
-          <p class="mt-8">Researched for an effective way to create a mobile education platform for children with special needs.</p>
-          <p class="mt-8 ">Results</p>
-          <span class="flex flex-wrap mt-2">
-          <p class="w-auto  pr-4 mr-4">Identified the market gap and ideated on one of the possible ways for solving the problem.
+    // Observe stagger containers — also mark children as anim so they start hidden
+    document.querySelectorAll('.anim-stagger').forEach(el => {
+      el.querySelectorAll(':scope > *').forEach(child => child.style.opacity = '0');
+      observer.observe(el);
+    });
 
-          </p>
-          </span>
-         
-        </span>
-        <img alt="PSW Project"   class="md:w-3/5 pt-14 pl-4 lg:pl-8 md:object-cover md:object-left"  src="./src/resources/images/image-3.png" />
-  
-        </span>
-      </a>
-      </div>
+    // ── Interactive Bot ──
+    const bot = document.getElementById('bot');
+    const leftEye = document.getElementById('leftEye');
+    const rightEye = document.getElementById('rightEye');
+    const leftPupil = document.getElementById('leftPupil');
+    const rightPupil = document.getElementById('rightPupil');
 
-      <div id="workPost2" class="w-inherit w-full text-white mt-14  lg:h-workh overflow-clip ">
-        <a href="./kutub-khana">
-        <span style="background-color:#F2A35E" class="flex flex-wrap   hover:scale-95 transition-transform duration-300 ease-in-out">
-   
-          <span class="md:w-2/5 block lg:py-14 lg:pl-14 lg:pr-0 p-4">
-            <h5 class="text-lg md:text-xl lg:text-3xl font-semibold">Helping freshmen get <br> course material without spending  too much</h5>
-          <p>2019</p>
-          <p class="mt-8">I designed a solution for students to be able easily <br> buy or rent books from other students.</p>
-          <p class="mt-8 ">Results</p>
-          <span class="flex flex-wrap mt-2">
-          <p class="w-auto  pr-4 mr-4">Launched an in-house app called “Kutub-khana”
-          </p>
-          </span>
-         
-        </span>
-        <img alt="PSW Project"   class="md:w-3/5 pt-14 pl-4 lg:pl-8 md:object-cover md:object-left"  src="./src/resources/images/image-2.png" />
-  
-        </span>
-      </a>
-      </div>
-      
-    </div>
+    // Track cursor and move pupils
+    document.addEventListener('mousemove', (e) => {
+      const botRect = bot.getBoundingClientRect();
+      const botCenterX = botRect.left + botRect.width / 2;
+      const botCenterY = botRect.top + botRect.height / 2;
 
+      // Calculate angle and distance from bot center to cursor
+      const angle = Math.atan2(e.clientY - botCenterY, e.clientX - botCenterX);
+      const distance = Math.min(1, Math.hypot(e.clientX - botCenterX, e.clientY - botCenterY));
 
-  </section>
+      // Move pupils based on cursor position (smaller range for tiny eyes)
+      const moveX = Math.cos(angle) * distance *5;
+      const moveY = Math.sin(angle) * distance *5;
 
+      if(!leftEye.classList.contains('squint') && !rightEye.classList.contains('squint')){
+      leftPupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+      rightPupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+      }else{
+      leftPupil.style.transform = `translate(calc(-50%), calc(-15%))`;
+      rightPupil.style.transform = `translate(calc(-50%), calc(-15%))`;
+      }
+    });
 
-  </section>
+    // Squint on hover
+    bot.addEventListener('mouseenter', () => {
+      leftEye.classList.add('squint');
+      rightEye.classList.add('squint');
+    });
 
-  <footer id="contact" class="mt-32  w-full mb-32 lg:max-w-1200 px-4 lg:px-14 mx-auto  text-center">
-    <div class="w-14 border-t border-red-500 mb-10 mx-auto"></div>
-    <p data-textify class="inline text-2xl font-medium text-gray-400">Have a project in mind?</p>
-    <p data-textify class=" mt-2"> Let's connect</p>
-   <a href="mailto:saad.siddiqui2014@gmail.com"><button class="mt-8 border-red-500 border-2 text-red-500 hover:bg-red-500 py-4 px-8 hover:text-white">Send an email</button></a> 
-  
-  </footer>
-
-  <script>
-    const example = new Textify({
-      once: true,
-      fade: true,
-      easing: "easeInOut",
-});
-
-    ScrollReveal().reveal('#expHeading', { easing: 'ease-in' });
-    ScrollReveal().reveal('#job1', { delay: 500, easing: 'ease-in', distance: '30px' });
-    ScrollReveal().reveal('#job2', { delay: 800, easing: 'ease-in', distance: '30px' });
-
-    ScrollReveal().reveal('#workHeading', { easing: 'ease-in' });
-    ScrollReveal().reveal('#workQues1', { delay: 500, easing: 'ease-in', distance: '30px' });
-    ScrollReveal().reveal('#workPost1', { delay: 500, easing: 'ease-out', distance: '30px' });
-
-    ScrollReveal().reveal('#workQues2', { delay: 500, easing: 'ease-in', distance: '30px' });
-    ScrollReveal().reveal('#workPost2', { delay: 500, easing: 'ease-out', distance: '30px' });
-    ScrollReveal().reveal('#workPost3', { delay: 500, easing: 'ease-out', distance: '30px' });
-    ScrollReveal().reveal('#workPost4', { delay: 500, easing: 'ease-out', distance: '30px' });
-
-    ScrollReveal().reveal('#workQues3', { delay: 500, easing: 'ease-in', distance: '30px' });
-    ScrollReveal().reveal('#workPost5', { delay: 500, easing: 'ease-out', distance: '30px' });
-    ScrollReveal().reveal('#workPost6', { delay: 500, easing: 'ease-out', distance: '30px' });
-
-    ScrollReveal().reveal('#contact', { delay: 500, easing: 'ease-out', distance: '30px', scale: '0.95' });
+    bot.addEventListener('mouseleave', () => {
+      leftEye.classList.remove('squint');
+      rightEye.classList.remove('squint');
+    });
   </script>
 
+    <script>
+      (() => {
+        const revealTargets = document.querySelectorAll("[data-reveal]");
+        const staggerGroups = document.querySelectorAll(
+          "[data-reveal-stagger]",
+        );
 
-</body>
+        revealTargets.forEach((target) => {
+          const delay = Number(target.dataset.revealDelay || 0);
 
+          if (delay > 0) {
+            target.style.setProperty("--reveal-delay", `${delay}ms`);
+          }
+        });
+
+        staggerGroups.forEach((group) => {
+          const delayBase = Number(group.dataset.revealDelay || 0);
+          const delayStep = Number(group.dataset.revealStep || 80);
+          const items = group.querySelectorAll(":scope > .reveal-item");
+
+          items.forEach((item, index) => {
+            item.style.setProperty(
+              "--reveal-delay",
+              `${delayBase + index * delayStep}ms`,
+            );
+          });
+        });
+
+        if (!("IntersectionObserver" in window)) {
+          revealTargets.forEach((target) => target.classList.add("is-visible"));
+          staggerGroups.forEach((group) => group.classList.add("is-visible"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries, activeObserver) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              activeObserver.unobserve(entry.target);
+            });
+          },
+          {
+            rootMargin: "0px 0px -8% 0px",
+            threshold: 0.12,
+          },
+        );
+
+        revealTargets.forEach((target) => observer.observe(target));
+        staggerGroups.forEach((group) => observer.observe(group));
+      })();
+
+      (() => {
+        const pattern = document.querySelector(".rail-pattern");
+        const canvas = document.querySelector(".rail-pattern-canvas");
+
+        if (!pattern || !canvas) return;
+
+        const ctx = canvas.getContext("2d");
+        const dots = [];
+        const config = {
+          spacing: 13,
+          baseRadius: 1,
+          hoverRadius: 4.8,
+          radius: 78,
+          baseAlpha: 0.32,
+          hoverAlpha: 0.82,
+          baseColor: [20, 20, 20],
+          hoverColor: [37, 145, 205],
+        };
+
+        let pointer = null;
+        let hoverAmount = 0;
+        let rafId = null;
+
+        function setCanvasSize() {
+          const rect = pattern.getBoundingClientRect();
+          const dpr = window.devicePixelRatio || 1;
+
+          canvas.width = Math.round(rect.width * dpr);
+          canvas.height = Math.round(rect.height * dpr);
+          canvas.style.width = `${rect.width}px`;
+          canvas.style.height = `${rect.height}px`;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+          dots.length = 0;
+
+          for (
+            let y = config.spacing / 2;
+            y < rect.height;
+            y += config.spacing
+          ) {
+            for (
+              let x = config.spacing / 2;
+              x < rect.width;
+              x += config.spacing
+            ) {
+              dots.push({ x, y });
+            }
+          }
+
+          draw();
+        }
+
+        function draw() {
+          const width = canvas.clientWidth;
+          const height = canvas.clientHeight;
+
+          ctx.clearRect(0, 0, width, height);
+
+          dots.forEach((dot) => {
+            let influence = 0;
+
+            if (pointer) {
+              const distance = Math.hypot(dot.x - pointer.x, dot.y - pointer.y);
+              influence = Math.max(0, 1 - distance / config.radius);
+              influence = influence * influence * hoverAmount;
+            }
+
+            const radius =
+              config.baseRadius +
+              influence * (config.hoverRadius - config.baseRadius);
+            const alpha =
+              config.baseAlpha +
+              influence * (config.hoverAlpha - config.baseAlpha);
+            const color = config.baseColor.map((channel, index) => {
+              const hoverChannel = config.hoverColor[index];
+              return Math.round(channel + influence * (hoverChannel - channel));
+            });
+
+            ctx.beginPath();
+            ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})`;
+            ctx.fill();
+          });
+        }
+
+        function animate() {
+          const target = pointer ? 1 : 0;
+          hoverAmount += (target - hoverAmount) * 0.18;
+          draw();
+
+          if (Math.abs(target - hoverAmount) > 0.01) {
+            rafId = requestAnimationFrame(animate);
+          } else {
+            hoverAmount = target;
+            draw();
+            rafId = null;
+          }
+        }
+
+        function requestDraw() {
+          if (!rafId) {
+            rafId = requestAnimationFrame(animate);
+          }
+        }
+
+        pattern.addEventListener("pointermove", (event) => {
+          const rect = pattern.getBoundingClientRect();
+          pointer = {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top,
+          };
+          requestDraw();
+        });
+
+        pattern.addEventListener("pointerleave", () => {
+          pointer = null;
+          requestDraw();
+        });
+
+        window.addEventListener("resize", setCanvasSize);
+        setCanvasSize();
+      })();
+    </script>
+  </body>
 </html>
