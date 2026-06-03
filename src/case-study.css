@@ -933,7 +933,7 @@ dotlottie-player {
   }
 
   .page {
-    padding: 40px 5% 72px !important;
+    padding: 40px 5% 0 !important;
   }
 
   .header {
@@ -956,10 +956,13 @@ dotlottie-player {
     min-height: 0;
     padding: 0;
     border-bottom: 0;
-    margin-bottom: 44px !important;
+    margin-bottom: 34px !important;
   }
 
   .images-column {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
     padding: 40px 0 0;
   }
 
@@ -975,7 +978,7 @@ dotlottie-player {
 
 @media (max-width: 767px) {
   .page {
-    padding: 28px 24px 56px !important;
+    padding: 28px 24px 0 !important;
   }
 
   .header {
@@ -985,6 +988,7 @@ dotlottie-player {
   .hero-title {
     font-size: 44px !important;
     line-height: 50px !important;
+    margin-bottom: 30px !important;
   }
 
   .sticky-header {
