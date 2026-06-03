@@ -238,7 +238,7 @@ img {
 
 .hero {
   display: grid;
-  min-height: 816px;
+  min-height: inherit;
   grid-template-rows: minmax(1px, 28vh) 1fr;
 }
 
