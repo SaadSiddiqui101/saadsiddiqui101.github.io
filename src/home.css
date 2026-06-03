@@ -572,10 +572,15 @@ img {
 @media (max-width: 820px) {
   .system-rail {
     position: relative;
+    top: auto;
     width: 100%;
     height: auto;
     border-right: 0;
-    border-bottom: 1px solid var(--faint);
+    border-bottom: 0;
+    background: rgba(240, 241, 243, 0.96);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    overflow: visible;
   }
 
   .system-rail::before,
@@ -585,17 +590,67 @@ img {
 
   .rail-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
     min-height: auto;
-    gap: 20px;
-    padding: 24px;
+    gap: 0;
+    padding: 0 24px;
   }
 
+  .rail-header {
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+
+  .rail-title {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .rail-content nav,
   .rail-nav,
   .rail-social {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px 18px;
+    display: contents;
+  }
+
+  .reveal-ready .system-rail .rail-nav > .reveal-item,
+  .reveal-ready .system-rail .rail-social > .reveal-item {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .rail-nav a,
+  .rail-social a {
+    width: 100%;
+    min-height: 44px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(20, 20, 20, 0.07);
+    font-size: 13px;
+    line-height: normal;
+  }
+
+  .rail-social a:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .rail-nav a::after,
+  .rail-social a::after {
+    margin-left: auto;
+    opacity: 0.36;
+    transform: none;
+  }
+
+  .rail-nav a:hover,
+  .rail-social a:hover,
+  .rail-nav a:focus-visible,
+  .rail-social a:focus-visible {
+    gap: 0;
+    transform: none;
   }
 
   .page-main {
@@ -656,11 +711,21 @@ img {
   .site-footer {
     margin: 0;
     padding: 14px 24px;
-    white-space: normal;
+    gap: 16px;
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 540px) {
+  .rail-header {
+    min-height: 58px;
+    padding: 0;
+  }
+
+  .rail-content {
+    column-gap: 14px;
+  }
+
   .hero h1 {
     font-size: 44px;
     line-height: 50px;
@@ -683,13 +748,22 @@ img {
     align-items: center;
   }
 
-  .principle-board {
-    grid-template-columns: 1fr;
+  .principle-card {
+    min-height: 160px;
+  }
+
+  .principle-card img {
+    width: min(38%, 92px);
+  }
+
+  .principle-card:nth-child(1) img {
+    width: min(42%, 96px);
   }
 
   .site-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    gap: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: clamp(9px, 2.8vw, 11px);
   }
 }

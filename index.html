@@ -35,64 +35,6 @@
     <link rel="stylesheet" href="./src/home.css" />
   </head>
   <body>
-    <aside class="system-rail" aria-label="System index">
-      <div class="rail-content">
-        <nav aria-label="Page sections">
-          <p class="rail-title reveal" data-reveal>// System Index</p>
-          <div
-            class="rail-nav reveal-stagger"
-            data-reveal-stagger
-            data-reveal-delay="90"
-            data-reveal-step="55"
-          >
-            <a class="reveal-item" href="#project-directory"
-              >Project Directory</a
-            >
-            <a class="reveal-item" href="#design-principles"
-              >Design Principles</a
-            >
-            <a class="reveal-item" href="#about-me">About Me</a>
-          </div>
-        </nav>
-        <div
-          class="rail-pattern reveal"
-          data-reveal
-          data-reveal-delay="240"
-          aria-hidden="true"
-        >
-          <canvas class="rail-pattern-canvas"></canvas>
-        </div>
-        <div
-          class="rail-social reveal-stagger"
-          data-reveal-stagger
-          data-reveal-delay="320"
-          data-reveal-step="60"
-        >
-          <a
-            class="reveal-item"
-            href="https://www.linkedin.com/in/saad-siddiqui-5528191aa/"
-            target="_blank"
-            rel="noopener"
-            >Connect on LinkedIn</a
-          >
-          <a
-            class="reveal-item"
-            href="https://dribbble.com/elveyui"
-            target="_blank"
-            rel="noopener"
-            >View Dribbble</a
-          >
-          <a
-            class="reveal-item"
-            href="./src/resources/documents/resume.pdf"
-            target="_blank"
-            rel="noopener"
-            >Download Resume</a
-          >
-        </div>
-      </div>
-    </aside>
-
     <main class="page-main">
       <header class="hero reveal-stagger" data-reveal-stagger>
         <div class="hero-copy reveal-item">
@@ -123,6 +65,67 @@
           />
         </div>
       </header>
+
+      <aside class="system-rail" aria-label="System index">
+        <div class="rail-content">
+          <nav aria-label="Page sections">
+            <div class="rail-header">
+              <p class="rail-title reveal" data-reveal>// System Index</p>
+            </div>
+            <div
+              id="system-rail-links"
+              class="rail-nav reveal-stagger"
+              data-reveal-stagger
+              data-reveal-delay="90"
+              data-reveal-step="55"
+            >
+              <a class="reveal-item" href="#project-directory"
+                >Project Directory</a
+              >
+              <a class="reveal-item" href="#design-principles"
+                >Design Principles</a
+              >
+              <a class="reveal-item" href="#about-me">About Me</a>
+            </div>
+          </nav>
+          <div
+            class="rail-pattern reveal"
+            data-reveal
+            data-reveal-delay="240"
+            aria-hidden="true"
+          >
+            <canvas class="rail-pattern-canvas"></canvas>
+          </div>
+          <div
+            class="rail-social reveal-stagger"
+            data-reveal-stagger
+            data-reveal-delay="320"
+            data-reveal-step="60"
+          >
+            <a
+              class="reveal-item"
+              href="https://www.linkedin.com/in/saad-siddiqui-5528191aa/"
+              target="_blank"
+              rel="noopener"
+              >Connect on LinkedIn</a
+            >
+            <a
+              class="reveal-item"
+              href="https://dribbble.com/elveyui"
+              target="_blank"
+              rel="noopener"
+              >View Dribbble</a
+            >
+            <a
+              class="reveal-item"
+              href="./src/resources/documents/resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+      </aside>
 
       <section
         class="content-section project-directory reveal"
@@ -321,11 +324,11 @@
     </main>
 
     <script>
-    window.addEventListener("load", () => {
-      document.body.classList.add("loaded");
-    });
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
 
-    const observer = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
