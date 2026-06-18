@@ -10,7 +10,7 @@
   --page-bg: #f0f1f3;
   --panel-bg: #e6e8eb;
   --text: #141414;
-  --muted: rgba(0, 0, 0, 0.4);
+  --muted: rgba(19, 19, 19, 0.588);
   --faint: rgba(0, 0, 0, 0.1);
   --line: #d8d9db;
   --accent: #2591cd;
@@ -251,7 +251,7 @@ img {
 
 .intro-kicker {
   margin-bottom: -10px;
-  color: rgba(19, 19, 19, 0.5);
+  color: var(--muted);
   font-size: 16px;
   line-height: 24px;
 }
