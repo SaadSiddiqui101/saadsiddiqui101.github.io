@@ -472,13 +472,13 @@ img {
 .principle-code {
   color: var(--muted);
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .principle-name {
   color: var(--text);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .about {
@@ -505,7 +505,7 @@ img {
   margin-left: 0;
   padding: 11px 48px;
   background: var(--panel-bg);
-  color: var(--muted);
+  color: rgba(0,0,0,0.55);
   font-size: 14px;
   line-height: normal;
   white-space: nowrap;
