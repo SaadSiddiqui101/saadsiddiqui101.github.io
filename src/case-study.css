@@ -686,6 +686,7 @@ a {
   border: none !important;
   border-radius: 0 !important;
   background: var(--panel-bg) !important;
+  min-width:800px;
 }
 
 .image-container img,
@@ -964,6 +965,8 @@ dotlottie-player {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
     padding: 40px 0 0;
+    overflow-x:auto;
+    overflow-y:hidden;
   }
 
   .case-media-switch {
