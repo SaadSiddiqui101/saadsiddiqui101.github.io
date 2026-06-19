@@ -23,12 +23,8 @@
       gtag("config", "G-BNHYDW2GZF");
     </script>
     <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
@@ -183,14 +179,14 @@
             class="image-container image-container-1 before-after-comparison"
             data-before-after
           >
-            <img
+            <img decoding="async"
               class="before-after-image before-after-image--before"
-              src="./src/resources/images/qlu_1a.png"
+              src="./src/resources/images/qlu_1a.webp"
               alt="QLU interface before redesign"
             />
-            <img
+            <img loading="lazy" decoding="async"
               class="before-after-image before-after-image--after"
-              src="./src/resources/images/qlu_1b.png"
+              src="./src/resources/images/qlu_1b.webp"
               alt="QLU interface after redesign"
             />
             <div class="before-after-handle" aria-hidden="true"></div>
@@ -206,14 +202,14 @@
             />
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_2.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_2.webp"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_3.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_3.webp"
               alt="Project screenshot"
             />
           </div>
@@ -236,32 +232,32 @@
             ></dotlottie-player>
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_6.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_6.webp"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_7.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_7.webp"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_8.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_8.webp"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_9.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_9.webp"
               alt="Project screenshot"
             />
           </div>
           <div class="image-container image-container-2">
-            <img
-              src="./src/resources/images/qlu_10.png"
+            <img loading="lazy" decoding="async"
+              src="./src/resources/images/qlu_10.webp"
               alt="Project screenshot"
             />
           </div>
@@ -393,5 +389,6 @@
         updateIcon();
       });
     </script>
+    <script src="./src/case-study.js"></script>
   </body>
 </html>

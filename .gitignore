@@ -120,3 +120,6 @@ property_tests/**/logs/
 property_tests/**/crashes/
 property_tests/**/crash-*.txt
 # skydev-extension: managed .skydev rules (end)
+
+
+scratch
