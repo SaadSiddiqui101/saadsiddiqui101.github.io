@@ -43,23 +43,6 @@ function initSwipeBadge() {
   }
 }
 
-function loadLottiePlayerScript() {
-  if (window.customElements && window.customElements.get("dotlottie-player")) {
-    return Promise.resolve();
-  }
-  if (window.lottieScriptLoadingPromise) {
-    return window.lottieScriptLoadingPromise;
-  }
-  window.lottieScriptLoadingPromise = new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = "https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js";
-    script.onload = () => resolve();
-    script.onerror = (err) => reject(err);
-    document.head.appendChild(script);
-  });
-  return window.lottieScriptLoadingPromise;
-}
-
 function initLazyLotties() {
   const players = document.querySelectorAll("dotlottie-player[data-src]");
   if (players.length === 0) return;
@@ -70,14 +53,14 @@ function initLazyLotties() {
         const player = entry.target;
         obs.unobserve(player);
 
-        loadLottiePlayerScript()
-          .then(() => {
-            const src = player.getAttribute("data-src");
-            if (src) {
-              player.setAttribute("src", src);
-            }
-          })
-          .catch((err) => console.error("Failed to load dotlottie-player script", err));
+        const src = player.getAttribute("data-src");
+        if (src) {
+          player.setAttribute("src", src);
+          // If custom elements are upgraded, load programmatically
+          if (typeof player.load === "function") {
+            player.load(src);
+          }
+        }
       }
     });
   }, {
