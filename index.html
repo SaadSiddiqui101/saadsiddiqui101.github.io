@@ -11,10 +11,8 @@
     <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
     <script>
       document.documentElement.classList.add("reveal-ready");
     </script>
@@ -59,7 +57,7 @@
           class="hero-visual reveal-item"
           aria-label="Portfolio work preview"
         >
-          <img
+          <img decoding="async" fetchpriority="high"
             src="./src/resources/figma/experiments-hero.png"
             alt="Dashboard interface preview"
           />

@@ -43,9 +43,57 @@ function initSwipeBadge() {
   }
 }
 
+function loadLottiePlayerScript() {
+  if (window.customElements && window.customElements.get("dotlottie-player")) {
+    return Promise.resolve();
+  }
+  if (window.lottieScriptLoadingPromise) {
+    return window.lottieScriptLoadingPromise;
+  }
+  window.lottieScriptLoadingPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js";
+    script.onload = () => resolve();
+    script.onerror = (err) => reject(err);
+    document.head.appendChild(script);
+  });
+  return window.lottieScriptLoadingPromise;
+}
+
+function initLazyLotties() {
+  const players = document.querySelectorAll("dotlottie-player[data-src]");
+  if (players.length === 0) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const player = entry.target;
+        obs.unobserve(player);
+
+        loadLottiePlayerScript()
+          .then(() => {
+            const src = player.getAttribute("data-src");
+            if (src) {
+              player.setAttribute("src", src);
+            }
+          })
+          .catch((err) => console.error("Failed to load dotlottie-player script", err));
+      }
+    });
+  }, {
+    rootMargin: "200px",
+  });
+
+  players.forEach((player) => observer.observe(player));
+}
+
 // Initialize on DOM load or immediately if already loaded
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initSwipeBadge);
+  document.addEventListener("DOMContentLoaded", () => {
+    initSwipeBadge();
+    initLazyLotties();
+  });
 } else {
   initSwipeBadge();
+  initLazyLotties();
 }

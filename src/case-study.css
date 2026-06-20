@@ -176,6 +176,7 @@ body {
   cursor: pointer;
 }
 
+.section-header h2,
 .section-header h3 {
   font-size: 18px;
   font-weight: 400;
@@ -370,11 +371,11 @@ body.loaded {
   --page-bg: #f0f1f3;
   --panel-bg: #e6e8eb;
   --text: #141414;
-  --muted: rgba(0, 0, 0, 0.42);
+  --muted: #595959;
   --body-copy: rgba(20, 20, 20, 0.72);
   --faint: rgba(0, 0, 0, 0.1);
   --line: #d8d9db;
-  --accent: #2591cd;
+  --accent: #196c9c;
   --font-display: "Darker Grotesque", sans-serif;
   --font-body: "Geist", "Inter", sans-serif;
   --font-ui: "Inter", sans-serif;
@@ -546,6 +547,7 @@ a {
   transform: translateX(6px);
 }
 
+.section-header h2,
 .section-header h3 {
   color: currentColor !important;
   font-family: var(--font-display);

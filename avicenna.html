@@ -25,10 +25,8 @@
     <link rel="shortcut icon" href="./src/resources/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Geist:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
     <link rel="stylesheet" href="./src/case-study.css" />
   </head>
   <body class="avicenna-case">
@@ -41,7 +39,7 @@
       <p class="sticky-title">Designing AI for Modern Healthcare Workflows</p>
     </div>
 
-    <div class="page">
+    <main class="page">
       <header class="header fade-in">
         <div class="bot-logo-wrapper">
           <div class="bot-container">
@@ -73,11 +71,13 @@
         <div class="content-column">
           <div class="accordion-item open">
             <div class="section-header">
-              <h3>Overview</h3>
+              <h2>Overview</h2>
               <img
                 src="./src/resources/icons/plus.svg"
                 alt="toggle"
                 class="accordion-icon"
+                width="18"
+                height="18"
               />
             </div>
             <div class="section-content">
@@ -98,11 +98,13 @@
 
           <div class="accordion-item">
             <div class="section-header">
-              <h3>Challenge</h3>
+              <h2>Challenge</h2>
               <img
                 src="./src/resources/icons/plus.svg"
                 alt="toggle"
                 class="accordion-icon"
+                width="18"
+                height="18"
               />
             </div>
             <div class="section-content">
@@ -130,11 +132,13 @@
 
           <div class="accordion-item">
             <div class="section-header">
-              <h3>Solution</h3>
+              <h2>Solution</h2>
               <img
                 src="./src/resources/icons/plus.svg"
                 alt="toggle"
                 class="accordion-icon"
+                width="18"
+                height="18"
               />
             </div>
             <div class="section-content">
@@ -166,11 +170,13 @@
 
           <div class="accordion-item">
             <div class="section-header">
-              <h3>Outcome</h3>
+              <h2>Outcome</h2>
               <img
                 src="./src/resources/icons/plus.svg"
                 alt="toggle"
                 class="accordion-icon"
+                width="18"
+                height="18"
               />
             </div>
             <div class="section-content">
@@ -197,7 +203,7 @@
 
         <div class="images-column">
           <div class="image-container image-container-1">
-            <img decoding="async"
+            <img decoding="async" fetchpriority="high"
               src="./src/resources/images/avicenna_1.webp"
               alt="Project screenshot"
             />
@@ -234,7 +240,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <script>
       window.addEventListener("load", () => {
