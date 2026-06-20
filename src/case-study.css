@@ -831,6 +831,7 @@ dotlottie-player {
 .lottie-wrapper-another,
 .lottie-wrapper-anothermother {
   position: relative;
+  min-height: 360px; /* Prevent container collapse before dynamic animations load */
 }
 
 .lottie-wrapper::after,
