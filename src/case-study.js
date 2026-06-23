@@ -55,6 +55,14 @@ function initLazyLotties() {
 
         const src = player.getAttribute("data-src");
         if (src) {
+          // Disable subframe rendering (stops frame interpolation for 4x-5x CPU savings on high-refresh rate displays)
+          player.addEventListener("ready", () => {
+            const lottieInstance = player.getLottie();
+            if (lottieInstance && typeof lottieInstance.setSubframe === "function") {
+              lottieInstance.setSubframe(false);
+            }
+          });
+
           player.setAttribute("src", src);
           // If custom elements are upgraded, load programmatically
           if (typeof player.load === "function") {
