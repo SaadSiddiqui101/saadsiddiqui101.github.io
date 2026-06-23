@@ -274,21 +274,15 @@ img {
   min-height: 516px;
   background: var(--panel-bg);
   overflow: hidden;
-  background-image: url("/src/resources/figma/experiments-hero.png");
-  background-size: cover;
-  background-position-y: 21px;
-  background-position-x: left;
-  background-repeat: no-repeat;
-
 }
 
 .hero-visual img {
- position: absolute;
-    top: 30px;
-    left: -1%;
-    width: 113%;
-    max-width: none;
-    display: none;
+  position: absolute;
+  top: 30px;
+  left: -1%;
+  width: 113%;
+  max-width: none;
+  display: block;
 }
 
 .content-section {
@@ -399,6 +393,8 @@ img {
 
 .principles {
   min-height: 519px;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 519px;
 }
 
 .principles .section-grid {
@@ -483,6 +479,8 @@ img {
 
 .about {
   min-height: 248px;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 248px;
 }
 
 .about-copy {
